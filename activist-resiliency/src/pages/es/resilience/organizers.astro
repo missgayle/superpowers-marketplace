@@ -1,0 +1,339 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import allResources from '../../../data/resources.json';
+
+const lang = 'es';
+
+// Filtrar: audiencia incluye "organizer" O scienceTags incluye "collective"
+const resources = allResources.filter(r =>
+  r.audience.includes('organizer') ||
+  r.scienceTags.includes('collective')
+);
+---
+
+<BaseLayout
+  title="Resiliencia para Organizadores — Resiliencia Activista"
+  description="Apoyar el bienestar de tu equipo y construir resiliencia colectiva como organizador/a o líder de movimiento."
+  lang={lang}
+>
+  <div class="page-container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/es/resilience" class="breadcrumb-link">Construir Resiliencia</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="breadcrumb-current">Para Organizadores/as</span>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-heading">Resiliencia para Organizadores</h1>
+      <p class="page-intro">
+        Los organizadores cargan un tipo particular de peso: la responsabilidad no solo por su propio bienestar, sino por las personas con las que trabajan. Esta página es para quienes lideran equipos, coordinan campañas y tratan de mantener a las personas comprometidas, saludables y efectivas a largo plazo.
+      </p>
+    </header>
+
+    <section class="content-section">
+      <h2 class="section-heading">Reconocer el Camino Reactivo en Tu Equipo</h2>
+      <p class="section-body">
+        El marco de Resiliencia Moral describe un <em>Camino Reactivo</em> por el que los individuos — y los equipos — pueden deslizarse bajo estrés crónico. Como organizador/a, aprender a reconocer estas señales en los demás (y en ti mismo/a) es una de las habilidades más valiosas que puedes desarrollar.
+      </p>
+
+      <div class="signs-grid">
+        <div class="sign-card">
+          <h3 class="sign-title">Entumecimiento y Retirada</h3>
+          <p class="sign-body">
+            Miembros del equipo que antes eran apasionados volviéndose planos, desconectados o actuando mecánicamente. Participación reducida en reuniones, negativa a asumir tareas que antes buscaban, o pareciendo emocionalmente no disponibles. Esta es a menudo la forma en que el cuerpo se protege del desbordamiento — una señal de que la capacidad de alguien ha sido excedida.
+          </p>
+        </div>
+
+        <div class="sign-card">
+          <h3 class="sign-title">Evitación</h3>
+          <p class="sign-body">
+            Faltar a reuniones, respuestas tardías, tareas incompletas, o encontrar razones para no comprometerse con las partes más difíciles del trabajo. La evitación a menudo parece pereza o irresponsabilidad desde afuera, pero frecuentemente señala que alguien se está protegiendo de material que se ha vuelto demasiado activador para procesar.
+          </p>
+        </div>
+
+        <div class="sign-card">
+          <h3 class="sign-title">Indignación Moral que Aísla</h3>
+          <p class="sign-body">
+            La indignación ante la injusticia puede ser una fuente de energía y claridad — pero cuando se vuelve crónica y totalizante, puede aislar a las personas dentro del movimiento y fuera de él. Observa a los miembros del equipo que se han vuelto cada vez más difíciles de alcanzar, que responden a la diferencia con desprecio en lugar de curiosidad, o que han perdido la capacidad de trabajar con cualquiera que perciban como insuficientemente comprometido.
+          </p>
+        </div>
+
+        <div class="sign-card">
+          <h3 class="sign-title">Aislamiento y Desconexión</h3>
+          <p class="sign-body">
+            Personas que se alejan de la comunidad que las sostiene — cancelando planes, rechazando apoyo, insistiendo en que están bien cuando claramente no lo están. El aislamiento puede acelerar el agotamiento rápidamente, porque elimina el apoyo relacional que ayuda al sistema nervioso a regularse.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Crear Espacio para la Regulación Dentro de los Equipos</h2>
+      <p class="section-body">
+        Los equipos se regulan juntos, no solo individualmente. La investigación sobre la co-regulación muestra que los sistemas nerviosos responden al estado de las personas a su alrededor — lo que significa que una presencia tranquila y estable en una sala de reuniones, o la simple práctica de hacer un check-in antes de entrar al contenido, puede cambiar el estado colectivo de tu equipo.
+      </p>
+      <p class="section-body">
+        Algunas formas prácticas de incorporar la regulación en la cultura del equipo:
+      </p>
+      <ul class="practice-list">
+        <li><strong>Comienza las reuniones con un breve check-in.</strong> Incluso una sola palabra o un número del 0 al 10 que refleje cómo llega alguien crea un momento de reconocimiento y conexión antes de que comience el trabajo.</li>
+        <li><strong>Incorpora tiempo de transición.</strong> Pasar de una reunión intensa a otra sin pausa acumula estrés. Un descanso de cinco minutos entre reuniones, con permiso para salir o respirar, importa más de lo que parece.</li>
+        <li><strong>Normaliza decir "necesito un descanso".</strong> Crea permiso explícito para que los miembros del equipo se alejen de una reunión, una tarea o un período de trabajo sin que sea un fracaso o una fuente de vergüenza.</li>
+        <li><strong>Reconoce directamente las cosas difíciles.</strong> Cuando sucede algo difícil — una derrota, un incidente violento, una pérdida — nómbralo explícitamente en el espacio del equipo antes de pasar a la logística. Pasar por alto el duelo para llegar a la planificación de acciones deja a las personas cargando un peso que las ralentiza más tarde.</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Prácticas Colectivas</h2>
+      <p class="section-body">
+        El autocuidado individual es necesario pero insuficiente para sostener el trabajo de movimiento. Los equipos y las comunidades necesitan prácticas compartidas que construyan resiliencia colectiva — formas de estar juntos que reponen en lugar de agotar.
+      </p>
+
+      <div class="practices-grid">
+        <div class="practice-card">
+          <h3 class="practice-title">Check-ins Grupales</h3>
+          <p class="practice-body">
+            Los check-ins estructurados regulares — ya sean standups diarios, reuniones semanales del equipo o sesiones más largas mensuales — crean ritmos predecibles de conexión. Los formatos estructurados (como un breve intercambio personal + qué traes al trabajo esta semana) reducen el trabajo de la divulgación mientras siguen construyendo un conocimiento genuino mutuo.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Rituales Compartidos</h3>
+          <p class="practice-body">
+            Los rituales marcan el tiempo, reconocen la dificultad y crean un sentido de significado colectivo. Celebrar las victorias — incluso las pequeñas — importa para la moral. Reconocer las pérdidas y los retrocesos en un contenedor (en lugar de pretender que no sucedieron) construye confianza y cohesión. Las reflexiones de fin de año, las ceremonias de hitos e incluso las comidas compartidas regulares crean el tejido cultural que mantiene a los equipos juntos durante los períodos difíciles.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Cuidado Comunitario</h3>
+          <p class="practice-body">
+            La ayuda mutua dentro de los equipos — verificar a alguien que ha estado callado, llevar comida cuando alguien está desbordado, ofrecer ayuda práctica durante una crisis — es tanto una práctica ética como una estrategia de resiliencia. Los equipos donde los miembros experimentan un cuidado genuino unos por otros mantienen el compromiso más tiempo que aquellos donde las personas se sienten partes intercambiables.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Pares de Reflexión entre Pares</h3>
+          <p class="practice-body">
+            Emparejar a los miembros del equipo para que se verifiquen mutuamente mensualmente — no sobre tareas, sino sobre cómo están — distribuye el trabajo de cuidado que de otro modo recae enteramente en un líder designado. Estas relaciones entre pares también crean bucles de retroalimentación más honestos, ya que las personas a menudo comparten cosas con un par que no plantearían con un supervisor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Del Liderazgo Reactivo al Resiliente</h2>
+      <p class="section-body">
+        El marco de Resiliencia Moral contrasta el <em>liderazgo invitacional</em> — caracterizado por la curiosidad, la colaboración y el poder compartido — con los patrones de liderazgo ineficaz que emergen de los estados reactivos: respuestas de mando y control, culpa cuando las cosas salen mal, incapacidad para tolerar el desacuerdo, o demandas de lealtad que suprimen la comunicación honesta.
+      </p>
+      <p class="section-body">
+        El liderazgo invitacional se parece a:
+      </p>
+      <ul class="practice-list">
+        <li>Hacer preguntas antes de tomar decisiones, especialmente bajo presión</li>
+        <li>Nombrar tu propia incertidumbre y límites como modelo para que los demás hagan lo mismo</li>
+        <li>Invitar la disidencia y el conflicto como información en lugar de amenazas a gestionar</li>
+        <li>Compartir el crédito generosamente y distribuir el reconocimiento en todo el equipo</li>
+        <li>Responsabilizar a las personas sin vergüenza — llamar a la reflexión en lugar de señalar con el dedo</li>
+      </ul>
+      <p class="section-body">
+        Este tipo de liderazgo es más difícil cuando estás agotado/a. Tu propia regulación no está separada de tu efectividad como organizador/a — es su base.
+      </p>
+    </section>
+
+    <section class="resources-section">
+      <h2 class="resources-heading">Recursos para Organizadores</h2>
+      <p class="resources-intro">
+        Guías, cuadernos de trabajo y herramientas para apoyar equipos y construir resiliencia colectiva.
+      </p>
+      <div class="resources-grid">
+        {resources.map(resource => (
+          <ResourceCard resource={resource} lang={lang} />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    opacity: 0.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .breadcrumb-link {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-sep {
+    opacity: 0.5;
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--color-sage-light);
+  }
+
+  .page-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    max-width: 70ch;
+    opacity: 0.85;
+  }
+
+  .content-section {
+    margin-bottom: var(--space-xl);
+    max-width: var(--content-width);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-body {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    margin-bottom: var(--space-md);
+  }
+
+  .signs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .signs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sign-card {
+    border-radius: 8px;
+    padding: var(--space-md);
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-sage);
+  }
+
+  .sign-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .sign-body {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+  }
+
+  .practice-list {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .practice-list li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .practices-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .practice-card {
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+  }
+
+  .practice-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .practice-body {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+  }
+
+  .resources-section {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--color-sage-light);
+  }
+
+  .resources-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .resources-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    opacity: 0.75;
+    margin-bottom: var(--space-lg);
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>
