@@ -1,0 +1,370 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import resources from '../../../data/resources.json';
+
+const lang = 'en';
+
+const relatedResources = resources.filter(r =>
+  r.scienceTags.includes('siegel')
+);
+---
+
+<BaseLayout
+  title="Window of Tolerance — The Science — Activist Resiliency"
+  description="Dan Siegel's window of tolerance concept — the optimal arousal zone for activists, how sustained work narrows it, and how practices widen it."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/science">The Science</a> &rsaquo; Window of Tolerance</p>
+      <h1 class="page-title">Window of Tolerance</h1>
+      <p class="page-byline">Concept by Dan Siegel &bull; Applied in trauma-informed and somatic practice</p>
+      <p class="page-intro">
+        The window of tolerance describes the optimal zone of nervous system arousal
+        where a person can function effectively — thinking clearly, feeling fully, and
+        responding with flexibility. Developed by neuropsychiatrist Dan Siegel, this
+        concept has become central to trauma-informed care and resilience practice.
+      </p>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <div class="container">
+
+      <section class="content-section">
+        <h2>What Is the Window of Tolerance?</h2>
+        <p>
+          The window of tolerance is the zone between two extremes of arousal:
+          hyper-arousal (too activated) and hypo-arousal (too shut down). Within
+          the window, the brain's prefrontal cortex — responsible for reasoning,
+          planning, and compassion — stays online. We can hold complexity, regulate
+          our emotions, and engage with others.
+        </p>
+        <p>
+          Outside the window, in either direction, thinking becomes impaired.
+          Reactive patterns take over. The capacity for nuanced judgment narrows.
+          We are operating from older parts of the brain oriented toward survival,
+          not collaboration.
+        </p>
+      </section>
+
+      <section class="content-section diagram-section">
+        <h2>The Window: A Visual Map</h2>
+
+        <div class="tolerance-diagram" aria-label="Window of tolerance diagram showing hyper-arousal zone above, window of tolerance in the middle, and hypo-arousal zone below">
+          <div class="zone zone-hyper">
+            <div class="zone-label">HYPER-AROUSAL</div>
+            <div class="zone-description">
+              <strong>Above the window</strong><br/>
+              Anxiety &bull; Rage &bull; Panic &bull; Overwhelm<br/>
+              Racing thoughts &bull; Hypervigilance &bull; Reactivity<br/>
+              Impulsive action &bull; Emotional flooding
+            </div>
+            <div class="zone-arrow zone-arrow-up">&#9650;</div>
+          </div>
+
+          <div class="zone zone-window">
+            <div class="zone-label">WINDOW OF TOLERANCE</div>
+            <div class="zone-description">
+              <strong>Optimal arousal zone</strong><br/>
+              Clear thinking &bull; Flexible response &bull; Empathy<br/>
+              Capacity to be present &bull; Access to values<br/>
+              Emotional regulation &bull; Grounded action
+            </div>
+            <div class="zone-arrows-both">
+              <span class="arrow-label">&#9650; activation</span>
+              <span class="arrow-label">&#9660; settling</span>
+            </div>
+          </div>
+
+          <div class="zone zone-hypo">
+            <div class="zone-label">HYPO-AROUSAL</div>
+            <div class="zone-description">
+              <strong>Below the window</strong><br/>
+              Numbness &bull; Disconnection &bull; Collapse &bull; Hopelessness<br/>
+              Depression &bull; Dissociation &bull; Apathy<br/>
+              Inability to act &bull; Emotional flatness
+            </div>
+            <div class="zone-arrow zone-arrow-down">&#9660;</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>How Activist Work Affects the Window</h2>
+        <p>
+          Activist work involves repeated exposure to material that is genuinely
+          distressing: injustice, suffering, threat, confrontation, loss, and
+          sometimes violence. This is not a sign that activists are fragile — it
+          is a sign that they are human, and that they care.
+        </p>
+        <p>
+          Over time, without adequate recovery and regulation, this repeated exposure
+          narrows the window of tolerance. What might once have been a manageable
+          level of activation — a difficult meeting, an upsetting news story, a
+          setback in organizing — becomes enough to push someone out of their window
+          entirely.
+        </p>
+        <p>
+          A narrowed window looks different for different people:
+        </p>
+        <ul class="effects-list">
+          <li><strong>Hyper:</strong> Hair-trigger anger, inability to disengage from crisis news, all-or-nothing thinking, exhaustion combined with inability to stop, interpersonal conflict.</li>
+          <li><strong>Hypo:</strong> Inability to feel outrage anymore, numbness to suffering, disengagement, depression, difficulty caring about outcomes that once felt urgent.</li>
+          <li><strong>Oscillation:</strong> Many people cycle between the two — periods of frantic activation followed by crashes into shutdown.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>How Practices Widen the Window</h2>
+        <p>
+          The encouraging finding from Siegel's research — and from the broader
+          neuroscience of neuroplasticity — is that the window of tolerance is not
+          fixed. It can be widened through consistent, intentional practice.
+        </p>
+        <p>
+          Practices that build the regulatory capacity to widen the window include:
+        </p>
+        <ul class="practices-list">
+          <li>
+            <strong>Mindfulness and present-moment awareness</strong> — builds the
+            capacity to observe experience without being overwhelmed by it.
+            ("I notice I am angry" rather than "I am nothing but anger.")
+          </li>
+          <li>
+            <strong>Somatic practices</strong> — body-based awareness, yoga, breath
+            work, and movement help complete incomplete stress cycles and build
+            tolerance for physical sensation.
+          </li>
+          <li>
+            <strong>Titration</strong> — gradually approaching distressing material
+            in small amounts, with full support and recovery time, rather than
+            flooding exposure.
+          </li>
+          <li>
+            <strong>Interpersonal co-regulation</strong> — spending time with
+            people whose nervous systems are regulated helps our own systems settle.
+            Social connection is a primary regulator, not a luxury.
+          </li>
+          <li>
+            <strong>Adequate sleep and physical recovery</strong> — the window
+            narrows dramatically with sleep deprivation. This is not weakness;
+            it is neurobiology.
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Siegel's Wheel of Awareness</h2>
+        <p>
+          Dan Siegel developed a complementary practice called the Wheel of Awareness —
+          a guided meditation that trains the capacity to distinguish between the
+          observer (the "hub" of the wheel) and what is being observed (the "rim").
+          Regular practice builds integration: the capacity to hold multiple experiences
+          simultaneously without collapsing into any single one.
+        </p>
+        <p>
+          This integration is central to resilient activist work. It is what allows
+          someone to witness suffering without being consumed by it, to experience
+          anger without being controlled by it, and to stay present in difficult
+          conversations without shutting down.
+        </p>
+      </section>
+
+      <section class="content-section resources-section">
+        <h2>Related Resources</h2>
+        <p class="resources-intro">
+          The following resources draw on Dan Siegel's window of tolerance framework
+          and related approaches to regulation and integration.
+        </p>
+        <div class="resources-grid">
+          {relatedResources.map(resource => (
+            <ResourceCard resource={resource} lang={lang} />
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+    border-bottom: 1px solid var(--color-sage-light);
+  }
+
+  .breadcrumb {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-byline {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .content-article {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .content-section {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-xl);
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  /* Diagram */
+  .diagram-section {
+    max-width: 540px;
+  }
+
+  .tolerance-diagram {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--color-sage-light);
+    margin-top: var(--space-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .zone {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .zone-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .zone-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--color-charcoal);
+  }
+
+  .zone-hyper {
+    background-color: #fdf0ec;
+    border-bottom: 2px dashed var(--color-clay);
+  }
+
+  .zone-hyper .zone-label {
+    color: var(--color-clay);
+  }
+
+  .zone-window {
+    background-color: #eef4ec;
+    border-bottom: 2px dashed var(--color-sage);
+  }
+
+  .zone-window .zone-label {
+    color: var(--color-sage);
+    font-size: 0.8rem;
+  }
+
+  .zone-hypo {
+    background-color: #f0eef5;
+  }
+
+  .zone-hypo .zone-label {
+    color: #7a6a9a;
+  }
+
+  .zone-arrow {
+    font-size: 1.2rem;
+    opacity: 0.5;
+  }
+
+  .zone-arrows-both {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.7rem;
+    color: var(--color-charcoal-light);
+  }
+
+  .effects-list,
+  .practices-list {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-sm) 0;
+  }
+
+  .effects-list li,
+  .practices-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+  }
+
+  .resources-section {
+    max-width: none;
+  }
+
+  .resources-section h2 {
+    max-width: var(--content-width);
+  }
+
+  .resources-intro {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-md) !important;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

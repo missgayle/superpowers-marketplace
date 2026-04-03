@@ -1,0 +1,354 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import resources from '../../../data/resources.json';
+
+const lang = 'es';
+
+const relatedResources = resources.filter(r =>
+  r.scienceTags.some(tag => ['porges', 'levine', 'somatic'].includes(tag))
+);
+---
+
+<BaseLayout
+  title="Teoría Polivagal — La Ciencia — Resiliencia Activista"
+  description="Cómo la teoría polivagal de Stephen Porges explica el sistema nervioso autónomo, la seguridad y por qué los activistas experimentan abrumamiento, apagado y conexión."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="/es/science">La Ciencia</a> &rsaquo; Teoría Polivagal</p>
+      <h1 class="page-title">Teoría Polivagal</h1>
+      <p class="page-byline">Investigación de Stephen Porges &bull; Trabajo relacionado: Peter Levine, Bessel van der Kolk</p>
+      <p class="page-intro">
+        Desarrollada por el neurocientífico Stephen Porges, la teoría polivagal ofrece
+        un mapa revolucionario de cómo el sistema nervioso autónomo responde a la
+        seguridad, el peligro y la amenaza vital — y por qué la conexión social es
+        nuestro recurso biológico más fundamental para la regulación.
+      </p>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <div class="container">
+
+      <section class="content-section">
+        <h2>Las Tres Ramas del Sistema Nervioso Autónomo</h2>
+        <p>
+          La neurociencia clásica describía dos modos: simpático (lucha o huida)
+          y parasimpático (descanso y digestión). Porges identificó una tercera rama,
+          evolutivamente más antigua del nervio vago — y demostró que las tres forman
+          una jerarquía a través de la cual el sistema nervioso se mueve en una secuencia
+          predecible.
+        </p>
+
+        <div class="three-states">
+          <div class="state-card state-ventral">
+            <h3 class="state-name">Vago Ventral</h3>
+            <p class="state-subtitle">Sistema de Compromiso Social</p>
+            <p class="state-keywords">Seguridad &bull; Conexión &bull; Regulación</p>
+            <p>
+              La rama evolutivamente más nueva del nervio vago. Cuando se activa,
+              nos sentimos seguros, curiosos y capaces de conectar. Nuestro rostro
+              es expresivo, nuestra voz es cálida, podemos escuchar. Este es el estado
+              donde el aprendizaje, la creatividad y la colaboración son posibles.
+            </p>
+            <p>
+              Para los activistas: presencia fundamentada, pensamiento claro, capacidad
+              de sostener la complejidad y conexión genuina con otros en el movimiento.
+            </p>
+          </div>
+
+          <div class="state-card state-sympathetic">
+            <h3 class="state-name">Simpático</h3>
+            <p class="state-subtitle">Lucha / Huida / Movilización</p>
+            <p class="state-keywords">Peligro &bull; Activación &bull; Acción</p>
+            <p>
+              Cuando el sistema nervioso percibe una amenaza, moviliza energía para
+              la acción. La frecuencia cardíaca aumenta, la atención se estrecha,
+              la digestión se ralentiza. Esto es adaptativo ante el peligro agudo —
+              pero cuando se activa crónicamente sin resolución, agota el sistema.
+            </p>
+            <p>
+              Para los activistas: urgencia, ansiedad, ira, hipervigilancia, dificultad
+              para dormir, pensamientos acelerados, toma de decisiones reactiva,
+              conflicto interpersonal dentro de los equipos.
+            </p>
+          </div>
+
+          <div class="state-card state-dorsal">
+            <h3 class="state-name">Vago Dorsal</h3>
+            <p class="state-subtitle">Congelamiento / Colapso / Apagado</p>
+            <p class="state-keywords">Amenaza Vital &bull; Inmovilización &bull; Entumecimiento</p>
+            <p>
+              La rama evolutivamente más antigua — una respuesta de supervivencia de
+              último recurso cuando la lucha y la huida han fallado. El sistema se apaga
+              para conservar energía. Nos sentimos entumecidos, desconectados, sin
+              esperanza e incapaces de actuar.
+            </p>
+            <p>
+              Para los activistas: insensibilidad ante la injusticia, apatía, incapacidad
+              para organizarse, disociación, depresión, abandono de los movimientos,
+              cinismo como defensa contra el sentir.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Cómo Se Relaciona con el Marco de Resiliencia Moral</h2>
+        <p>
+          El marco de Resiliencia Moral que subyace a este sitio se relaciona
+          directamente con la teoría polivagal:
+        </p>
+        <ul class="mapping-list">
+          <li>
+            <strong>Vago ventral = el Camino Resiliente.</strong> Integración,
+            regulación y respuesta flexible. La capacidad de ser movido por la
+            injusticia sin ser arrasado — de actuar desde la empatía en lugar
+            de la reactividad.
+          </li>
+          <li>
+            <strong>Activación simpática = el Camino Reactivo.</strong>
+            Angustia empática, agotamiento por sobreactivación, urgencia que
+            anula el juicio y fricción interpersonal por emoción no regulada.
+          </li>
+          <li>
+            <strong>Vago dorsal = el Camino de la Retirada.</strong> Fatiga por
+            compasión, entumecimiento, desconexión, desvinculación moral —
+            el lugar donde el cuidado ha sido congelado para protegerse del
+            abrumamiento.
+          </li>
+        </ul>
+        <p>
+          El objetivo no es eliminar las respuestas simpáticas o dorsales — son
+          adaptaciones de supervivencia. El objetivo es ampliar la capacidad de
+          regresar al vago ventral: desarrollar lo que Porges llama "neurocepción"
+          — la capacidad de percibir con precisión la seguridad — y fortalecer
+          los caminos de regreso a la conexión y la regulación.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Neurocepción: El Radar del Cuerpo para la Seguridad</h2>
+        <p>
+          Porges acuñó el término <em>neurocepción</em> para describir el escaneo
+          continuo y por debajo de la conciencia que hace el sistema nervioso del
+          entorno en busca de señales de seguridad o amenaza. Esto ocurre más rápido
+          que el pensamiento — por eso nuestros cuerpos pueden responder al peligro
+          percibido antes de que seamos conscientes de él.
+        </p>
+        <p>
+          Las señales de seguridad (el sonido de una voz cálida, un rostro relajado,
+          quietud física, olores familiares) activan las vías del vago ventral. Las
+          señales de amenaza (conflicto, ruido fuerte, expresiones faciales de
+          desprecio, constricción física) activan respuestas simpáticas o dorsales.
+        </p>
+        <p>
+          Para los activistas, cuyos entornos a menudo están saturados de señales
+          de amenaza — espacios de confrontación, autoridad hostil, medios que
+          amplifican el daño — el sistema nervioso puede quedarse atascado en alerta
+          alta. Las prácticas que introducen deliberadamente señales de seguridad
+          (respiración lenta, conexión, enraizamiento, movimiento) ayudan a restaurar
+          la capacidad reguladora.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>El Freno Vagal y Por Qué Funcionan las Prácticas</h2>
+        <p>
+          El sistema vago ventral actúa como un "freno vagal" que modula la activación
+          simpática. Cuando el tono vagal es fuerte, podemos tolerar niveles más altos
+          de activación sin caer en la desregulación. Podemos estar en una reunión
+          acalorada sin perdernos a nosotros mismos. Podemos sostener a alguien en
+          crisis sin absorber su angustia.
+        </p>
+        <p>
+          La investigación muestra que el tono vagal no es fijo. Es entrenable. Prácticas
+          como la respiración diafragmática lenta, el tarareo, el canto, la exposición
+          al agua fría y la conexión cara a cara aumentan el tono vagal. Por eso las
+          prácticas en la sección Construir Resiliencia no son meramente estrategias
+          de autocuidado — tienen efectos medibles en la regulación del sistema nervioso.
+        </p>
+      </section>
+
+      <section class="content-section resources-section">
+        <h2>Recursos Relacionados</h2>
+        <p class="resources-intro">
+          Los siguientes recursos se basan en la teoría polivagal, los enfoques
+          somáticos del trauma (Peter Levine) y las prácticas de resiliencia
+          basadas en el cuerpo.
+        </p>
+        <div class="resources-grid">
+          {relatedResources.map(resource => (
+            <ResourceCard resource={resource} lang={lang} />
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+    border-bottom: 1px solid var(--color-sage-light);
+  }
+
+  .breadcrumb {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-byline {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .content-article {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .content-section {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-xl);
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .three-states {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .state-card {
+    border-radius: 10px;
+    padding: var(--space-md);
+    border-left: 5px solid transparent;
+  }
+
+  .state-card p {
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    margin-bottom: var(--space-xs);
+  }
+
+  .state-ventral {
+    background-color: #eef4ec;
+    border-left-color: var(--color-sage);
+  }
+
+  .state-sympathetic {
+    background-color: #fdf0ec;
+    border-left-color: var(--color-clay);
+  }
+
+  .state-dorsal {
+    background-color: #f0eef5;
+    border-left-color: #7a6a9a;
+  }
+
+  .state-name {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: 0.2rem;
+  }
+
+  .state-subtitle {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-charcoal-light);
+    margin-bottom: 0.25rem;
+  }
+
+  .state-keywords {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .mapping-list {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-sm) 0;
+  }
+
+  .mapping-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+  }
+
+  .resources-section {
+    max-width: none;
+  }
+
+  .resources-section h2 {
+    max-width: var(--content-width);
+  }
+
+  .resources-intro {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-md) !important;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>
