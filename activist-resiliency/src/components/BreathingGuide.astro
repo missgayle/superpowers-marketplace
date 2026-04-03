@@ -1,0 +1,185 @@
+---
+// BreathingGuide.astro
+// Pure CSS breathing animation: 4s inhale, 4s hold, 6s exhale = 14s total cycle
+---
+
+<div class="breathing-guide" aria-label="Breathing guide: follow the circle">
+  <div class="breathing-container">
+    <div class="circle-outer">
+      <div class="circle"></div>
+    </div>
+    <div class="breathing-text" aria-live="polite">
+      <span class="text-inhale">Breathe in...</span>
+      <span class="text-hold">Hold...</span>
+      <span class="text-exhale">Breathe out...</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .breathing-guide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-xl) var(--space-lg);
+    background-color: var(--color-cream);
+  }
+
+  .breathing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+  }
+
+  /* Outer ring gives a subtle halo effect */
+  .circle-outer {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ring-pulse 14s ease-in-out infinite;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle at 38% 38%,
+      var(--color-sage-light),
+      var(--color-sage)
+    );
+    animation: breathe 14s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  /*
+   * Breathing cycle — 14s total:
+   *   0%   →  28.57%  = 4s inhale   (scale up)
+   *   28.57% → 57.14% = 4s hold     (stay large)
+   *   57.14% → 100%   = 6s exhale   (scale down)
+   *
+   * Percentages: 4/14 = 28.571%, 8/14 = 57.143%
+   */
+  @keyframes breathe {
+    0% {
+      transform: scale(0.55);
+      opacity: 0.7;
+    }
+    28.571% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    57.143% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.55);
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes ring-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(124, 154, 110, 0.15);
+    }
+    28.571% {
+      box-shadow: 0 0 0 20px rgba(124, 154, 110, 0.08);
+    }
+    57.143% {
+      box-shadow: 0 0 0 20px rgba(124, 154, 110, 0.08);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(124, 154, 110, 0.15);
+    }
+  }
+
+  /* ---- Text labels ---- */
+
+  .breathing-text {
+    position: relative;
+    height: 2rem;
+    width: 180px;
+    text-align: center;
+  }
+
+  .breathing-text span {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--color-sage);
+    opacity: 0;
+    letter-spacing: 0.02em;
+  }
+
+  /*
+   * Text timing (14s cycle):
+   *   "Breathe in..." visible during inhale  0s – 4s
+   *   "Hold..."       visible during hold    4s – 8s
+   *   "Breathe out…"  visible during exhale  8s – 14s
+   *
+   * We fade in/out at cycle boundaries with a short 0.4s crossfade.
+   * Percentages based on 14s:
+   *   2.86% = 0.4s, 25.71% = 3.6s (near end of inhale = 4s - 0.4s)
+   *   28.57% = 4s,  54.29% = 7.6s, 57.14% = 8s
+   *   60.00% = 8.4s, 97.14% = 13.6s
+   */
+
+  @keyframes text-inhale {
+    0%        { opacity: 0; }
+    2.857%    { opacity: 1; }   /* fade in at 0.4s */
+    25.714%   { opacity: 1; }   /* hold until 3.6s */
+    28.571%   { opacity: 0; }   /* fade out at 4s */
+    100%      { opacity: 0; }
+  }
+
+  @keyframes text-hold {
+    0%        { opacity: 0; }
+    28.571%   { opacity: 0; }
+    31.429%   { opacity: 1; }   /* fade in at 4.4s */
+    54.286%   { opacity: 1; }   /* hold until 7.6s */
+    57.143%   { opacity: 0; }   /* fade out at 8s */
+    100%      { opacity: 0; }
+  }
+
+  @keyframes text-exhale {
+    0%        { opacity: 0; }
+    57.143%   { opacity: 0; }
+    60.000%   { opacity: 1; }   /* fade in at 8.4s */
+    97.143%   { opacity: 1; }   /* hold until 13.6s */
+    100%      { opacity: 0; }   /* fade out at 14s */
+  }
+
+  .text-inhale {
+    animation: text-inhale 14s ease-in-out infinite;
+  }
+
+  .text-hold {
+    animation: text-hold 14s ease-in-out infinite;
+  }
+
+  .text-exhale {
+    animation: text-exhale 14s ease-in-out infinite;
+  }
+
+  /* Reduced motion: keep text cycling but skip the circle animation */
+  @media (prefers-reduced-motion: reduce) {
+    .circle,
+    .circle-outer {
+      animation: none;
+    }
+
+    .circle {
+      transform: scale(0.8);
+      opacity: 0.85;
+    }
+  }
+</style>
