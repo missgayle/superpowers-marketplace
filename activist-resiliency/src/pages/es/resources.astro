@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ResourceBrowser from '../../components/ResourceBrowser.astro';
+import resources from '../../data/resources.json';
+
+const lang = 'es';
+---
+
+<BaseLayout
+  title="Recursos — Resiliencia del Activismo"
+  description="Una biblioteca curada de herramientas, guías y medios para la resiliencia del activismo — organizada por formato, etapa y audiencia."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Recursos</h1>
+      <p class="page-intro">
+        Una colección curada de libros, pódcasts, videos y kits de herramientas
+        para apoyar la resiliencia del activismo — fundamentada en la neurociencia,
+        la práctica somática y la sabiduría colectiva. Filtra por formato, etapa
+        de necesidad o audiencia.
+      </p>
+    </div>
+  </div>
+
+  <section class="browser-section">
+    <div class="container">
+      <ResourceBrowser resources={resources} lang={lang} />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .browser-section {
+    padding-bottom: var(--space-2xl);
+  }
+</style>
