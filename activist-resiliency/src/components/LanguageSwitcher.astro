@@ -1,0 +1,46 @@
+---
+const currentPath = Astro.url.pathname;
+const isSpanish = currentPath.startsWith('/es');
+const currentLang = isSpanish ? 'es' : 'en';
+const otherLang = isSpanish ? 'en' : 'es';
+
+// Swap /en <-> /es in the path
+let otherPath: string;
+if (isSpanish) {
+  otherPath = currentPath.replace(/^\/es/, '/en');
+} else {
+  otherPath = currentPath.replace(/^\/en/, '/es');
+}
+
+const t = await import(`../i18n/${currentLang}.json`).then(m => m.default);
+const otherLabel = t.lang[otherLang];
+const switchLabel = t.lang.switch;
+---
+
+<a
+  href={otherPath}
+  class="lang-switcher"
+  aria-label={switchLabel}
+  title={switchLabel}
+>
+  {otherLabel}
+</a>
+
+<style>
+  .lang-switcher {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    border: 1px solid var(--color-charcoal-light);
+    border-radius: 4px;
+    padding: 0.25rem 0.625rem;
+    text-decoration: none;
+    line-height: 1.4;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .lang-switcher:hover {
+    color: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+  }
+</style>

@@ -1,0 +1,128 @@
+---
+import '../styles/global.css';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: string;
+}
+
+const { title, description, lang = 'en' } = Astro.props;
+const t = await import(`../i18n/${lang}.json`).then(m => m.default);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href={`/${lang}`} class="site-logo">{t.site.title}</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href={`/${lang}/crisis`} class="nav-link nav-crisis">{t.nav.crisis}</a>
+          <a href={`/${lang}/resilience`} class="nav-link">{t.nav.resilience}</a>
+          <a href={`/${lang}/framework`} class="nav-link">{t.nav.framework}</a>
+          <a href={`/${lang}/resources`} class="nav-link">{t.nav.resources}</a>
+          <a href={`/${lang}/science`} class="nav-link">{t.nav.science}</a>
+        </nav>
+        <LanguageSwitcher />
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>{t.footer.framework_credit}</p>
+        <p>{t.footer.adapted_from}</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-sage-light);
+    padding: var(--space-sm) 0;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .site-logo {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-sage);
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .site-logo:hover {
+    color: var(--color-sage);
+    opacity: 0.85;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  .nav-link {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-link:hover {
+    color: var(--color-clay);
+  }
+
+  .nav-crisis {
+    color: var(--color-clay);
+    font-weight: 600;
+  }
+
+  .nav-crisis:hover {
+    color: var(--color-clay);
+    opacity: 0.85;
+  }
+
+  .site-footer {
+    background-color: var(--color-charcoal);
+    color: var(--color-cream);
+    padding: var(--space-lg) 0;
+    margin-top: var(--space-2xl);
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    opacity: 0.85;
+  }
+</style>
