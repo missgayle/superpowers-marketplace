@@ -1,0 +1,514 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'en';
+---
+
+<BaseLayout
+  title="Working Framework for Moral Resiliency — Activist Resiliency"
+  description="An overview of the Working Framework for Moral Resiliency: the two paths that activists travel — Resilient or Reactive — and what shapes which direction we go."
+  lang={lang}
+>
+  <div class="page-container">
+    <header class="page-header">
+      <h1 class="page-heading">Working Framework for Moral Resiliency</h1>
+      <p class="page-intro">
+        Activists carry something most people never have to hold: the moral weight of injustice, day after day, often with little institutional support. This framework maps the two paths that weight can lead us down — and points toward what makes the difference.
+      </p>
+    </header>
+
+    <section class="intro-section">
+      <div class="intro-inner">
+        <h2 class="section-heading">What This Framework Is</h2>
+        <p class="section-body">
+          The Working Framework for Moral Resiliency was developed by Gayle Karen Young, drawing on decades of research in moral psychology, neuroscience, and contemplative practice. It synthesizes the work of scholars including N. Eisenberg (on prosocial behavior and empathy), D. Batson (on altruism and moral motivation), J. Halifax (on compassion and edge states), and C. Rushton (on moral resilience in caregiving contexts).
+        </p>
+        <p class="section-body">
+          The framework identifies two trajectories — the <strong>Resilient Path</strong> and the <strong>Reactive Path</strong> — that emerge from the same starting conditions. Both paths begin with who we are: our personal attributes, our history, our current resources. What diverges is what happens next: whether we move toward regulation and integration, or toward dysregulation. And from there, the behaviors we enact, and ultimately the outcomes — for ourselves and for our movements.
+        </p>
+        <p class="section-body">
+          This is not a framework of judgment. The Reactive Path is not weakness — it is what happens to caring people under sustained pressure without adequate support. Understanding it is the first step toward finding another way.
+        </p>
+      </div>
+    </section>
+
+    <section class="diagram-section">
+      <h2 class="section-heading">The Two-Path Diagram</h2>
+      <p class="section-body diagram-intro">
+        Both paths begin with the same person. The difference lies in what resources we have — internal and external — and whether we move toward regulation or away from it.
+      </p>
+
+      <div class="diagram" aria-label="Two-path diagram of the Working Framework for Moral Resiliency">
+
+        <!-- Resilient Path -->
+        <div class="path path-resilient">
+          <div class="path-label">
+            <span class="path-badge badge-resilient">Resilient Path</span>
+          </div>
+
+          <div class="path-flow">
+            <div class="flow-stage">
+              <div class="stage-card card-resilient">
+                <h3 class="stage-title">Personal Attributes</h3>
+                <ul class="stage-list">
+                  <li>Perspective Taking <span class="level high">high</span></li>
+                  <li>Moral Sensitivity <span class="level high">high</span></li>
+                  <li>Resourced</li>
+                  <li>Capacity for Complexity</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">+</div>
+
+            <div class="flow-stage">
+              <div class="stage-card card-resilient">
+                <h3 class="stage-title">Regulation &amp; Integration</h3>
+                <ul class="stage-list">
+                  <li>Practices</li>
+                  <li>Ritual</li>
+                  <li>Community</li>
+                  <li>Creative Acts</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+
+            <div class="flow-stage">
+              <div class="stage-card card-resilient">
+                <h3 class="stage-title">Behaviors (Other-Focused)</h3>
+                <ul class="stage-list">
+                  <li>Empathy-related responses</li>
+                  <li>Generative sensemaking &amp; co-sensing</li>
+                  <li>Appropriate help &amp; call to action</li>
+                  <li>Moral imagination</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+
+            <div class="flow-stage outcomes-pair">
+              <div class="stage-card card-resilient card-outcome">
+                <h3 class="stage-title">Personal / Inner</h3>
+                <ul class="stage-list">
+                  <li>Resilience</li>
+                  <li>Principled compassionate action</li>
+                  <li>Integrity</li>
+                  <li>Collective capability</li>
+                  <li>Discernment</li>
+                </ul>
+              </div>
+              <div class="stage-card card-resilient card-outcome">
+                <h3 class="stage-title">Collective / Outer</h3>
+                <ul class="stage-list">
+                  <li>Invitational leadership</li>
+                  <li>Collaboration</li>
+                  <li>Effective coalition building</li>
+                  <li>Coherence</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-divider" aria-hidden="true"></div>
+
+        <!-- Reactive Path -->
+        <div class="path path-reactive">
+          <div class="path-label">
+            <span class="path-badge badge-reactive">Reactive Path</span>
+          </div>
+
+          <div class="path-flow">
+            <div class="flow-stage">
+              <div class="stage-card card-reactive">
+                <h3 class="stage-title">Personal Attributes</h3>
+                <ul class="stage-list">
+                  <li>Perspective Taking <span class="level low">low</span></li>
+                  <li>Moral Sensitivity <span class="level low">low</span></li>
+                  <li>Under Resourced</li>
+                  <li>Complexity Avoidant</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">+</div>
+
+            <div class="flow-stage">
+              <div class="stage-card card-reactive">
+                <h3 class="stage-title">Dysregulation</h3>
+                <ul class="stage-list">
+                  <li>Empathic Distress</li>
+                  <li>Over-arousal</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+
+            <div class="flow-stage">
+              <div class="stage-card card-reactive">
+                <h3 class="stage-title">Behaviors (Self-Focused)</h3>
+                <ul class="stage-list">
+                  <li>Avoidance</li>
+                  <li>Numbness</li>
+                  <li>Abandonment &amp; Isolation</li>
+                  <li>Unregulated Moral Outrage</li>
+                  <li>Hopelessness</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+
+            <div class="flow-stage outcomes-pair">
+              <div class="stage-card card-reactive card-outcome">
+                <h3 class="stage-title">Personal (Self-Focused)</h3>
+                <ul class="stage-list">
+                  <li>Burnout</li>
+                  <li>Unregulated action</li>
+                  <li>Acute secondary stress</li>
+                </ul>
+              </div>
+              <div class="stage-card card-reactive card-outcome">
+                <h3 class="stage-title">Collective</h3>
+                <ul class="stage-list">
+                  <li>Ineffective leadership</li>
+                  <li>Burn others out</li>
+                  <li>Silos</li>
+                  <li>Blaming</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end diagram -->
+    </section>
+
+    <section class="paths-intro-section">
+      <h2 class="section-heading">Explore Each Path</h2>
+      <p class="section-body">
+        The diagram above is a map — but maps only become useful when you walk the territory. The pages below explore each path in depth: what each stage means in practice, what the science tells us, and what it looks like to move from one path toward the other.
+      </p>
+      <div class="paths-cards">
+        <a href="/en/framework/resilient-path" class="path-explore-card card-explore-resilient">
+          <h3 class="explore-title">The Resilient Path</h3>
+          <p class="explore-desc">
+            Understand how high perspective-taking, moral sensitivity, and regulation practices build the capacity for other-focused behavior and lasting impact. Explore what it means to act from a ventral vagal state — within your window of tolerance.
+          </p>
+          <span class="explore-link">Explore the Resilient Path &rarr;</span>
+        </a>
+
+        <a href="/en/framework/reactive-path" class="path-explore-card card-explore-reactive">
+          <h3 class="explore-title">The Reactive Path</h3>
+          <p class="explore-desc">
+            Understand — with compassion, not judgment — how dysregulation, empathic distress, and depleted resources lead toward burnout, isolation, and fragmented movements. And how the path back to resilience is always available.
+          </p>
+          <span class="explore-link">Explore the Reactive Path &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="credits-section">
+      <p class="credits-text">
+        <em>Working Framework for Moral Resiliency by Gayle Karen Young, adapted from N. Eisenberg, D. Batson, J. Halifax, C. Rushton. Updated 8.10.25.</em>
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--color-sage-light);
+    max-width: 780px;
+  }
+
+  .page-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    max-width: 70ch;
+    opacity: 0.85;
+  }
+
+  .intro-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .intro-inner {
+    max-width: var(--content-width);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-body {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    margin-bottom: var(--space-md);
+  }
+
+  /* ---- Diagram ---- */
+
+  .diagram-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .diagram-intro {
+    max-width: 65ch;
+  }
+
+  .diagram {
+    background: var(--color-white);
+    border: 1px solid var(--color-sage-light);
+    border-radius: 16px;
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
+    overflow-x: auto;
+  }
+
+  .path {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+  }
+
+  .path-label {
+    flex-shrink: 0;
+    width: 8rem;
+    padding-top: 0.75rem;
+  }
+
+  .path-badge {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+
+  .badge-resilient {
+    background-color: var(--color-sage);
+    color: var(--color-white);
+  }
+
+  .badge-reactive {
+    background-color: var(--color-clay);
+    color: var(--color-white);
+  }
+
+  .path-flow {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .flow-stage {
+    flex-shrink: 0;
+  }
+
+  .outcomes-pair {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .flow-arrow {
+    color: var(--color-charcoal-light);
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-top: 0.6rem;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .stage-card {
+    border-radius: 8px;
+    padding: var(--space-sm) var(--space-md);
+    min-width: 160px;
+    max-width: 200px;
+  }
+
+  .card-resilient {
+    background-color: #EEF4EC;
+    border-left: 4px solid var(--color-sage);
+  }
+
+  .card-reactive {
+    background-color: #F8EDE9;
+    border-left: 4px solid var(--color-clay);
+  }
+
+  .card-outcome {
+    max-width: 190px;
+  }
+
+  .stage-title {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .stage-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stage-list li {
+    font-size: 0.8rem;
+    color: var(--color-charcoal);
+    line-height: 1.5;
+    padding: 0.1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  .level {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.1rem 0.35rem;
+    border-radius: 999px;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+
+  .level.high {
+    background-color: var(--color-sage);
+    color: white;
+  }
+
+  .level.low {
+    background-color: var(--color-clay);
+    color: white;
+  }
+
+  .path-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-light), transparent);
+    margin: var(--space-sm) 0;
+  }
+
+  /* ---- Explore Cards ---- */
+
+  .paths-intro-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .paths-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .paths-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .path-explore-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .path-explore-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+  }
+
+  .card-explore-resilient {
+    background: linear-gradient(135deg, #EEF4EC, #C8DAC4);
+    color: var(--color-charcoal);
+  }
+
+  .card-explore-reactive {
+    background: linear-gradient(135deg, #F8EDE9, #E3C0B4);
+    color: var(--color-charcoal);
+  }
+
+  .explore-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.3;
+  }
+
+  .explore-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    opacity: 0.9;
+    flex: 1;
+  }
+
+  .explore-link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-charcoal);
+    opacity: 0.8;
+    display: block;
+    margin-top: var(--space-sm);
+  }
+
+  /* ---- Credits ---- */
+
+  .credits-section {
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-sage-light);
+    max-width: 72ch;
+  }
+
+  .credits-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    opacity: 0.65;
+    line-height: 1.6;
+  }
+</style>

@@ -1,0 +1,339 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import allResources from '../../../data/resources.json';
+
+const lang = 'en';
+
+// Filter: audience includes "organizer" OR scienceTags includes "collective"
+const resources = allResources.filter(r =>
+  r.audience.includes('organizer') ||
+  r.scienceTags.includes('collective')
+);
+---
+
+<BaseLayout
+  title="Resilience for Organizers — Activist Resiliency"
+  description="Supporting your team's wellbeing and building collective resilience as an organizer or movement leader."
+  lang={lang}
+>
+  <div class="page-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/en/resilience" class="breadcrumb-link">Build Resilience</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="breadcrumb-current">For Organizers</span>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-heading">Resilience for Organizers</h1>
+      <p class="page-intro">
+        Organizers hold a particular kind of weight: the responsibility not just for their own wellbeing, but for the people they work with. This page is for those who are leading teams, coordinating campaigns, and trying to keep people engaged, healthy, and effective over the long haul.
+      </p>
+    </header>
+
+    <section class="content-section">
+      <h2 class="section-heading">Recognizing the Reactive Path in Your Team</h2>
+      <p class="section-body">
+        The Moral Resiliency framework describes a <em>Reactive Path</em> that individuals — and teams — can slide down under chronic stress. As an organizer, learning to recognize these signs in others (and in yourself) is one of the most valuable skills you can develop.
+      </p>
+
+      <div class="signs-grid">
+        <div class="sign-card sign-numbness">
+          <h3 class="sign-title">Numbness and Withdrawal</h3>
+          <p class="sign-body">
+            Team members who were once passionate becoming flat, disengaged, or going through the motions. Reduced participation in meetings, declining to take on tasks they once sought out, or seeming emotionally unavailable. This is often the body's way of protecting itself from overwhelm — a sign that someone's capacity has been exceeded.
+          </p>
+        </div>
+
+        <div class="sign-card sign-avoidance">
+          <h3 class="sign-title">Avoidance</h3>
+          <p class="sign-body">
+            Missing meetings, delayed responses, leaving tasks unfinished, or finding reasons not to engage with the hardest parts of the work. Avoidance often looks like laziness or irresponsibility from the outside, but frequently signals that someone is protecting themselves from material that has become too activating to process.
+          </p>
+        </div>
+
+        <div class="sign-card sign-outrage">
+          <h3 class="sign-title">Moral Outrage That Isolates</h3>
+          <p class="sign-body">
+            Outrage at injustice can be a source of energy and clarity — but when it becomes chronic and totalizing, it can isolate people within the movement and outside it. Watch for team members who have become increasingly difficult to reach, who respond to difference with contempt rather than curiosity, or who have lost the ability to work with anyone they perceive as insufficiently committed.
+          </p>
+        </div>
+
+        <div class="sign-card sign-isolation">
+          <h3 class="sign-title">Isolation and Disconnection</h3>
+          <p class="sign-body">
+            People pulling away from the community that sustains them — canceling plans, declining support, insisting they are fine when they're clearly not. Isolation can accelerate burnout rapidly, because it removes the very relational support that helps the nervous system regulate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Creating Space for Regulation Within Teams</h2>
+      <p class="section-body">
+        Teams regulate together, not just individually. Research on co-regulation shows that nervous systems respond to the state of the people around them — which means that a calm, grounded presence in a meeting room, or the simple practice of checking in before diving into content, can shift the collective state of your team.
+      </p>
+      <p class="section-body">
+        Some practical ways to build regulation into team culture:
+      </p>
+      <ul class="practice-list">
+        <li><strong>Start meetings with a brief check-in.</strong> Even a single word or a 0–10 number that reflects how someone is arriving creates a moment of acknowledgment and connection before the work begins.</li>
+        <li><strong>Build in transition time.</strong> Moving from one intense meeting to another without pause accumulates stress. A five-minute break between meetings, with permission to step outside or breathe, matters more than it sounds.</li>
+        <li><strong>Normalize saying "I need a break."</strong> Create explicit permission for team members to step back from a meeting, a task, or a period of work without it being a failure or a source of shame.</li>
+        <li><strong>Acknowledge the hard stuff directly.</strong> When something difficult happens — a defeat, a violent incident, a loss — name it explicitly in team space before moving to logistics. Bypassing grief to get to action planning leaves people carrying weight that slows them down later.</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Collective Practices</h2>
+      <p class="section-body">
+        Individual self-care is necessary but insufficient for sustaining movement work. Teams and communities need shared practices that build collective resilience — ways of being together that replenish rather than deplete.
+      </p>
+
+      <div class="practices-grid">
+        <div class="practice-card">
+          <h3 class="practice-title">Group Check-ins</h3>
+          <p class="practice-body">
+            Regular structured check-ins — whether daily standups, weekly team meetings, or monthly longer sessions — create predictable rhythms of connection. Structured formats (like a brief personal share + what you're bringing to the work this week) reduce the labor of disclosure while still building genuine knowing of one another.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Shared Rituals</h3>
+          <p class="practice-body">
+            Rituals mark time, acknowledge difficulty, and create a sense of collective meaning. Celebrating wins — even small ones — matters for morale. Acknowledging losses and setbacks in a container (rather than pretending they didn't happen) builds trust and cohesion. End-of-year reflections, milestone ceremonies, and even regular shared meals create the cultural fabric that holds teams together through hard periods.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Community Care</h3>
+          <p class="practice-body">
+            Mutual aid within teams — checking in on someone who's been quiet, bringing food when someone is overwhelmed, offering practical help during a crisis — is both an ethical practice and a resilience strategy. Teams where members experience genuine care for one another sustain commitment longer than those where people feel like interchangeable parts.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Peer Reflection Pairs</h3>
+          <p class="practice-body">
+            Pairing team members to check in with each other monthly — not about tasks, but about how they're doing — distributes the care labor that otherwise falls entirely on one designated leader. These peer relationships also create more honest feedback loops, since people often share things with a peer that they wouldn't raise with a supervisor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">From Reactive to Resilient Leadership</h2>
+      <p class="section-body">
+        The Moral Resiliency framework contrasts <em>invitational leadership</em> — characterized by curiosity, collaboration, and shared power — with ineffective leadership patterns that emerge from reactive states: command-and-control responses, blame when things go wrong, inability to tolerate disagreement, or demands for loyalty that suppress honest communication.
+      </p>
+      <p class="section-body">
+        Invitational leadership looks like:
+      </p>
+      <ul class="practice-list">
+        <li>Asking questions before making decisions, especially when under pressure</li>
+        <li>Naming your own uncertainty and limits as a model for others to do the same</li>
+        <li>Inviting dissent and conflict as information rather than threats to be managed</li>
+        <li>Sharing credit generously and distributing recognition across the team</li>
+        <li>Holding people accountable without shame — calling in rather than calling out</li>
+      </ul>
+      <p class="section-body">
+        This kind of leadership is harder when you are depleted. Your own regulation is not separate from your effectiveness as an organizer — it is foundational to it.
+      </p>
+    </section>
+
+    <section class="resources-section">
+      <h2 class="resources-heading">Resources for Organizers</h2>
+      <p class="resources-intro">
+        Guides, workbooks, and tools for supporting teams and building collective resilience.
+      </p>
+      <div class="resources-grid">
+        {resources.map(resource => (
+          <ResourceCard resource={resource} lang={lang} />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    opacity: 0.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .breadcrumb-link {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-sep {
+    opacity: 0.5;
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--color-sage-light);
+  }
+
+  .page-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    max-width: 70ch;
+    opacity: 0.85;
+  }
+
+  .content-section {
+    margin-bottom: var(--space-xl);
+    max-width: var(--content-width);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-body {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    margin-bottom: var(--space-md);
+  }
+
+  .signs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .signs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .sign-card {
+    border-radius: 8px;
+    padding: var(--space-md);
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-sage);
+  }
+
+  .sign-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .sign-body {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+  }
+
+  .practice-list {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .practice-list li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .practices-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .practice-card {
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+  }
+
+  .practice-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .practice-body {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+  }
+
+  .resources-section {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--color-sage-light);
+  }
+
+  .resources-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .resources-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    opacity: 0.75;
+    margin-bottom: var(--space-lg);
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

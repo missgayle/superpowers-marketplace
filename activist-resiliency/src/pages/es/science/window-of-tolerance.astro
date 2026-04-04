@@ -1,0 +1,371 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import resources from '../../../data/resources.json';
+
+const lang = 'es';
+
+const relatedResources = resources.filter(r =>
+  r.scienceTags.includes('siegel')
+);
+---
+
+<BaseLayout
+  title="Ventana de Tolerancia — La Ciencia — Resiliencia Activista"
+  description="El concepto de ventana de tolerancia de Dan Siegel — la zona óptima de activación para activistas, cómo el trabajo sostenido la estrecha y cómo las prácticas la amplían."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="/es/science">La Ciencia</a> &rsaquo; Ventana de Tolerancia</p>
+      <h1 class="page-title">Ventana de Tolerancia</h1>
+      <p class="page-byline">Concepto de Dan Siegel &bull; Aplicado en la práctica informada por el trauma y somática</p>
+      <p class="page-intro">
+        La ventana de tolerancia describe la zona óptima de activación del sistema
+        nervioso donde una persona puede funcionar eficazmente — pensando con claridad,
+        sintiendo plenamente y respondiendo con flexibilidad. Desarrollado por el
+        neuropsiquiatra Dan Siegel, este concepto se ha vuelto central en la atención
+        informada por el trauma y la práctica de la resiliencia.
+      </p>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <div class="container">
+
+      <section class="content-section">
+        <h2>¿Qué Es la Ventana de Tolerancia?</h2>
+        <p>
+          La ventana de tolerancia es la zona entre dos extremos de activación:
+          hiperactivación (demasiado activado) e hipoactivación (demasiado apagado).
+          Dentro de la ventana, la corteza prefrontal del cerebro — responsable del
+          razonamiento, la planificación y la compasión — permanece activa. Podemos
+          sostener la complejidad, regular nuestras emociones y relacionarnos con otros.
+        </p>
+        <p>
+          Fuera de la ventana, en cualquier dirección, el pensamiento se deteriora.
+          Los patrones reactivos toman el control. La capacidad de juicio matizado
+          se estrecha. Estamos operando desde partes más antiguas del cerebro
+          orientadas a la supervivencia, no a la colaboración.
+        </p>
+      </section>
+
+      <section class="content-section diagram-section">
+        <h2>La Ventana: Un Mapa Visual</h2>
+
+        <div class="tolerance-diagram" aria-label="Diagrama de la ventana de tolerancia mostrando la zona de hiperactivación arriba, la ventana de tolerancia en el medio y la zona de hipoactivación abajo">
+          <div class="zone zone-hyper">
+            <div class="zone-label">HIPERACTIVACIÓN</div>
+            <div class="zone-description">
+              <strong>Por encima de la ventana</strong><br/>
+              Ansiedad &bull; Ira &bull; Pánico &bull; Abrumamiento<br/>
+              Pensamientos acelerados &bull; Hipervigilancia &bull; Reactividad<br/>
+              Acción impulsiva &bull; Inundación emocional
+            </div>
+            <div class="zone-arrow zone-arrow-up">&#9650;</div>
+          </div>
+
+          <div class="zone zone-window">
+            <div class="zone-label">VENTANA DE TOLERANCIA</div>
+            <div class="zone-description">
+              <strong>Zona de activación óptima</strong><br/>
+              Pensamiento claro &bull; Respuesta flexible &bull; Empatía<br/>
+              Capacidad de estar presente &bull; Acceso a valores<br/>
+              Regulación emocional &bull; Acción fundamentada
+            </div>
+            <div class="zone-arrows-both">
+              <span class="arrow-label">&#9650; activación</span>
+              <span class="arrow-label">&#9660; calma</span>
+            </div>
+          </div>
+
+          <div class="zone zone-hypo">
+            <div class="zone-label">HIPOACTIVACIÓN</div>
+            <div class="zone-description">
+              <strong>Por debajo de la ventana</strong><br/>
+              Entumecimiento &bull; Desconexión &bull; Colapso &bull; Desesperanza<br/>
+              Depresión &bull; Disociación &bull; Apatía<br/>
+              Incapacidad para actuar &bull; Aplanamiento emocional
+            </div>
+            <div class="zone-arrow zone-arrow-down">&#9660;</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Cómo el Trabajo Activista Afecta la Ventana</h2>
+        <p>
+          El trabajo activista implica la exposición repetida a material genuinamente
+          angustiante: injusticia, sufrimiento, amenaza, confrontación, pérdida y a
+          veces violencia. Esto no es una señal de que los activistas sean frágiles —
+          es una señal de que son humanos y de que les importa.
+        </p>
+        <p>
+          Con el tiempo, sin una recuperación y regulación adecuadas, esta exposición
+          repetida estrecha la ventana de tolerancia. Lo que antes podría haber sido
+          un nivel manejable de activación — una reunión difícil, una noticia
+          perturbadora, un retroceso en la organización — se vuelve suficiente para
+          empujar a alguien completamente fuera de su ventana.
+        </p>
+        <p>
+          Una ventana estrecha se ve diferente en diferentes personas:
+        </p>
+        <ul class="effects-list">
+          <li><strong>Hiper:</strong> Ira con detonadores inmediatos, incapacidad de desconectarse de noticias de crisis, pensamiento de todo o nada, agotamiento combinado con incapacidad de parar, conflicto interpersonal.</li>
+          <li><strong>Hipo:</strong> Incapacidad de sentir indignación, insensibilidad al sufrimiento, desconexión, depresión, dificultad para importarle los resultados que antes parecían urgentes.</li>
+          <li><strong>Oscilación:</strong> Muchas personas oscilan entre los dos — períodos de activación frenética seguidos de caídas en el apagado.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>Cómo las Prácticas Amplían la Ventana</h2>
+        <p>
+          El hallazgo alentador de la investigación de Siegel — y de la neurociencia
+          más amplia de la neuroplasticidad — es que la ventana de tolerancia no es
+          fija. Puede ampliarse mediante prácticas consistentes e intencionales.
+        </p>
+        <p>
+          Las prácticas que desarrollan la capacidad reguladora para ampliar la
+          ventana incluyen:
+        </p>
+        <ul class="practices-list">
+          <li>
+            <strong>Atención plena y conciencia del momento presente</strong> —
+            desarrolla la capacidad de observar la experiencia sin ser abrumado
+            por ella. ("Noto que estoy enojado" en lugar de "no soy más que enojo.")
+          </li>
+          <li>
+            <strong>Prácticas somáticas</strong> — conciencia corporal, yoga,
+            trabajo con la respiración y movimiento ayudan a completar ciclos de
+            estrés incompletos y a desarrollar tolerancia para la sensación física.
+          </li>
+          <li>
+            <strong>Titulación</strong> — acercarse gradualmente al material
+            angustiante en pequeñas cantidades, con apoyo completo y tiempo de
+            recuperación, en lugar de exposición inundante.
+          </li>
+          <li>
+            <strong>Corregulación interpersonal</strong> — pasar tiempo con
+            personas cuyos sistemas nerviosos están regulados ayuda a que el
+            nuestro se calme. La conexión social es un regulador primario, no un lujo.
+          </li>
+          <li>
+            <strong>Sueño adecuado y recuperación física</strong> — la ventana
+            se estrecha dramáticamente con la privación del sueño. Esto no es
+            debilidad; es neurobiología.
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2>La Rueda de la Conciencia de Siegel</h2>
+        <p>
+          Dan Siegel desarrolló una práctica complementaria llamada la Rueda de la
+          Conciencia — una meditación guiada que entrena la capacidad de distinguir
+          entre el observador (el "eje" de la rueda) y lo que se observa (el "borde").
+          La práctica regular desarrolla la integración: la capacidad de sostener
+          múltiples experiencias simultáneamente sin colapsar en ninguna sola.
+        </p>
+        <p>
+          Esta integración es central para el trabajo activista resiliente. Es lo que
+          permite a alguien ser testigo del sufrimiento sin ser consumido por él,
+          experimentar ira sin ser controlado por ella, y permanecer presente en
+          conversaciones difíciles sin cerrarse.
+        </p>
+      </section>
+
+      <section class="content-section resources-section">
+        <h2>Recursos Relacionados</h2>
+        <p class="resources-intro">
+          Los siguientes recursos se basan en el marco de ventana de tolerancia de
+          Dan Siegel y los enfoques relacionados con la regulación y la integración.
+        </p>
+        <div class="resources-grid">
+          {relatedResources.map(resource => (
+            <ResourceCard resource={resource} lang={lang} />
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+    border-bottom: 1px solid var(--color-sage-light);
+  }
+
+  .breadcrumb {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-byline {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .content-article {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .content-section {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-xl);
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .diagram-section {
+    max-width: 540px;
+  }
+
+  .tolerance-diagram {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--color-sage-light);
+    margin-top: var(--space-md);
+    font-size: var(--font-size-sm);
+  }
+
+  .zone {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .zone-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .zone-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    color: var(--color-charcoal);
+  }
+
+  .zone-hyper {
+    background-color: #fdf0ec;
+    border-bottom: 2px dashed var(--color-clay);
+  }
+
+  .zone-hyper .zone-label {
+    color: var(--color-clay);
+  }
+
+  .zone-window {
+    background-color: #eef4ec;
+    border-bottom: 2px dashed var(--color-sage);
+  }
+
+  .zone-window .zone-label {
+    color: var(--color-sage);
+    font-size: 0.8rem;
+  }
+
+  .zone-hypo {
+    background-color: #f0eef5;
+  }
+
+  .zone-hypo .zone-label {
+    color: #7a6a9a;
+  }
+
+  .zone-arrow {
+    font-size: 1.2rem;
+    opacity: 0.5;
+  }
+
+  .zone-arrows-both {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.7rem;
+    color: var(--color-charcoal-light);
+  }
+
+  .effects-list,
+  .practices-list {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-sm) 0;
+  }
+
+  .effects-list li,
+  .practices-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+  }
+
+  .resources-section {
+    max-width: none;
+  }
+
+  .resources-section h2 {
+    max-width: var(--content-width);
+  }
+
+  .resources-intro {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-md) !important;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

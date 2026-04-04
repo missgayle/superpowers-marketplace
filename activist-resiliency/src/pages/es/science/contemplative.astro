@@ -1,0 +1,402 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import resources from '../../../data/resources.json';
+
+const lang = 'es';
+
+const relatedResources = resources.filter(r =>
+  r.scienceTags.includes('contemplative')
+);
+---
+
+<BaseLayout
+  title="Tradiciones Contemplativas — La Ciencia — Resiliencia Activista"
+  description="Cómo la atención plena, la respiración y la conciencia corporal de las tradiciones budistas, hinduistas y otras tradiciones contemplativas construyen regulación y resiliencia para los activistas."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="/es/science">La Ciencia</a> &rsaquo; Tradiciones Contemplativas</p>
+      <h1 class="page-title">Tradiciones Contemplativas</h1>
+      <p class="page-byline">Atención Plena &bull; Respiración &bull; Conciencia Corporal &bull; Sistemas de Familia Interna</p>
+      <p class="page-intro">
+        Mucho antes de que la neurociencia tuviera el lenguaje para describir la
+        ventana de tolerancia o el tono vagal, las tradiciones contemplativas ya
+        estaban desarrollando prácticas sistemáticas para trabajar con la mente,
+        el cuerpo y la vida relacional. Estas tradiciones — budistas, hinduistas,
+        taoístas y otras — ofrecen prácticas que la investigación moderna ha
+        validado repetidamente y que forman la columna vertebral práctica de la
+        resiliencia activista.
+      </p>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <div class="container">
+
+      <section class="content-section">
+        <h2>Una Nota sobre el Linaje</h2>
+        <div class="lineage-note">
+          <p>
+            Muchas de las prácticas en este sitio — meditación de atención plena,
+            trabajo con la respiración, exploración corporal, meditación de bondad
+            amorosa — se originan en tradiciones budistas e hinduistas que han sido
+            practicadas durante miles de años. A medida que estas prácticas han
+            entrado en contextos clínicos y de bienestar occidentales, sus raíces
+            a menudo se oscurecen.
+          </p>
+          <p>
+            Reconocemos esa deuda directamente. La atención plena tal como se enseña
+            en entornos clínicos occidentales (MBSR, DBT, ACT) se basa en gran
+            medida en la práctica de meditación budista theravada. Las prácticas de
+            respiración como el pranayama se originan en las tradiciones yóguicas
+            hinduistas. La meditación de bondad amorosa (metta) es una práctica
+            budista específica de cultivar la compasión.
+          </p>
+          <p>
+            Ninguna de estas prácticas requiere que los practicantes se identifiquen
+            con las tradiciones de las que provienen. Pero nombrar el linaje es una
+            cuestión de honestidad y a menudo enriquece la práctica.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Atención Plena: Conciencia sin Juicio</h2>
+        <p>
+          La atención plena — en su núcleo — es la práctica de prestar atención a
+          la experiencia presente con apertura y sin juicio automático. Es engañosamente
+          simple y neurológicamente profunda.
+        </p>
+        <p>
+          La investigación sobre la práctica de la atención plena ha documentado
+          cambios medibles en la estructura y función del cerebro, incluyendo:
+        </p>
+        <ul class="research-list">
+          <li>Mayor grosor en áreas corticales prefrontales asociadas con la atención y la regulación emocional</li>
+          <li>Menor reactividad de la amígdala (el centro de detección de amenazas del cerebro)</li>
+          <li>Mayor integración entre los sistemas prefrontal y límbico</li>
+          <li>Mayor densidad de materia gris en el hipocampo (aprendizaje y memoria)</li>
+          <li>Menor respuesta de cortisol a los factores estresantes agudos</li>
+        </ul>
+        <p>
+          Para los activistas, el efecto más significativo en la práctica de la
+          atención plena es este: aumenta el intervalo entre el estímulo y la
+          respuesta. Algo sucede (noticias perturbadoras, un conflicto en una reunión,
+          un retroceso en la organización), y en lugar de una respuesta reactiva
+          automática, hay — con práctica — un momento de conciencia primero. Ese
+          momento es donde vive la elección.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Trabajo con la Respiración: Acceso Directo al Sistema Nervioso</h2>
+        <p>
+          La respiración es única entre los procesos corporales: es tanto involuntaria
+          (continúa sin atención) como voluntaria (podemos controlarla conscientemente).
+          Esto la convierte en un palanca directa sobre el sistema nervioso autónomo.
+        </p>
+        <p>
+          La respiración diafragmática lenta — específicamente, extender la exhalación
+          en relación con la inhalación — activa el sistema nervioso parasimpático y
+          aumenta el tono vagal. Esto no es metafórico. Es un efecto neurofisiológico
+          directo, medible en la variabilidad de la frecuencia cardíaca en cuestión
+          de minutos.
+        </p>
+        <p>
+          Diferentes prácticas de respiración tienen diferentes efectos:
+        </p>
+        <div class="breath-practices">
+          <div class="breath-item">
+            <h3>Respiración con exhalación extendida (4-7-8, respiración en caja)</h3>
+            <p>
+              Activa el sistema parasimpático. Útil para la calma aguda — antes de
+              una confrontación, después de recibir noticias difíciles o cuando el
+              sueño parece imposible.
+            </p>
+          </div>
+          <div class="breath-item">
+            <h3>Respiración coherente / de resonancia (5 respiraciones/min)</h3>
+            <p>
+              Maximiza la variabilidad de la frecuencia cardíaca. La práctica regular
+              desarrolla el tono vagal de referencia. Se usa en entornos clínicos
+              para la ansiedad, el TEPT y la depresión.
+            </p>
+          </div>
+          <div class="breath-item">
+            <h3>Trabajo activador de respiración (Wim Hof, holotrópico)</h3>
+            <p>
+              Aumenta la activación y puede aflorar y liberar el estrés fisiológico
+              retenido. Es mejor usarlo en entornos de apoyo con facilitación experta.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Conciencia Corporal: El Cuerpo como Maestro</h2>
+        <p>
+          Una perspectiva central tanto de las tradiciones contemplativas como de la
+          neurociencia somática es que la sabiduría vive en el cuerpo, no solo en la
+          mente. La experiencia emocional es fundamentalmente física — tiene ubicación,
+          textura, temperatura y movimiento. Aprender a notar y permanecer con la
+          sensación física es una habilidad contemplativa y terapéutica central.
+        </p>
+        <p>
+          La meditación de exploración corporal — llevar sistemáticamente la atención
+          a diferentes partes del cuerpo — entrena esta capacidad. El yoga, el qi
+          gong y el tai chi integran el movimiento consciente con la respiración.
+          Los enfoques de terapia somática trabajan directamente con la sensación
+          corporal para procesar y liberar el trauma retenido.
+        </p>
+        <p>
+          Para los activistas, las prácticas de conciencia corporal contrarrestan un
+          riesgo ocupacional específico: la tendencia a vivir completamente en la
+          cabeza — en el análisis, la estrategia, la indignación y la abstracción —
+          mientras se pierde el contacto con las señales del cuerpo de agotamiento,
+          necesidad y vitalidad. El cuerpo a menudo sabe que nos estamos quemando
+          antes de que la mente esté dispuesta a admitirlo.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Sistemas de Familia Interna (SFI)</h2>
+        <p>
+          Desarrollado por el psicólogo Richard Schwartz, los Sistemas de Familia
+          Interna son un enfoque terapéutico de orientación contemplativa que trata
+          la mente como una comunidad de "partes" — cada una con su propia perspectiva,
+          necesidades e historia. Se basa en las enseñanzas budistas sobre la naturaleza
+          construida del yo y la psicología profunda jungiana.
+        </p>
+        <p>
+          La perspectiva central del SFI es que lo que llamamos "reactividad" es a
+          menudo una parte de nosotros tratando de protegernos del dolor — no un
+          enemigo que suprimir, sino un guardián que entender. Cuando los activistas
+          sienten ira, desesperación, entumecimiento o exceso de trabajo compulsivo,
+          el SFI pregunta: ¿qué está protegiendo esta parte? ¿Qué teme que sucedería
+          sin ella?
+        </p>
+        <p>
+          Este enfoque se relaciona directamente con el marco de Resiliencia Moral.
+          En lugar de tratar los estados desregulados como fracasos, el SFI los trata
+          como respuestas adaptativas que buscan ser comprendidas — y ofrece un camino
+          hacia la integración en el que todas las partes del ser son bienvenidas en
+          lugar de suprimidas.
+        </p>
+        <div class="ifs-note">
+          <p>
+            <strong>Concepto clave:</strong> En el SFI, el "Ser" — con mayúscula —
+            se refiere a un estado de ser que es calmado, curioso, compasivo, conectado
+            y claro. Es la capacidad del activista de permanecer siendo él mismo
+            mientras se involucra con el dolor del mundo. Porges lo reconocería como
+            vago ventral. Siegel lo llamaría el estado integrado dentro de la ventana
+            de tolerancia.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Cómo la Práctica Contemplativa Se Relaciona con el Marco</h2>
+        <p>
+          Las prácticas contemplativas no eliminan los estados reactivos descritos
+          en el marco de Resiliencia Moral. Construyen la capacidad reguladora para:
+        </p>
+        <ul class="mapping-list">
+          <li>Notar cuando te has movido a estados simpáticos o dorsales (en lugar de actuarlos inconscientemente)</li>
+          <li>Regresar más rápidamente al vago ventral — a una respuesta regulada, conectada y flexible</li>
+          <li>Ampliar la ventana de tolerancia para que más pueda sostenerse sin desregulación</li>
+          <li>Acceder al Camino Resiliente de manera más consistente, incluso bajo presión sostenida</li>
+          <li>Construir la integración que permite que la compasión se sostenga sin colapsar en angustia</li>
+        </ul>
+        <p>
+          Las tradiciones contemplativas siempre han sabido lo que la neurociencia
+          ahora está confirmando: que la capacidad de permanecer presente con el
+          sufrimiento — sin ser destruido por él ni cerrarlo — es entrenable. Y que
+          este entrenamiento es uno de los trabajos más importantes que un activista
+          puede hacer.
+        </p>
+      </section>
+
+      <section class="content-section resources-section">
+        <h2>Recursos Relacionados</h2>
+        <p class="resources-intro">
+          Los siguientes recursos incorporan prácticas contemplativas, atención plena,
+          respiración y enfoques de resiliencia basados en el cuerpo.
+        </p>
+        <div class="resources-grid">
+          {relatedResources.map(resource => (
+            <ResourceCard resource={resource} lang={lang} />
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+    border-bottom: 1px solid var(--color-sage-light);
+  }
+
+  .breadcrumb {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-byline {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .content-article {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .content-section {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-xl);
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .lineage-note {
+    background-color: #f0eef5;
+    border-left: 4px solid #7a6a9a;
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .lineage-note p {
+    margin-bottom: 0;
+  }
+
+  .research-list {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: var(--space-sm) 0;
+  }
+
+  .research-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+  }
+
+  .breath-practices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .breath-item {
+    border-left: 3px solid var(--color-sage);
+    padding-left: var(--space-md);
+  }
+
+  .breath-item h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .breath-item p {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+  }
+
+  .ifs-note {
+    background-color: #eef4ec;
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .ifs-note p {
+    margin-bottom: 0;
+    font-size: var(--font-size-sm);
+  }
+
+  .mapping-list {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-sm) 0;
+  }
+
+  .mapping-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+  }
+
+  .resources-section {
+    max-width: none;
+  }
+
+  .resources-section h2 {
+    max-width: var(--content-width);
+  }
+
+  .resources-intro {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-md) !important;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

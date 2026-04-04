@@ -1,0 +1,578 @@
+[
+  {
+    "id": "activist-handbook-wellbeing",
+    "title": {
+      "en": "Activist Handbook: Well-being Chapter",
+      "es": "Manual del Activista: Capítulo de Bienestar"
+    },
+    "description": {
+      "en": "Mental health resources and strategies for activists",
+      "es": "Recursos de salud mental y estrategias para activistas"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["long-term"],
+    "audience": ["individual", "organizer"],
+    "source": "Activist Handbook",
+    "url": "https://activisthandbook.org/wellbeing",
+    "scienceTags": ["collective", "contemplative"]
+  },
+  {
+    "id": "police-brutality-activist-trauma",
+    "title": {
+      "en": "Police Brutality & Activist Trauma Support and Recovery",
+      "es": "Brutalidad Policial y Apoyo y Recuperación del Trauma del Activismo"
+    },
+    "description": {
+      "en": "Booklet about trauma of police brutality and recovery strategies",
+      "es": "Folleto sobre el trauma de la brutalidad policial y estrategias de recuperación"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual", "organizer"],
+    "source": "Roots of Change Collective",
+    "url": "https://commonslibrary.org/a-resource-for-activists-working-through-trauma/",
+    "scienceTags": ["somatic", "levine", "porges"]
+  },
+  {
+    "id": "protecting-mental-health-speaking-out",
+    "title": {
+      "en": "Protecting Your Mental Health and Well-being While Speaking Out",
+      "es": "Protegiendo Tu Salud Mental y Bienestar Mientras Alzas la Voz"
+    },
+    "description": {
+      "en": "Toolkit for young women caring for themselves while advocating",
+      "es": "Kit de herramientas para mujeres jóvenes que cuidan de sí mismas mientras abogan"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Assembly; Malala Fund",
+    "url": "https://assembly.malala.org/stories/protecting-your-mental-health-while-speaking-out",
+    "scienceTags": ["contemplative", "collective"]
+  },
+  {
+    "id": "holistic-security-manual",
+    "title": {
+      "en": "Holistic Security: A Strategy Manual for Human Rights Defenders",
+      "es": "Seguridad Holística: Manual de Estrategias para Defensores de Derechos Humanos"
+    },
+    "description": {
+      "en": "Strategy manual for human rights defenders' well-being",
+      "es": "Manual de estrategias para el bienestar de los defensores de derechos humanos"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["long-term"],
+    "audience": ["individual", "organizer", "organization"],
+    "source": "Tactical Technology Collective",
+    "url": "https://holistic-protection.tacticaltech.org/ckeditor_assets/attachments/62/hs_complete_lores.pdf",
+    "scienceTags": ["somatic", "collective", "contemplative"]
+  },
+  {
+    "id": "self-care-for-activists-augsburg",
+    "title": {
+      "en": "Self-Care for Activists",
+      "es": "Autocuidado para Activistas"
+    },
+    "description": {
+      "en": "Resources on self-care during mobilization",
+      "es": "Recursos sobre el autocuidado durante la movilización"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["long-term"],
+    "audience": ["individual", "organizer"],
+    "source": "Augsburg University",
+    "url": "https://www.augsburg.edu/cwc/self-help/self-care-for-activists/",
+    "scienceTags": ["contemplative", "somatic"]
+  },
+  {
+    "id": "21-day-activism-self-care-challenge",
+    "title": {
+      "en": "21-Day Activism Self-Care Challenge",
+      "es": "Desafío de Autocuidado en el Activismo de 21 Días"
+    },
+    "description": {
+      "en": "Tools and resources for a 21-day self-care challenge",
+      "es": "Herramientas y recursos para un desafío de autocuidado de 21 días"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Debby Irving et al.",
+    "url": "https://www.debbyirving.com/21-day-self-care-challenge/",
+    "scienceTags": ["contemplative", "epel"]
+  },
+  {
+    "id": "self-care-prevention-burnout-activists",
+    "title": {
+      "en": "Self-care and Prevention of Burnout Among Activists",
+      "es": "Autocuidado y Prevención del Agotamiento Entre Activistas"
+    },
+    "description": {
+      "en": "Toolkit with worksheet and online resources",
+      "es": "Kit de herramientas con hojas de trabajo y recursos en línea"
+    },
+    "format": "read",
+    "type": "workbook",
+    "stage": ["long-term"],
+    "audience": ["individual", "organizer"],
+    "source": "Frontline Aids",
+    "url": "https://frontlineaids.org/wp-content/uploads/old_site/self_care_workbook_(webready)_original.pdf?1532089391",
+    "scienceTags": ["contemplative", "epel", "collective"]
+  },
+  {
+    "id": "staying-resilient-vol2-amnesty",
+    "title": {
+      "en": "Staying Resilient While Trying to Save the World (Vol 2)",
+      "es": "Mantenerse Resiliente Mientras Intentas Salvar el Mundo (Vol. 2)"
+    },
+    "description": {
+      "en": "Workbook for activists to strengthen self-care",
+      "es": "Cuaderno de trabajo para que los activistas fortalezcan el autocuidado"
+    },
+    "format": "read",
+    "type": "workbook",
+    "stage": ["long-term"],
+    "audience": ["individual", "organizer"],
+    "source": "Amnesty International",
+    "url": "https://www.amnesty.org/en/documents/act10/3231/2020/en/",
+    "scienceTags": ["contemplative", "somatic", "epel"]
+  },
+  {
+    "id": "manual-prevent-criminalisation-defenders",
+    "title": {
+      "en": "Manual to Prevent Criminalisation of Defenders",
+      "es": "Manual para Prevenir la Criminalización de los Defensores"
+    },
+    "description": {
+      "en": "Tactics to combat criminalization of dissidents",
+      "es": "Tácticas para combatir la criminalización de los disidentes"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["long-term"],
+    "audience": ["organizer", "organization"],
+    "source": "Protection International",
+    "url": "https://www.protectioninternational.org/protection-manuals/manual-to-prevent-the-criminalisation-of-defenders-of-the-right-to-land-and-territory/",
+    "scienceTags": ["collective"]
+  },
+  {
+    "id": "taking-care-of-us-collective-protection",
+    "title": {
+      "en": "Taking Care of Us – Collective Protection Guide",
+      "es": "Cuidándonos – Guía de Protección Colectiva"
+    },
+    "description": {
+      "en": "Guide for collective well-being in struggle",
+      "es": "Guía para el bienestar colectivo en la lucha"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["long-term"],
+    "audience": ["organizer", "organization"],
+    "source": "Protection International",
+    "url": "https://www.protectioninternational.org/protection-manuals/taking-care-of-us-a-guide-for-the-collective-protection-of-human-rights-defenders-in-rural-areas/",
+    "scienceTags": ["collective", "somatic"]
+  },
+  {
+    "id": "burnout-workbook-support-link",
+    "title": {
+      "en": "Burnout Workbook",
+      "es": "Cuaderno de Trabajo sobre el Agotamiento"
+    },
+    "description": {
+      "en": "Identify, reflect on, and build a plan to treat burnout",
+      "es": "Identificar, reflexionar y elaborar un plan para tratar el agotamiento"
+    },
+    "format": "read",
+    "type": "workbook",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Support Link",
+    "url": "https://resources.finalsite.net/images/v1679328618/kckpsorg/slwdo4rzkeg3yzibjkoy/KCKPS_April2023ParticipantWorkbook_PreventingBurnout.pdf",
+    "scienceTags": ["epel", "contemplative"]
+  },
+  {
+    "id": "healing-trauma-worksheets-positive-psychology",
+    "title": {
+      "en": "Healing Trauma Thought Exercises and Worksheets",
+      "es": "Ejercicios de Pensamiento y Hojas de Trabajo para Sanar el Trauma"
+    },
+    "description": {
+      "en": "23 free worksheets for trauma",
+      "es": "23 hojas de trabajo gratuitas para el trauma"
+    },
+    "format": "read",
+    "type": "workbook",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "Positive Psychology",
+    "url": "https://positivepsychology.com/post-traumatic-growth-worksheets/#trauma-worksheets-pdf",
+    "scienceTags": ["levine", "siegel", "somatic"]
+  },
+  {
+    "id": "self-care-assessment-plan-brown",
+    "title": {
+      "en": "Self Care Assessment and Plan Builder",
+      "es": "Evaluación de Autocuidado y Constructor de Plan"
+    },
+    "description": {
+      "en": "Self-care assessment and improvement plan",
+      "es": "Evaluación de autocuidado y plan de mejora"
+    },
+    "format": "read",
+    "type": "workbook",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Brown University",
+    "url": "https://www.brown.edu/campus-life/health/services/promotion/sites/healthpromo/files/fillable%20self-care%20worksheet.pdf",
+    "scienceTags": ["contemplative", "epel"]
+  },
+  {
+    "id": "resources-affordable-trauma-therapy",
+    "title": {
+      "en": "Resources for Finding Affordable Trauma Therapy",
+      "es": "Recursos para Encontrar Terapia de Trauma Asequible"
+    },
+    "description": {
+      "en": "Free therapy and resources for cheap or free therapy",
+      "es": "Terapia gratuita y recursos para terapia barata o gratuita"
+    },
+    "format": "read",
+    "type": "educational",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "Free Psychotherapy Network",
+    "url": "https://freepsychotherapynetwork.com/organisations-offering-low-cost-psychotherapy/",
+    "scienceTags": ["somatic", "levine"]
+  },
+  {
+    "id": "understanding-panic-attack",
+    "title": {
+      "en": "Understanding Your Panic Attack",
+      "es": "Entendiendo Tu Ataque de Pánico"
+    },
+    "description": {
+      "en": "Explanation and resources for panic attacks",
+      "es": "Explicación y recursos para los ataques de pánico"
+    },
+    "format": "read",
+    "type": "educational",
+    "stage": ["acute"],
+    "audience": ["individual"],
+    "source": "Better Health Channel",
+    "url": "https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/panic-attack",
+    "scienceTags": ["porges", "levine"]
+  },
+  {
+    "id": "understanding-anxiety-mclean",
+    "title": {
+      "en": "Understanding Your Anxiety",
+      "es": "Entendiendo Tu Ansiedad"
+    },
+    "description": {
+      "en": "Explanation and resources for anxiety disorders",
+      "es": "Explicación y recursos para los trastornos de ansiedad"
+    },
+    "format": "read",
+    "type": "educational",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "McLean Hospital",
+    "url": "https://www.mcleanhospital.org/essential/anxiety",
+    "scienceTags": ["porges", "siegel"]
+  },
+  {
+    "id": "americas-staying-resilient-vol1-fanzine",
+    "title": {
+      "en": "Americas: Staying Resilient (Vol 1) Fanzine",
+      "es": "Américas: Manteniéndose Resiliente (Vol. 1) Fanzine"
+    },
+    "description": {
+      "en": "Comic by young people in the Americas for well-being",
+      "es": "Cómic creado por jóvenes de las Américas para el bienestar"
+    },
+    "format": "read",
+    "type": "educational",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Amnesty International",
+    "url": "https://www.amnesty.org/en/documents/amr01/2273/2020/en/",
+    "scienceTags": ["contemplative", "collective"]
+  },
+  {
+    "id": "sustainable-activism-self-care-amnesty",
+    "title": {
+      "en": "Sustainable Activism and Self-Care",
+      "es": "Activismo Sostenible y Autocuidado"
+    },
+    "description": {
+      "en": "Sustainable vs unsustainable activism, self-care plan activity",
+      "es": "Activismo sostenible vs insostenible, actividad de plan de autocuidado"
+    },
+    "format": "read",
+    "type": "toolkit",
+    "stage": ["long-term"],
+    "audience": ["individual", "organizer"],
+    "source": "Amnesty International",
+    "url": "https://www.amnesty.org.au/wp-content/uploads/2020/02/207-sustainable-activism-self-care.pdf",
+    "scienceTags": ["contemplative", "epel", "collective"]
+  },
+  {
+    "id": "body-keeps-the-score",
+    "title": {
+      "en": "The Body Keeps the Score",
+      "es": "El Cuerpo Lleva la Cuenta"
+    },
+    "description": {
+      "en": "How trauma reshapes body and brain, treatments from neurofeedback to yoga",
+      "es": "Cómo el trauma transforma el cuerpo y el cerebro, tratamientos desde la neurorretroalimentación hasta el yoga"
+    },
+    "format": "read",
+    "type": "book",
+    "stage": ["long-term"],
+    "audience": ["individual", "organizer"],
+    "source": "Bessel van der Kolk",
+    "url": "https://www.amazon.com/Body-Keeps-Score-Healing-Trauma/dp/0143127748",
+    "scienceTags": ["porges", "levine", "siegel", "somatic"]
+  },
+  {
+    "id": "waking-the-tiger",
+    "title": {
+      "en": "Waking the Tiger",
+      "es": "Despertar al Tigre"
+    },
+    "description": {
+      "en": "Why animals don't get traumatized, understanding human trauma response",
+      "es": "Por qué los animales no se traumatizan, comprensión de la respuesta humana al trauma"
+    },
+    "format": "read",
+    "type": "book",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Peter Levine",
+    "url": "https://www.amazon.com/Waking-Tiger-Healing-Peter-Levine/dp/155643233X",
+    "scienceTags": ["levine", "somatic", "porges"]
+  },
+  {
+    "id": "it-didnt-start-with-you",
+    "title": {
+      "en": "It Didn't Start With You",
+      "es": "No Empezó Contigo"
+    },
+    "description": {
+      "en": "Resolving longstanding inherited family difficulties",
+      "es": "Resolviendo dificultades familiares heredadas de larga data"
+    },
+    "format": "read",
+    "type": "book",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Mark Wolynn",
+    "url": "https://www.amazon.com/Didnt-Start-You-Inherited-Family/dp/1101980389",
+    "scienceTags": ["somatic", "epel", "siegel"]
+  },
+  {
+    "id": "no-bad-parts",
+    "title": {
+      "en": "No Bad Parts",
+      "es": "No Hay Partes Malas"
+    },
+    "description": {
+      "en": "Internal Family Systems - consciousness as multiple sub-minds",
+      "es": "Sistemas de Familia Interna - la conciencia como múltiples sub-mentes"
+    },
+    "format": "read",
+    "type": "book",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Richard Schwartz",
+    "url": "https://www.amazon.com/No-Bad-Parts-Restoring-Wholeness/dp/1683646681",
+    "scienceTags": ["siegel", "somatic", "contemplative"]
+  },
+  {
+    "id": "yoga-healing-body-soul-adriene",
+    "title": {
+      "en": "Yoga Healing Body and Soul",
+      "es": "Yoga para Sanar el Cuerpo y el Alma"
+    },
+    "description": {
+      "en": "Yoga for self soothing and trauma release",
+      "es": "Yoga para el autocalmado y la liberación del trauma"
+    },
+    "format": "watch",
+    "type": "guided-practice",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "Yoga with Adriene",
+    "url": "https://youtu.be/TqVSwY8y3UY?feature=shared",
+    "scienceTags": ["somatic", "levine", "porges"]
+  },
+  {
+    "id": "guided-sleep-meditation-trauma-insomnia",
+    "title": {
+      "en": "Guided Sleep Meditation for Trauma-Based Insomnia",
+      "es": "Meditación Guiada para Dormir con Insomnio por Trauma"
+    },
+    "description": {
+      "en": "Meditation for calming trauma and PTSD thoughts before sleep",
+      "es": "Meditación para calmar los pensamientos de trauma y TEPT antes de dormir"
+    },
+    "format": "watch",
+    "type": "guided-practice",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "The Mindful Movement",
+    "url": "https://youtu.be/wE0Of6W_6RA?feature=shared",
+    "scienceTags": ["contemplative", "porges", "siegel"]
+  },
+  {
+    "id": "guided-meditation-being-present-kornfield",
+    "title": {
+      "en": "Guided Meditation on Being Present",
+      "es": "Meditación Guiada sobre el Estar Presente"
+    },
+    "description": {
+      "en": "Moving past anxious thoughts to embodying presence",
+      "es": "Superar los pensamientos ansiosos para encarnar la presencia"
+    },
+    "format": "watch",
+    "type": "guided-practice",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "Jack Kornfield",
+    "url": "https://youtu.be/znbrOSWOWfI?feature=shared",
+    "scienceTags": ["contemplative", "siegel", "porges"]
+  },
+  {
+    "id": "wheel-of-awareness-dan-siegel",
+    "title": {
+      "en": "Understanding and Exploring Awareness (Wheel of Awareness)",
+      "es": "Entendiendo y Explorando la Conciencia (Rueda de la Conciencia)"
+    },
+    "description": {
+      "en": "Wheel of awareness technique in accessible forms",
+      "es": "Técnica de la rueda de la conciencia en formas accesibles"
+    },
+    "format": "watch",
+    "type": "guided-practice",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Dan Siegel",
+    "url": "https://drdansiegel.com/wheel-of-awareness/",
+    "scienceTags": ["siegel", "contemplative", "porges"]
+  },
+  {
+    "id": "short-yoga-exhaustion-burnout",
+    "title": {
+      "en": "Short Yoga Flow for Exhaustion and Burnout",
+      "es": "Secuencia Corta de Yoga para el Agotamiento y el Burnout"
+    },
+    "description": {
+      "en": "Guided yoga for anxiety, depression, and stress",
+      "es": "Yoga guiado para la ansiedad, la depresión y el estrés"
+    },
+    "format": "watch",
+    "type": "guided-practice",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "Honey Lion",
+    "url": "https://youtu.be/eArfqte0dTE?feature=shared",
+    "scienceTags": ["somatic", "levine", "epel"]
+  },
+  {
+    "id": "evidence-based-trauma-sensitive-yoga",
+    "title": {
+      "en": "Evidence-Based Trauma-Sensitive Yoga",
+      "es": "Yoga Sensible al Trauma Basado en Evidencia"
+    },
+    "description": {
+      "en": "Long session of evidence-based trauma-sensitive yoga",
+      "es": "Sesión extendida de yoga sensible al trauma basado en evidencia"
+    },
+    "format": "watch",
+    "type": "guided-practice",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Trauma Center",
+    "url": "https://youtu.be/w1Zj20oKi9c?feature=shared",
+    "scienceTags": ["somatic", "levine", "porges"]
+  },
+  {
+    "id": "peter-levine-fight-or-flight",
+    "title": {
+      "en": "Peter Levine Fight or Flight Explanation",
+      "es": "Explicación de la Respuesta de Lucha o Huida por Peter Levine"
+    },
+    "description": {
+      "en": "Fight/flight response and working with the freeze response",
+      "es": "Respuesta de lucha/huida y cómo trabajar con la respuesta de congelamiento"
+    },
+    "format": "watch",
+    "type": "educational",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "Peter Levine",
+    "url": "https://www.youtube.com/watch?v=GvM_6GOFDc4",
+    "scienceTags": ["levine", "porges", "somatic"]
+  },
+  {
+    "id": "guided-meditation-fear-krishnananda",
+    "title": {
+      "en": "Guided Meditation for Fear",
+      "es": "Meditación Guiada para el Miedo"
+    },
+    "description": {
+      "en": "Healing shock and embracing sensitivity",
+      "es": "Sanar el shock y abrazar la sensibilidad"
+    },
+    "format": "listen",
+    "type": "guided-practice",
+    "stage": ["acute"],
+    "audience": ["individual"],
+    "source": "Krishnananda and Amana",
+    "url": "https://open.spotify.com/track/0cbvHOFA1vDVbnfYDVuGa1",
+    "scienceTags": ["contemplative", "somatic", "porges"]
+  },
+  {
+    "id": "guided-meditation-inner-space-krishnananda",
+    "title": {
+      "en": "Guided Meditation to Grow Inner Space",
+      "es": "Meditación Guiada para Cultivar el Espacio Interior"
+    },
+    "description": {
+      "en": "Inner space guided inner journey",
+      "es": "Viaje interior guiado hacia el espacio interno"
+    },
+    "format": "listen",
+    "type": "guided-practice",
+    "stage": ["long-term"],
+    "audience": ["individual"],
+    "source": "Krishnananda and Amana",
+    "url": "https://open.spotify.com/track/3idnCJ99pk13mcA3HQtPo1",
+    "scienceTags": ["contemplative", "siegel", "porges"]
+  },
+  {
+    "id": "breathwrk-app",
+    "title": {
+      "en": "Breathwrk App",
+      "es": "Aplicación Breathwrk"
+    },
+    "description": {
+      "en": "Free app with breathing exercises, tracking, and notifications",
+      "es": "Aplicación gratuita con ejercicios de respiración, seguimiento y notificaciones"
+    },
+    "format": "listen",
+    "type": "app",
+    "stage": ["acute", "long-term"],
+    "audience": ["individual"],
+    "source": "Breathwrk",
+    "url": "https://www.breathwrk.com/",
+    "scienceTags": ["porges", "levine", "somatic"]
+  }
+]

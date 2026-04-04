@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreathingGuide from '../../components/BreathingGuide.astro';
+import SelfCheck from '../../components/SelfCheck.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import resources from '../../data/resources.json';
+
+const lang = 'en';
+
+// Acute resources: stage includes "acute" or "both"
+const acuteResources = resources.filter(r =>
+  r.stage.includes('acute') || r.stage.includes('both')
+);
+
+// Additional resources at bottom, sorted by speed: watch > listen > read
+const formatOrder: Record<string, number> = { watch: 0, listen: 1, read: 2 };
+const additionalResources = [...acuteResources].sort((a, b) => {
+  const fa = formatOrder[a.format] ?? 99;
+  const fb = formatOrder[b.format] ?? 99;
+  return fa - fb;
+});
+---
+
+<BaseLayout
+  title="Crisis Support — Activist Resiliency"
+  description="Immediate support and grounding resources for activists in acute distress. Start here."
+  lang={lang}
+>
+  <div class="crisis-page">
+
+    <!-- Opening calming text -->
+    <section class="opening-section" aria-label="Opening">
+      <div class="container">
+        <p class="opening-text">
+          You are safe enough to be here.<br />
+          Let's start with a breath.
+        </p>
+      </div>
+    </section>
+
+    <!-- Breathing guide -->
+    <section class="breathing-section" aria-label="Breathing exercise">
+      <BreathingGuide />
+    </section>
+
+    <!-- Self-check routing component -->
+    <section class="selfcheck-section" aria-label="Self-check">
+      <div class="container">
+        <SelfCheck resources={resources} lang={lang} />
+      </div>
+    </section>
+
+    <!-- Additional acute resources, prioritized by speed -->
+    <section class="additional-section" aria-label="More acute resources">
+      <div class="container">
+        <h2 class="section-heading">More immediate resources</h2>
+        <p class="section-intro">
+          Additional tools for this moment — sorted by what you can access fastest.
+        </p>
+        <div class="resource-grid">
+          {additionalResources.map(r => <ResourceCard resource={r} lang={lang} />)}
+        </div>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<style>
+  .crisis-page {
+    padding-bottom: var(--space-2xl);
+  }
+
+  /* Opening */
+  .opening-section {
+    padding: var(--space-xl) 0 var(--space-lg);
+    text-align: center;
+  }
+
+  .opening-text {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    font-weight: 400;
+    color: var(--color-charcoal);
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+  }
+
+  /* Breathing */
+  .breathing-section {
+    background-color: var(--color-cream);
+  }
+
+  /* Self-check */
+  .selfcheck-section {
+    padding: var(--space-lg) 0;
+    background-color: var(--color-white);
+  }
+
+  /* Additional resources */
+  .additional-section {
+    padding: var(--space-xl) 0 var(--space-lg);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-intro {
+    color: var(--color-charcoal-light);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-lg);
+    max-width: var(--content-width);
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 480px) {
+    .resource-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

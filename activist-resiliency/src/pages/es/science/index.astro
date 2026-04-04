@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'es';
+---
+
+<BaseLayout
+  title="La Ciencia — Resiliencia Activista"
+  description="La investigación y la sabiduría contemplativa que fundamentan este sitio: teoría polivagal, ventana de tolerancia, ciencia de resiliencia climática y tradiciones contemplativas."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">La Ciencia</h1>
+      <p class="page-intro">
+        Este sitio se basa en una fundación de investigación revisada por pares y
+        sabiduría contemplativa probada. Comprender la ciencia detrás del estrés,
+        la regulación del sistema nervioso y la resiliencia puede ser en sí misma
+        una herramienta: ayuda a los activistas a dar sentido a su propia experiencia
+        y a elegir prácticas con intención. A continuación se presentan los cuatro
+        pilares de la investigación que fundamentan este trabajo.
+      </p>
+    </div>
+  </div>
+
+  <section class="topics-section">
+    <div class="container topics-grid">
+      <a href="/es/science/polyvagal" class="topic-card topic-polyvagal">
+        <div class="topic-icon" aria-hidden="true">&#9762;</div>
+        <h2 class="topic-title">Teoría Polivagal</h2>
+        <p class="topic-author">Stephen Porges</p>
+        <p class="topic-description">
+          Cómo el sistema nervioso autónomo gobierna la seguridad, la movilización
+          y el apagado — y por qué la conexión es el primer recurso del sistema nervioso.
+        </p>
+        <span class="topic-link">Explorar &rarr;</span>
+      </a>
+
+      <a href="/es/science/window-of-tolerance" class="topic-card topic-window">
+        <div class="topic-icon" aria-hidden="true">&#9651;</div>
+        <h2 class="topic-title">Ventana de Tolerancia</h2>
+        <p class="topic-author">Dan Siegel</p>
+        <p class="topic-description">
+          La zona óptima de activación donde puedes pensar con claridad, sentir
+          plenamente y responder con flexibilidad — y cómo ampliarla bajo presión sostenida.
+        </p>
+        <span class="topic-link">Explorar &rarr;</span>
+      </a>
+
+      <a href="/es/science/climate-resilience" class="topic-card topic-climate">
+        <div class="topic-icon" aria-hidden="true">&#127758;</div>
+        <h2 class="topic-title">Clima y Resiliencia Sostenida</h2>
+        <p class="topic-author">Elissa Epel</p>
+        <p class="topic-description">
+          Biología del estrés, investigación sobre telómeros y lo que la ciencia
+          nos dice sobre construir resiliencia biológica para el trabajo activista a largo plazo.
+        </p>
+        <span class="topic-link">Explorar &rarr;</span>
+      </a>
+
+      <a href="/es/science/contemplative" class="topic-card topic-contemplative">
+        <div class="topic-icon" aria-hidden="true">&#128218;</div>
+        <h2 class="topic-title">Tradiciones Contemplativas</h2>
+        <p class="topic-author">Atención plena, respiración y SFI</p>
+        <p class="topic-description">
+          Cómo las prácticas contemplativas antiguas se relacionan con la
+          neurociencia moderna — y cómo construyen la capacidad de regulación
+          e integración que los activistas necesitan.
+        </p>
+        <span class="topic-link">Explorar &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="grounding-note">
+    <div class="container">
+      <div class="note-inner">
+        <h2 class="note-heading">Por Qué la Ciencia Importa para los Activistas</h2>
+        <p>
+          El trabajo activista genera respuestas de estrés fisiológicas reales. La
+          exposición sostenida a la injusticia, la amenaza y el duelo no es metafórica:
+          deja huellas medibles en el cuerpo — cortisol elevado, telómeros acortados,
+          ventanas de tolerancia más estrechas. Entender esto no es derrotista. Es el
+          comienzo de elegir sabiamente.
+        </p>
+        <p>
+          El marco que subyace a este sitio — Resiliencia Moral — sintetiza estas
+          tradiciones de investigación con la sabiduría contemplativa. El objetivo no
+          es eliminar el estrés (lo cual es imposible e indeseable), sino desarrollar
+          la capacidad de atravesarlo sin colapsar, y regresar una y otra vez a la
+          acción conectada y fundamentada.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .topics-section {
+    padding: var(--space-lg) 0;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 639px) {
+    .topics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .topic-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .topic-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    color: white;
+  }
+
+  .topic-polyvagal {
+    background: linear-gradient(135deg, #5a7c6a, #3d5c4e);
+  }
+
+  .topic-window {
+    background: linear-gradient(135deg, #6a7a8c, #3d5066);
+  }
+
+  .topic-climate {
+    background: linear-gradient(135deg, #8c7a5a, #664f2e);
+  }
+
+  .topic-contemplative {
+    background: linear-gradient(135deg, #7a5a8c, #4d2e66);
+  }
+
+  .topic-icon {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+  }
+
+  .topic-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .topic-author {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.75);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .topic-description {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+    flex: 1;
+    margin: 0;
+  }
+
+  .topic-link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: var(--space-sm);
+  }
+
+  .grounding-note {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .note-inner {
+    max-width: var(--content-width);
+    background-color: var(--color-white);
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .note-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .note-inner p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+  }
+</style>

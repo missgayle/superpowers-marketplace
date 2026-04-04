@@ -1,0 +1,464 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import resources from '../../../data/resources.json';
+
+const lang = 'es';
+
+const relatedResources = resources.filter(r =>
+  r.scienceTags.some(tag => ['epel', 'burnout', 'self-care'].includes(tag))
+);
+---
+
+<BaseLayout
+  title="Clima y Resiliencia Sostenida — La Ciencia — Resiliencia Activista"
+  description="La investigación de Elissa Epel sobre biología del estrés, telómeros y la construcción de resiliencia biológica para el trabajo activista a largo plazo bajo amenaza crónica."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="/es/science">La Ciencia</a> &rsaquo; Clima y Resiliencia Sostenida</p>
+      <h1 class="page-title">Clima y Resiliencia Sostenida</h1>
+      <p class="page-byline">Investigación de Elissa Epel &bull; Biología del estrés, ciencia de los telómeros y la fisiología de la abogacía a largo plazo</p>
+      <p class="page-intro">
+        ¿Qué le sucede al cuerpo humano bajo una amenaza crónica y sostenida? ¿Y qué
+        dice la ciencia sobre la construcción de resiliencia biológica real — no solo
+        sobrellevar, sino prosperar — frente a la injusticia, la pérdida y la
+        incertidumbre continuas? La investigación de Elissa Epel sobre biología del
+        estrés y el acortamiento de los telómeros ofrece algunas de las respuestas
+        más claras que tenemos.
+      </p>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <div class="container">
+
+      <section class="content-section">
+        <h2>Estrés Agudo vs. Estrés Crónico: Una Distinción Crítica</h2>
+        <p>
+          No todo el estrés es igual. El estrés agudo — un factor estresante breve y
+          acotado con una resolución clara — es realmente adaptativo. El cuerpo se
+          moviliza, supera el desafío, se recupera y puede incluso salir más fuerte.
+          Esto es lo que la ciencia del ejercicio llama "hormesis": exposición
+          controlada a factores estresantes que desarrolla capacidad.
+        </p>
+        <p>
+          El estrés crónico es diferente. Cuando el sistema de estrés se activa
+          repetidamente sin una recuperación completa — cuando la amenaza es continua,
+          ambigua o sin una resolución clara — la respuesta adaptativa al estrés se
+          vuelve desreguladora. El cuerpo permanece en un estado de alerta de bajo
+          grado que, con el tiempo, agota casi todos los sistemas biológicos.
+        </p>
+        <div class="comparison-grid">
+          <div class="comparison-card comparison-acute">
+            <h3>Estrés Agudo</h3>
+            <ul>
+              <li>Duración acotada</li>
+              <li>Factor estresante claro</li>
+              <li>Recuperación completa posible</li>
+              <li>Puede desarrollar capacidad (hormesis)</li>
+              <li>El cortisol regresa a la línea base</li>
+            </ul>
+          </div>
+          <div class="comparison-card comparison-chronic">
+            <h3>Estrés Crónico</h3>
+            <ul>
+              <li>Sostenido, continuo</li>
+              <li>Amenaza difusa o ambigua</li>
+              <li>Recuperación incompleta</li>
+              <li>Agota las reservas biológicas</li>
+              <li>Cortisol basal elevado</li>
+            </ul>
+          </div>
+        </div>
+        <p>
+          El trabajo activista a menudo implica estrés crónico: injusticia continua
+          sin una resolución clara, exposición sostenida al sufrimiento y la amenaza,
+          retrocesos repetidos y la carga particular de preocuparse por resultados
+          sobre los que se tiene un control limitado.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Biología del Estrés: Lo Que Sucede en el Cuerpo</h2>
+        <p>
+          La investigación de Epel — junto con el campo más amplio de la
+          psiconeuroinmunología — ha documentado lo que el estrés crónico hace a
+          nivel biológico:
+        </p>
+        <div class="biology-list">
+          <div class="biology-item">
+            <h3 class="biology-term">Carga Alostática</h3>
+            <p>
+              El "desgaste" biológico acumulativo del estrés crónico. A medida que
+              el cuerpo moviliza repetidamente hormonas del estrés sin recuperación
+              completa, acumula carga alostática — un índice medible de desregulación
+              fisiológica que afecta los sistemas cardiovascular, inmune, metabólico
+              y neuroendocrino.
+            </p>
+          </div>
+
+          <div class="biology-item">
+            <h3 class="biology-term">Acortamiento de los Telómeros</h3>
+            <p>
+              Los telómeros son las tapas protectoras al final de los cromosomas,
+              como las puntas de plástico de los cordones de los zapatos. Se acortan
+              naturalmente a medida que las células se dividen. La investigación
+              pionera de Epel y la laureada Nobel Elizabeth Blackburn mostró que el
+              estrés psicológico crónico acelera el acortamiento de los telómeros —
+              acelerando efectivamente el envejecimiento celular. El estrés percibido,
+              incluso sin factores estresantes objetivos, se asoció con telómeros
+              más cortos.
+            </p>
+          </div>
+
+          <div class="biology-item">
+            <h3 class="biology-term">Desregulación del Cortisol</h3>
+            <p>
+              Bajo estrés crónico, el ritmo normal del cortisol (alto en la mañana,
+              declinando durante el día) se aplana. Este aplanamiento se asocia con
+              fatiga, supresión inmune, dificultades cognitivas y depresión — la
+              constelación de síntomas clásica del agotamiento.
+            </p>
+          </div>
+
+          <div class="biology-item">
+            <h3 class="biology-term">Marcadores Inflamatorios</h3>
+            <p>
+              El estrés crónico regula al alza las vías inflamatorias, aumentando
+              los niveles de citocinas proinflamatorias. La inflamación crónica de
+              bajo grado está implicada en la depresión, las enfermedades
+              cardiovasculares, las condiciones autoinmunes y el envejecimiento
+              acelerado — todo lo cual aparece a tasas elevadas en poblaciones con
+              alto agotamiento.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Duelo Climático y Amenaza Ecológica</h2>
+        <p>
+          El trabajo más reciente de Epel ha abordado el cambio climático como un
+          factor estresante específico — lo que ella llama "estrés climático" o
+          "ecoestrés". Los activistas ambientales enfrentan una forma distintiva de
+          amenaza crónica: la escala de la crisis, su carácter lento pero acelerado,
+          el duelo por la pérdida (especies, ecosistemas, futuros) y el peso
+          particular de actuar en nombre de quienes no pueden actuar por sí mismos.
+        </p>
+        <p>
+          Este contexto de investigación es importante porque valida algo que los
+          activistas a menudo dudan de sí mismos: su angustia no es irracional ni
+          una señal de debilidad. Es una respuesta proporcionada a una amenaza real
+          y sostenida. El desafío no es sentir menos — es desarrollar la capacidad
+          biológica y relacional para seguir sintiendo sin colapsar.
+        </p>
+        <p>
+          La investigación de Epel muestra consistentemente que el factor más
+          predictivo de la resiliencia bajo amenaza crónica no es la ausencia de
+          angustia, sino la presencia de significado, conexión social y prácticas
+          de recuperación consistentes.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Construyendo Resiliencia Biológica: Prácticas Basadas en Evidencia</h2>
+        <p>
+          La investigación identifica cuatro dominios de práctica con la evidencia
+          más sólida para construir resiliencia biológica — específicamente protegiendo
+          la longitud de los telómeros, reduciendo la carga alostática y restaurando
+          el ritmo del cortisol:
+        </p>
+
+        <div class="practices-grid">
+          <div class="practice-card">
+            <div class="practice-icon" aria-hidden="true">&#128564;</div>
+            <h3>Sueño</h3>
+            <p>
+              El sueño es la herramienta de recuperación más poderosa. Durante el
+              sueño, el cerebro limpia los desechos metabólicos, consolida la memoria
+              y restaura la capacidad reguladora. El sueño consistente y adecuado
+              (7-9 horas para la mayoría de los adultos) es más protector de la
+              longitud de los telómeros que casi cualquier otro factor.
+            </p>
+          </div>
+
+          <div class="practice-card">
+            <div class="practice-icon" aria-hidden="true">&#127939;</div>
+            <h3>Movimiento</h3>
+            <p>
+              El ejercicio aeróbico regular se asocia sólidamente con telómeros
+              más largos, menor inflamación y mejor regulación del cortisol. El
+              ejercicio también induce BDNF (factor neurotrófico derivado del cerebro),
+              que apoya la neuroplasticidad y la regulación del estado de ánimo.
+              Incluso 30 minutos de caminata diaria muestran efectos significativos.
+            </p>
+          </div>
+
+          <div class="practice-card">
+            <div class="practice-icon" aria-hidden="true">&#129309;</div>
+            <h3>Conexión Social</h3>
+            <p>
+              El aislamiento es uno de los predictores más fuertes del envejecimiento
+              biológico acelerado. Por el contrario, los vínculos sociales sólidos —
+              particularmente las relaciones caracterizadas por confianza, reciprocidad
+              y cuidado mutuo — son profundamente protectores. La investigación de
+              Epel identifica consistentemente la conexión social como el recurso
+              de resiliencia más subestimado.
+            </p>
+          </div>
+
+          <div class="practice-card">
+            <div class="practice-icon" aria-hidden="true">&#129504;</div>
+            <h3>Creación de Significado</h3>
+            <p>
+              Las personas que mantienen un sentido de significado y propósito bajo
+              estrés crónico muestran una resiliencia biológica significativamente
+              mejor que quienes pierden el significado. Conectar el trabajo activista
+              con valores profundos — y encontrar espacios para reflexionar sobre
+              por qué importa el trabajo — no es un lujo. Es un factor de protección
+              biológica.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>El Peligro de las "Normas de Sacrificio" en el Activismo</h2>
+        <p>
+          La investigación de Epel — y la literatura más amplia sobre el agotamiento
+          activista — señala un patrón cultural específico que socava activamente la
+          resiliencia en el trabajo de movimiento: la normalización del autosacrificio.
+          Cuando las culturas activistas recompensan explícita o implícitamente a
+          quienes trabajan más, duermen menos y se cuidan al último, están
+          seleccionando para el agotamiento.
+        </p>
+        <p>
+          Esto no es meramente un problema individual. Las organizaciones cuyos
+          miembros están crónicamente agotados se vuelven menos efectivas, más
+          conflictivas internamente y más vulnerables a la deserción precisamente
+          cuando su trabajo es más necesario.
+        </p>
+        <p>
+          La ciencia apoya lo que muchos organizadores experimentados saben
+          intuitivamente: los movimientos sostenibles requieren personas sostenibles.
+          Las prácticas en este sitio no son retiros del activismo. Son las condiciones
+          biológicas para él.
+        </p>
+      </section>
+
+      <section class="content-section resources-section">
+        <h2>Recursos Relacionados</h2>
+        <p class="resources-intro">
+          Los siguientes recursos abordan el agotamiento, el autocuidado y la
+          resiliencia frente al estrés en el trabajo activista y de defensa sostenido.
+        </p>
+        <div class="resources-grid">
+          {relatedResources.map(resource => (
+            <ResourceCard resource={resource} lang={lang} />
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+    border-bottom: 1px solid var(--color-sage-light);
+  }
+
+  .breadcrumb {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-byline {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .content-article {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .content-section {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-xl);
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+  }
+
+  @media (max-width: 480px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .comparison-card {
+    border-radius: 8px;
+    padding: var(--space-md);
+  }
+
+  .comparison-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+  }
+
+  .comparison-card ul {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+  }
+
+  .comparison-acute {
+    background-color: #eef4ec;
+    border-left: 4px solid var(--color-sage);
+  }
+
+  .comparison-chronic {
+    background-color: #fdf0ec;
+    border-left: 4px solid var(--color-clay);
+  }
+
+  .biology-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .biology-item {
+    border-left: 3px solid var(--color-gold);
+    padding-left: var(--space-md);
+  }
+
+  .biology-term {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .biology-item p {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+  }
+
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  @media (max-width: 480px) {
+    .practices-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .practice-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-sage-light);
+    border-radius: 10px;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .practice-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+
+  .practice-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+  }
+
+  .practice-card p {
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .resources-section {
+    max-width: none;
+  }
+
+  .resources-section h2 {
+    max-width: var(--content-width);
+  }
+
+  .resources-intro {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-md) !important;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

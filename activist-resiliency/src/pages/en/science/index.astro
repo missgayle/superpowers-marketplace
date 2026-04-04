@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'en';
+---
+
+<BaseLayout
+  title="The Science — Activist Resiliency"
+  description="The research and contemplative wisdom grounding this site — polyvagal theory, window of tolerance, climate resilience science, and contemplative traditions."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">The Science</h1>
+      <p class="page-intro">
+        This site draws on a foundation of peer-reviewed research and tested
+        contemplative wisdom. Understanding the science behind stress, nervous
+        system regulation, and resilience can itself be a tool — it helps
+        activists make sense of their own experience and choose practices with
+        intention. Below are the four pillars of the research grounding this work.
+      </p>
+    </div>
+  </div>
+
+  <section class="topics-section">
+    <div class="container topics-grid">
+      <a href="/en/science/polyvagal" class="topic-card topic-polyvagal">
+        <div class="topic-icon" aria-hidden="true">&#9762;</div>
+        <h2 class="topic-title">Polyvagal Theory</h2>
+        <p class="topic-author">Stephen Porges</p>
+        <p class="topic-description">
+          How the autonomic nervous system governs safety, mobilization, and
+          shutdown — and why connection is the nervous system's first resource.
+        </p>
+        <span class="topic-link">Explore &rarr;</span>
+      </a>
+
+      <a href="/en/science/window-of-tolerance" class="topic-card topic-window">
+        <div class="topic-icon" aria-hidden="true">&#9651;</div>
+        <h2 class="topic-title">Window of Tolerance</h2>
+        <p class="topic-author">Dan Siegel</p>
+        <p class="topic-description">
+          The optimal zone of arousal where you can think clearly, feel fully,
+          and respond flexibly — and how to widen it under sustained pressure.
+        </p>
+        <span class="topic-link">Explore &rarr;</span>
+      </a>
+
+      <a href="/en/science/climate-resilience" class="topic-card topic-climate">
+        <div class="topic-icon" aria-hidden="true">&#127758;</div>
+        <h2 class="topic-title">Climate &amp; Sustained Resilience</h2>
+        <p class="topic-author">Elissa Epel</p>
+        <p class="topic-description">
+          Stress biology, telomere research, and what science tells us about
+          building biological resilience for long-haul activist work.
+        </p>
+        <span class="topic-link">Explore &rarr;</span>
+      </a>
+
+      <a href="/en/science/contemplative" class="topic-card topic-contemplative">
+        <div class="topic-icon" aria-hidden="true">&#128218;</div>
+        <h2 class="topic-title">Contemplative Traditions</h2>
+        <p class="topic-author">Mindfulness, Breathwork &amp; IFS</p>
+        <p class="topic-description">
+          How ancient contemplative practices map onto modern neuroscience — and
+          how they build the regulation and integration capacity activists need.
+        </p>
+        <span class="topic-link">Explore &rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="grounding-note">
+    <div class="container">
+      <div class="note-inner">
+        <h2 class="note-heading">Why Science Matters for Activists</h2>
+        <p>
+          Activist work generates real physiological stress responses. Sustained
+          exposure to injustice, threat, and grief is not metaphorical — it
+          leaves measurable traces in the body: elevated cortisol, shortened
+          telomeres, narrowed windows of tolerance. Understanding this is not
+          defeatist. It is the beginning of choosing wisely.
+        </p>
+        <p>
+          The framework underlying this site — Moral Resiliency — synthesizes
+          these research traditions with contemplative wisdom. The goal is not
+          to eliminate stress (which is impossible and undesirable) but to
+          develop the capacity to move through it without collapse, and to
+          return again and again to grounded, connected action.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .topics-section {
+    padding: var(--space-lg) 0;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 639px) {
+    .topics-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .topic-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .topic-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    color: white;
+  }
+
+  .topic-polyvagal {
+    background: linear-gradient(135deg, #5a7c6a, #3d5c4e);
+  }
+
+  .topic-window {
+    background: linear-gradient(135deg, #6a7a8c, #3d5066);
+  }
+
+  .topic-climate {
+    background: linear-gradient(135deg, #8c7a5a, #664f2e);
+  }
+
+  .topic-contemplative {
+    background: linear-gradient(135deg, #7a5a8c, #4d2e66);
+  }
+
+  .topic-icon {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+  }
+
+  .topic-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+
+  .topic-author {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.75);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .topic-description {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+    flex: 1;
+    margin: 0;
+  }
+
+  .topic-link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: var(--space-sm);
+  }
+
+  .grounding-note {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .note-inner {
+    max-width: var(--content-width);
+    background-color: var(--color-white);
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .note-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .note-inner p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+  }
+</style>

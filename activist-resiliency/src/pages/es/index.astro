@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'es';
+---
+
+<BaseLayout
+  title="Resiliencia Activista"
+  description="Herramientas basadas en evidencia para activistas, organizadores y movimientos — fundamentadas en neurociencia y sabiduría contemplativa."
+  lang={lang}
+>
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1 class="hero-heading">No tienes que cargar con esto solo/a.</h1>
+      <p class="hero-subtitle">
+        Herramientas basadas en evidencia para activistas, organizadores y movimientos — fundamentadas en neurociencia y sabiduría contemplativa.
+      </p>
+    </div>
+  </section>
+
+  <section class="doorways">
+    <div class="container doorways-grid">
+      <a href="/es/crisis" class="doorway-card doorway-crisis">
+        <h2 class="doorway-title">Necesito Ayuda Ahora</h2>
+        <p class="doorway-description">
+          Prácticas de enraizamiento, ejercicios de respiración y apoyo inmediato para el estrés agudo, la sobrecarga o la crisis.
+        </p>
+      </a>
+
+      <a href="/es/resilience" class="doorway-card doorway-resilience">
+        <h2 class="doorway-title">Construir Resiliencia</h2>
+        <p class="doorway-description">
+          Prácticas, herramientas y marcos a largo plazo para un activismo sostenible — para ti, tu equipo y tu organización.
+        </p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+    text-align: center;
+  }
+
+  .hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .hero-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    opacity: 0.8;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .doorways {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .doorways-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .doorways-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .doorway-card {
+    display: block;
+    border-radius: 12px;
+    padding: var(--space-xl) var(--space-lg);
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .doorway-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    color: white;
+  }
+
+  .doorway-crisis {
+    background: linear-gradient(135deg, var(--color-clay-light), var(--color-clay));
+  }
+
+  .doorway-resilience {
+    background: linear-gradient(135deg, var(--color-sage-light), var(--color-sage));
+  }
+
+  .doorway-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: white;
+  }
+
+  .doorway-description {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: white;
+    opacity: 0.92;
+  }
+</style>

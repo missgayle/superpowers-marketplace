@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import allResources from '../../../data/resources.json';
+
+const lang = 'en';
+
+// Filter: audience includes "individual" AND stage includes "long-term"
+const resources = allResources.filter(r =>
+  r.audience.includes('individual') &&
+  r.stage.includes('long-term')
+);
+---
+
+<BaseLayout
+  title="Resilience for Individuals — Activist Resiliency"
+  description="Personal practices for self-regulation, recovery, and sustained wellbeing as an activist."
+  lang={lang}
+>
+  <div class="page-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/en/resilience" class="breadcrumb-link">Build Resilience</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="breadcrumb-current">For Individuals</span>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-heading">Resilience for Individuals</h1>
+      <p class="page-intro">
+        The work of change begins — and must be sustained — within the person doing it. This section draws on the Resilient Path of the Moral Resiliency framework: moving from reactivity toward regulation, from isolation toward connection, and from depletion toward renewal.
+      </p>
+    </header>
+
+    <section class="content-section">
+      <h2 class="section-heading">Perspective-Taking and Moral Sensitivity</h2>
+      <p class="section-body">
+        Resilience begins with the capacity to hold multiple truths at once — to see suffering clearly without losing sight of possibility, to feel outrage without becoming consumed by it. This quality, called <em>moral sensitivity</em> in the resiliency framework, is a kind of inner balance: acknowledging the gravity of injustice while maintaining the perspective that change is possible and that you are one actor in a long movement.
+      </p>
+      <p class="section-body">
+        Perspective-taking doesn't mean minimizing harm. It means developing enough inner space to stay curious rather than reactive — to notice when you've shifted from engaged concern into numbing, rage, or despair, and to find your way back. Practices like journaling, therapy, and contemplative inquiry can all support this quality of witnessing.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Regulation Practices</h2>
+      <p class="section-body">
+        The nervous system doesn't distinguish between a physical threat and the sustained low-grade stress of fighting for justice. Over time, unresolved activation accumulates — and regulation practices are how we discharge that activation and return to a window of tolerance where thinking is clear, connection is available, and action can be purposeful rather than reactive.
+      </p>
+
+      <div class="practices-grid">
+        <div class="practice-card">
+          <h3 class="practice-title">Breathwork</h3>
+          <p class="practice-body">
+            Conscious breathing is one of the most direct ways to shift nervous system state. Extended exhale breathing (breathing out longer than you breathe in) activates the parasympathetic nervous system, reducing cortisol and heart rate. Even three to five minutes of slow, extended exhales can move you from an activated state into one where clear thought and connection become possible again. The Breathwrk app in our resources offers structured exercises you can return to daily.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Mindfulness and Meditation</h3>
+          <p class="practice-body">
+            Mindfulness practice builds the capacity to observe your internal state without immediately acting on it — to notice fear, anger, or despair as passing experiences rather than fixed realities. Research supports regular meditation as reducing burnout, improving emotional regulation, and supporting the kind of long-term engagement that activism requires. Start with five minutes daily. Jack Kornfield's guided meditation on presence is a gentle entry point.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Somatic Awareness</h3>
+          <p class="practice-body">
+            Trauma and chronic stress live in the body, not just the mind. Somatic practices — body-based approaches like progressive muscle relaxation, grounding through sensation, or Peter Levine's Somatic Experiencing work — help the body complete stress cycles that cognitive approaches alone cannot reach. Learning to notice where you hold tension, and how to release it, is a foundational resilience skill.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Yoga</h3>
+          <p class="practice-body">
+            Yoga integrates movement, breath, and attention in ways that are uniquely effective for nervous system regulation. Trauma-sensitive yoga — which emphasizes choice, sensation, and gentle inquiry rather than performance — has significant research support for reducing symptoms of PTSD and chronic stress. Even a short practice several times a week builds cumulative resilience over months.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Creative Acts and Ritual as Regulation</h2>
+      <p class="section-body">
+        Movement work has always been sustained by culture: songs, stories, art, ritual, and ceremony. These are not luxuries or distractions — they are regulation tools. Creative expression processes experience that language alone cannot carry. Ritual creates a container for grief, gratitude, and transition. Drawing, writing poetry, making music, dancing, and collective ceremony all work through the body and the imagination in ways that replenish what activism depletes.
+      </p>
+      <p class="section-body">
+        Consider building small rituals into your activist practice: a moment of intention before an action, a way to mark the end of a difficult week, a practice of gratitude for those who came before. These anchors help distinguish periods of effort from periods of recovery — a distinction that is easy to lose in movements where the urgency never stops.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Knowing When to Seek Support</h2>
+      <p class="section-body">
+        Self-regulation practices are powerful, but they have limits. If you are experiencing persistent intrusive thoughts, nightmares, difficulty functioning, or feeling fundamentally disconnected from yourself or others, these may be signs of trauma that needs professional support. Trauma-informed therapists, somatic practitioners, and peer support networks can offer what self-care alone cannot. Seeking help is not a sign of weakness — it is a way of preserving your capacity to keep doing the work.
+      </p>
+    </section>
+
+    <section class="resources-section">
+      <h2 class="resources-heading">Resources for Individuals</h2>
+      <p class="resources-intro">
+        Curated resources for personal resilience — workbooks, guided practices, books, and tools.
+      </p>
+      <div class="resources-grid">
+        {resources.map(resource => (
+          <ResourceCard resource={resource} lang={lang} />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    opacity: 0.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .breadcrumb-link {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-sep {
+    opacity: 0.5;
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--color-sage-light);
+  }
+
+  .page-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    max-width: 70ch;
+    opacity: 0.85;
+  }
+
+  .content-section {
+    margin-bottom: var(--space-xl);
+    max-width: var(--content-width);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-body {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    margin-bottom: var(--space-md);
+  }
+
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .practices-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .practice-card {
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+  }
+
+  .practice-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .practice-body {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+  }
+
+  .resources-section {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--color-sage-light);
+  }
+
+  .resources-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .resources-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    opacity: 0.75;
+    margin-bottom: var(--space-lg);
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

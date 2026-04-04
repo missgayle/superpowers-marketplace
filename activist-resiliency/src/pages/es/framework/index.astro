@@ -1,0 +1,512 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const lang = 'es';
+---
+
+<BaseLayout
+  title="Marco de Trabajo para la Resiliencia Moral — Resiliencia Activista"
+  description="Una visión general del Marco de Trabajo para la Resiliencia Moral: los dos caminos que recorren los activistas — Resiliente o Reactivo — y qué determina hacia dónde vamos."
+  lang={lang}
+>
+  <div class="page-container">
+    <header class="page-header">
+      <h1 class="page-heading">Marco de Trabajo para la Resiliencia Moral</h1>
+      <p class="page-intro">
+        Los activistas cargan con algo que la mayoría de las personas nunca tiene que sostener: el peso moral de la injusticia, día tras día, a menudo sin apoyo institucional suficiente. Este marco mapea los dos caminos a los que ese peso puede llevarnos — y señala qué marca la diferencia.
+      </p>
+    </header>
+
+    <section class="intro-section">
+      <div class="intro-inner">
+        <h2 class="section-heading">Qué es este marco</h2>
+        <p class="section-body">
+          El Marco de Trabajo para la Resiliencia Moral fue desarrollado por Gayle Karen Young, basándose en décadas de investigación en psicología moral, neurociencia y práctica contemplativa. Sintetiza el trabajo de académicos como N. Eisenberg (sobre comportamiento prosocial y empatía), D. Batson (sobre altruismo y motivación moral), J. Halifax (sobre compasión y estados límite) y C. Rushton (sobre resiliencia moral en contextos de cuidado).
+        </p>
+        <p class="section-body">
+          El marco identifica dos trayectorias — el <strong>Camino Resiliente</strong> y el <strong>Camino Reactivo</strong> — que surgen de las mismas condiciones de partida. Ambos caminos comienzan con quienes somos: nuestros atributos personales, nuestra historia, nuestros recursos actuales. Lo que diverge es lo que sucede después: si nos movemos hacia la regulación e integración, o hacia la desregulación. Y desde allí, los comportamientos que adoptamos y, en última instancia, los resultados — para nosotros y para nuestros movimientos.
+        </p>
+        <p class="section-body">
+          Este no es un marco de juicio. El Camino Reactivo no es debilidad — es lo que les sucede a personas comprometidas bajo presión sostenida sin apoyo adecuado. Comprenderlo es el primer paso hacia encontrar otro camino.
+        </p>
+      </div>
+    </section>
+
+    <section class="diagram-section">
+      <h2 class="section-heading">El diagrama de los dos caminos</h2>
+      <p class="section-body diagram-intro">
+        Ambos caminos comienzan con la misma persona. La diferencia está en los recursos que tenemos — internos y externos — y si nos movemos hacia la regulación o nos alejamos de ella.
+      </p>
+
+      <div class="diagram" aria-label="Diagrama de dos caminos del Marco de Trabajo para la Resiliencia Moral">
+
+        <!-- Camino Resiliente -->
+        <div class="path path-resilient">
+          <div class="path-label">
+            <span class="path-badge badge-resilient">Camino Resiliente</span>
+          </div>
+
+          <div class="path-flow">
+            <div class="flow-stage">
+              <div class="stage-card card-resilient">
+                <h3 class="stage-title">Atributos Personales</h3>
+                <ul class="stage-list">
+                  <li>Toma de Perspectiva <span class="level high">alta</span></li>
+                  <li>Sensibilidad Moral <span class="level high">alta</span></li>
+                  <li>Con recursos</li>
+                  <li>Capacidad para la Complejidad</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">+</div>
+
+            <div class="flow-stage">
+              <div class="stage-card card-resilient">
+                <h3 class="stage-title">Regulación e Integración</h3>
+                <ul class="stage-list">
+                  <li>Prácticas</li>
+                  <li>Ritual</li>
+                  <li>Comunidad</li>
+                  <li>Actos Creativos</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+
+            <div class="flow-stage">
+              <div class="stage-card card-resilient">
+                <h3 class="stage-title">Comportamientos (Centrados en Otros)</h3>
+                <ul class="stage-list">
+                  <li>Respuestas empáticas</li>
+                  <li>Creación de sentido generativo</li>
+                  <li>Ayuda apropiada y llamada a la acción</li>
+                  <li>Imaginación moral</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+
+            <div class="flow-stage outcomes-pair">
+              <div class="stage-card card-resilient card-outcome">
+                <h3 class="stage-title">Personal / Interior</h3>
+                <ul class="stage-list">
+                  <li>Resiliencia</li>
+                  <li>Acción compasiva con principios</li>
+                  <li>Integridad</li>
+                  <li>Capacidad colectiva</li>
+                  <li>Discernimiento</li>
+                </ul>
+              </div>
+              <div class="stage-card card-resilient card-outcome">
+                <h3 class="stage-title">Colectivo / Exterior</h3>
+                <ul class="stage-list">
+                  <li>Liderazgo invitacional</li>
+                  <li>Colaboración</li>
+                  <li>Construcción de coaliciones</li>
+                  <li>Coherencia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-divider" aria-hidden="true"></div>
+
+        <!-- Camino Reactivo -->
+        <div class="path path-reactive">
+          <div class="path-label">
+            <span class="path-badge badge-reactive">Camino Reactivo</span>
+          </div>
+
+          <div class="path-flow">
+            <div class="flow-stage">
+              <div class="stage-card card-reactive">
+                <h3 class="stage-title">Atributos Personales</h3>
+                <ul class="stage-list">
+                  <li>Toma de Perspectiva <span class="level low">baja</span></li>
+                  <li>Sensibilidad Moral <span class="level low">baja</span></li>
+                  <li>Sin recursos</li>
+                  <li>Evitación de Complejidad</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">+</div>
+
+            <div class="flow-stage">
+              <div class="stage-card card-reactive">
+                <h3 class="stage-title">Desregulación</h3>
+                <ul class="stage-list">
+                  <li>Angustia Empática</li>
+                  <li>Sobreactivación</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+
+            <div class="flow-stage">
+              <div class="stage-card card-reactive">
+                <h3 class="stage-title">Comportamientos (Centrados en Sí Mismo)</h3>
+                <ul class="stage-list">
+                  <li>Evitación</li>
+                  <li>Entumecimiento</li>
+                  <li>Abandono y aislamiento</li>
+                  <li>Indignación moral no regulada</li>
+                  <li>Desesperanza</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">&rarr;</div>
+
+            <div class="flow-stage outcomes-pair">
+              <div class="stage-card card-reactive card-outcome">
+                <h3 class="stage-title">Personal (Centrado en Sí Mismo)</h3>
+                <ul class="stage-list">
+                  <li>Agotamiento</li>
+                  <li>Acción no regulada</li>
+                  <li>Estrés secundario agudo</li>
+                </ul>
+              </div>
+              <div class="stage-card card-reactive card-outcome">
+                <h3 class="stage-title">Colectivo</h3>
+                <ul class="stage-list">
+                  <li>Liderazgo ineficaz</li>
+                  <li>Agotar a otros</li>
+                  <li>Silos</li>
+                  <li>Culpabilización</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- fin diagrama -->
+    </section>
+
+    <section class="paths-intro-section">
+      <h2 class="section-heading">Explora cada camino</h2>
+      <p class="section-body">
+        El diagrama anterior es un mapa — pero los mapas solo se vuelven útiles cuando se camina el territorio. Las páginas a continuación exploran cada camino en profundidad: qué significa cada etapa en la práctica, qué nos dice la ciencia, y cómo es pasar de un camino al otro.
+      </p>
+      <div class="paths-cards">
+        <a href="/es/framework/resilient-path" class="path-explore-card card-explore-resilient">
+          <h3 class="explore-title">El Camino Resiliente</h3>
+          <p class="explore-desc">
+            Comprende cómo la alta toma de perspectiva, la sensibilidad moral y las prácticas de regulación construyen la capacidad de comportamiento centrado en otros y un impacto duradero. Explora qué significa actuar desde un estado vagal ventral — dentro de tu ventana de tolerancia.
+          </p>
+          <span class="explore-link">Explorar el Camino Resiliente &rarr;</span>
+        </a>
+
+        <a href="/es/framework/reactive-path" class="path-explore-card card-explore-reactive">
+          <h3 class="explore-title">El Camino Reactivo</h3>
+          <p class="explore-desc">
+            Comprende — con compasión, no con juicio — cómo la desregulación, la angustia empática y los recursos agotados llevan al burnout, el aislamiento y los movimientos fragmentados. Y cómo el camino de regreso a la resiliencia siempre está disponible.
+          </p>
+          <span class="explore-link">Explorar el Camino Reactivo &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="credits-section">
+      <p class="credits-text">
+        <em>Marco de Trabajo para la Resiliencia Moral de Gayle Karen Young, adaptado de N. Eisenberg, D. Batson, J. Halifax, C. Rushton. Actualizado 8.10.25.</em>
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--color-sage-light);
+    max-width: 780px;
+  }
+
+  .page-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    max-width: 70ch;
+    opacity: 0.85;
+  }
+
+  .intro-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .intro-inner {
+    max-width: var(--content-width);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-body {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    margin-bottom: var(--space-md);
+  }
+
+  /* Diagram */
+  .diagram-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .diagram-intro {
+    max-width: 65ch;
+  }
+
+  .diagram {
+    background: var(--color-white);
+    border: 1px solid var(--color-sage-light);
+    border-radius: 16px;
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
+    overflow-x: auto;
+  }
+
+  .path {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+  }
+
+  .path-label {
+    flex-shrink: 0;
+    width: 8rem;
+    padding-top: 0.75rem;
+  }
+
+  .path-badge {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .badge-resilient {
+    background-color: var(--color-sage);
+    color: var(--color-white);
+  }
+
+  .badge-reactive {
+    background-color: var(--color-clay);
+    color: var(--color-white);
+  }
+
+  .path-flow {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .flow-stage {
+    flex-shrink: 0;
+  }
+
+  .outcomes-pair {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .flow-arrow {
+    color: var(--color-charcoal-light);
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-top: 0.6rem;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .stage-card {
+    border-radius: 8px;
+    padding: var(--space-sm) var(--space-md);
+    min-width: 160px;
+    max-width: 200px;
+  }
+
+  .card-resilient {
+    background-color: #EEF4EC;
+    border-left: 4px solid var(--color-sage);
+  }
+
+  .card-reactive {
+    background-color: #F8EDE9;
+    border-left: 4px solid var(--color-clay);
+  }
+
+  .card-outcome {
+    max-width: 190px;
+  }
+
+  .stage-title {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .stage-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .stage-list li {
+    font-size: 0.8rem;
+    color: var(--color-charcoal);
+    line-height: 1.5;
+    padding: 0.1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  .level {
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.1rem 0.35rem;
+    border-radius: 999px;
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+
+  .level.high {
+    background-color: var(--color-sage);
+    color: white;
+  }
+
+  .level.low {
+    background-color: var(--color-clay);
+    color: white;
+  }
+
+  .path-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-light), transparent);
+    margin: var(--space-sm) 0;
+  }
+
+  /* Explore Cards */
+  .paths-intro-section {
+    margin-bottom: var(--space-xl);
+  }
+
+  .paths-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .paths-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .path-explore-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .path-explore-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+  }
+
+  .card-explore-resilient {
+    background: linear-gradient(135deg, #EEF4EC, #C8DAC4);
+    color: var(--color-charcoal);
+  }
+
+  .card-explore-reactive {
+    background: linear-gradient(135deg, #F8EDE9, #E3C0B4);
+    color: var(--color-charcoal);
+  }
+
+  .explore-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.3;
+  }
+
+  .explore-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    opacity: 0.9;
+    flex: 1;
+  }
+
+  .explore-link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-charcoal);
+    opacity: 0.8;
+    display: block;
+    margin-top: var(--space-sm);
+  }
+
+  /* Credits */
+  .credits-section {
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-sage-light);
+    max-width: 72ch;
+  }
+
+  .credits-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    opacity: 0.65;
+    line-height: 1.6;
+  }
+</style>

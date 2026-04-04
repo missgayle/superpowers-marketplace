@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import allResources from '../../../data/resources.json';
+
+const lang = 'es';
+
+// Filtrar: audiencia incluye "individual" Y etapa incluye "long-term"
+const resources = allResources.filter(r =>
+  r.audience.includes('individual') &&
+  r.stage.includes('long-term')
+);
+---
+
+<BaseLayout
+  title="Resiliencia para Individuos — Resiliencia Activista"
+  description="Prácticas personales para la autorregulación, la recuperación y el bienestar sostenido como activista."
+  lang={lang}
+>
+  <div class="page-container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/es/resilience" class="breadcrumb-link">Construir Resiliencia</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="breadcrumb-current">Para Individuos</span>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-heading">Resiliencia para Individuos</h1>
+      <p class="page-intro">
+        El trabajo del cambio comienza — y debe sostenerse — dentro de la persona que lo lleva a cabo. Esta sección se basa en el Camino Resiliente del marco de Resiliencia Moral: avanzar desde la reactividad hacia la regulación, desde el aislamiento hacia la conexión, y desde el agotamiento hacia la renovación.
+      </p>
+    </header>
+
+    <section class="content-section">
+      <h2 class="section-heading">La Toma de Perspectiva y la Sensibilidad Moral</h2>
+      <p class="section-body">
+        La resiliencia comienza con la capacidad de sostener múltiples verdades a la vez — ver el sufrimiento con claridad sin perder de vista la posibilidad, sentir indignación sin ser consumido/a por ella. Esta cualidad, llamada <em>sensibilidad moral</em> en el marco de resiliencia, es un tipo de equilibrio interior: reconocer la gravedad de la injusticia mientras se mantiene la perspectiva de que el cambio es posible y que tú eres un actor en un largo movimiento.
+      </p>
+      <p class="section-body">
+        La toma de perspectiva no significa minimizar el daño. Significa desarrollar suficiente espacio interior para permanecer curioso/a en lugar de reactivo/a — para notar cuando has pasado de la preocupación comprometida al entumecimiento, la rabia o la desesperación, y encontrar el camino de regreso. Prácticas como el diario, la terapia y la indagación contemplativa pueden apoyar esta cualidad de ser testigo.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Prácticas de Regulación</h2>
+      <p class="section-body">
+        El sistema nervioso no distingue entre una amenaza física y el estrés bajo sostenido de luchar por la justicia. Con el tiempo, la activación no resuelta se acumula — y las prácticas de regulación son la forma en que descargamos esa activación y volvemos a una ventana de tolerancia donde el pensamiento es claro, la conexión está disponible y la acción puede ser intencional en lugar de reactiva.
+      </p>
+
+      <div class="practices-grid">
+        <div class="practice-card">
+          <h3 class="practice-title">Trabajo de Respiración</h3>
+          <p class="practice-body">
+            La respiración consciente es una de las formas más directas de cambiar el estado del sistema nervioso. La respiración con exhalación extendida (exhalar más tiempo del que se inhala) activa el sistema nervioso parasimpático, reduciendo el cortisol y la frecuencia cardíaca. Incluso tres a cinco minutos de exhalaciones lentas y extendidas pueden llevarte de un estado activado a uno donde el pensamiento claro y la conexión se vuelven posibles nuevamente. La aplicación Breathwrk en nuestros recursos ofrece ejercicios estructurados a los que puedes volver diariamente.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Mindfulness y Meditación</h3>
+          <p class="practice-body">
+            La práctica del mindfulness desarrolla la capacidad de observar tu estado interno sin actuar inmediatamente sobre él — notar el miedo, la ira o la desesperación como experiencias pasajeras en lugar de realidades fijas. La investigación apoya la meditación regular para reducir el agotamiento, mejorar la regulación emocional y apoyar el tipo de compromiso a largo plazo que requiere el activismo. Comienza con cinco minutos al día.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Conciencia Somática</h3>
+          <p class="practice-body">
+            El trauma y el estrés crónico viven en el cuerpo, no solo en la mente. Las prácticas somáticas — enfoques basados en el cuerpo como la relajación muscular progresiva, el anclaje a través de la sensación, o el trabajo de Experiencia Somática de Peter Levine — ayudan al cuerpo a completar ciclos de estrés que los enfoques cognitivos solos no pueden alcanzar. Aprender a notar dónde sostienes la tensión, y cómo liberarla, es una habilidad de resiliencia fundamental.
+          </p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="practice-title">Yoga</h3>
+          <p class="practice-body">
+            El yoga integra el movimiento, la respiración y la atención de maneras que son especialmente efectivas para la regulación del sistema nervioso. El yoga sensible al trauma — que enfatiza la elección, la sensación y la indagación gentil en lugar del rendimiento — tiene un apoyo significativo en investigación para reducir los síntomas del estrés postraumático y el estrés crónico. Incluso una práctica corta varias veces a la semana construye resiliencia acumulativa a lo largo de los meses.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Actos Creativos y Rituales como Regulación</h2>
+      <p class="section-body">
+        El trabajo de movimiento siempre ha sido sostenido por la cultura: canciones, historias, arte, ritual y ceremonia. Estas no son lujos o distracciones — son herramientas de regulación. La expresión creativa procesa experiencias que el lenguaje solo no puede cargar. El ritual crea un contenedor para el duelo, la gratitud y la transición. Dibujar, escribir poesía, hacer música, bailar y la ceremonia colectiva trabajan a través del cuerpo y la imaginación de maneras que reponen lo que el activismo agota.
+      </p>
+      <p class="section-body">
+        Considera incorporar pequeños rituales en tu práctica activista: un momento de intención antes de una acción, una manera de marcar el final de una semana difícil, una práctica de gratitud por quienes vinieron antes. Estos anclajes ayudan a distinguir los períodos de esfuerzo de los períodos de recuperación — una distinción que es fácil perder en los movimientos donde la urgencia nunca se detiene.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Saber Cuándo Buscar Apoyo</h2>
+      <p class="section-body">
+        Las prácticas de autorregulación son poderosas, pero tienen límites. Si experimentas pensamientos intrusivos persistentes, pesadillas, dificultad para funcionar, o te sientes fundamentalmente desconectado/a de ti mismo/a o de los demás, estas pueden ser señales de trauma que necesita apoyo profesional. Los terapeutas informados sobre el trauma, los practicantes somáticos y las redes de apoyo entre pares pueden ofrecer lo que el autocuidado solo no puede. Buscar ayuda no es una señal de debilidad — es una manera de preservar tu capacidad para continuar haciendo el trabajo.
+      </p>
+    </section>
+
+    <section class="resources-section">
+      <h2 class="resources-heading">Recursos para Individuos</h2>
+      <p class="resources-intro">
+        Recursos seleccionados para la resiliencia personal — cuadernos de trabajo, prácticas guiadas, libros y herramientas.
+      </p>
+      <div class="resources-grid">
+        {resources.map(resource => (
+          <ResourceCard resource={resource} lang={lang} />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    opacity: 0.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .breadcrumb-link {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-sep {
+    opacity: 0.5;
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--color-sage-light);
+  }
+
+  .page-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    max-width: 70ch;
+    opacity: 0.85;
+  }
+
+  .content-section {
+    margin-bottom: var(--space-xl);
+    max-width: var(--content-width);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-body {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    margin-bottom: var(--space-md);
+  }
+
+  .practices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .practices-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .practice-card {
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+  }
+
+  .practice-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .practice-body {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+  }
+
+  .resources-section {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--color-sage-light);
+  }
+
+  .resources-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .resources-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    opacity: 0.75;
+    margin-bottom: var(--space-lg);
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

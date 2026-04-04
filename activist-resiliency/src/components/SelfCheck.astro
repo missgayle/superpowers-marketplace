@@ -1,0 +1,316 @@
+---
+import ResourceCard from './ResourceCard.astro';
+
+interface Resource {
+  id: string;
+  title: { en: string; es: string };
+  description: { en: string; es: string };
+  format: string;
+  type: string;
+  stage: string[];
+  audience: string[];
+  source: string;
+  url: string;
+  scienceTags: string[];
+}
+
+interface Props {
+  resources: Resource[];
+  lang: string;
+}
+
+const { resources, lang } = Astro.props;
+
+// Only acute resources
+const acuteResources = resources.filter(r => r.stage.includes('acute') || r.stage.includes('both'));
+
+// IDs for overwhelmed (hyper-arousal / sympathetic activation) — grounding/calming
+const overwhelmedIds = new Set([
+  'guided-sleep-meditation-trauma-insomnia',
+  'guided-meditation-fear-krishnananda',
+  'breathwrk-app',
+  'guided-meditation-being-present-kornfield',
+  'yoga-healing-body-soul-adriene',
+]);
+
+// IDs for numb (hypo-arousal / dorsal vagal) — gently activating
+const numbIds = new Set([
+  'short-yoga-exhaustion-burnout',
+  'peter-levine-fight-or-flight',
+  'yoga-healing-body-soul-adriene',
+  'healing-trauma-worksheets-positive-psychology',
+  'understanding-panic-attack',
+]);
+
+const overwhelmedResources = acuteResources.filter(r => overwhelmedIds.has(r.id));
+const numbResources = acuteResources.filter(r => numbIds.has(r.id));
+
+const i18n = {
+  en: {
+    question: 'What are you experiencing right now?',
+    overwhelmed: 'Overwhelmed / Racing thoughts',
+    numb: 'Numb / Shut down',
+    notSure: "I'm not sure",
+    overwhelmedHeading: 'Resources to help you settle and ground',
+    numbHeading: 'Resources to gently re-engage your body',
+    notSureHeading: 'Acute support resources',
+    back: '← Back to question',
+  },
+  es: {
+    question: '¿Qué estás experimentando ahora mismo?',
+    overwhelmed: 'Abrumado/a / Pensamientos acelerados',
+    numb: 'Adormecido/a / Desconectado/a',
+    notSure: 'No estoy seguro/a',
+    overwhelmedHeading: 'Recursos para ayudarte a calmarte y centrarte',
+    numbHeading: 'Recursos para reconectar suavemente con tu cuerpo',
+    notSureHeading: 'Recursos de apoyo inmediato',
+    back: '← Volver a la pregunta',
+  },
+};
+
+const t = i18n[lang as 'en' | 'es'] ?? i18n.en;
+---
+
+<div class="self-check" id="self-check">
+  <!-- Question panel — shown by default, hidden via JS when a state is chosen -->
+  <div class="question-panel" id="sc-question">
+    <p class="question-text">{t.question}</p>
+    <div class="option-buttons">
+      <button
+        class="option-btn"
+        type="button"
+        data-sc-target="overwhelmed"
+        aria-controls="sc-overwhelmed"
+      >
+        {t.overwhelmed}
+      </button>
+      <button
+        class="option-btn"
+        type="button"
+        data-sc-target="numb"
+        aria-controls="sc-numb"
+      >
+        {t.numb}
+      </button>
+      <button
+        class="option-btn"
+        type="button"
+        data-sc-target="not-sure"
+        aria-controls="sc-not-sure"
+      >
+        {t.notSure}
+      </button>
+    </div>
+  </div>
+
+  <!-- Resource panels — all visible without JS; hidden/shown via JS -->
+  <div class="resource-panel" id="sc-overwhelmed" aria-label={t.overwhelmedHeading}>
+    <div class="panel-header">
+      <h3 class="panel-heading">{t.overwhelmedHeading}</h3>
+      <button class="back-btn js-only" type="button" data-sc-back>{t.back}</button>
+    </div>
+    <div class="resource-grid">
+      {overwhelmedResources.map(r => <ResourceCard resource={r} lang={lang} />)}
+    </div>
+  </div>
+
+  <div class="resource-panel" id="sc-numb" aria-label={t.numbHeading}>
+    <div class="panel-header">
+      <h3 class="panel-heading">{t.numbHeading}</h3>
+      <button class="back-btn js-only" type="button" data-sc-back>{t.back}</button>
+    </div>
+    <div class="resource-grid">
+      {numbResources.map(r => <ResourceCard resource={r} lang={lang} />)}
+    </div>
+  </div>
+
+  <div class="resource-panel" id="sc-not-sure" aria-label={t.notSureHeading}>
+    <div class="panel-header">
+      <h3 class="panel-heading">{t.notSureHeading}</h3>
+      <button class="back-btn js-only" type="button" data-sc-back>{t.back}</button>
+    </div>
+    <div class="resource-grid">
+      {acuteResources.map(r => <ResourceCard resource={r} lang={lang} />)}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const root = document.getElementById('self-check');
+    if (!root) return;
+
+    const questionPanel = document.getElementById('sc-question');
+    const panels = {
+      overwhelmed: document.getElementById('sc-overwhelmed'),
+      numb: document.getElementById('sc-numb'),
+      'not-sure': document.getElementById('sc-not-sure'),
+    } as Record<string, HTMLElement | null>;
+
+    // Hide all resource panels initially (JS-enabled experience)
+    Object.values(panels).forEach(p => {
+      if (p) p.setAttribute('data-sc-hidden', '');
+    });
+
+    // Show option buttons only when JS is running
+    root.setAttribute('data-sc-js', '');
+
+    // Option button click
+    root.querySelectorAll('[data-sc-target]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = (btn as HTMLElement).dataset.scTarget!;
+        if (questionPanel) questionPanel.setAttribute('data-sc-hidden', '');
+        const panel = panels[target];
+        if (panel) {
+          panel.removeAttribute('data-sc-hidden');
+          panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Back button click
+    root.querySelectorAll('[data-sc-back]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        Object.values(panels).forEach(p => {
+          if (p) p.setAttribute('data-sc-hidden', '');
+        });
+        if (questionPanel) {
+          questionPanel.removeAttribute('data-sc-hidden');
+          questionPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  })();
+</script>
+
+<style>
+  .self-check {
+    padding: var(--space-lg) 0;
+  }
+
+  /* Question panel */
+  .question-panel {
+    text-align: center;
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  /* No-JS fallback: question panel shows but no routing happens */
+  /* With JS, we set data-sc-js on root and data-sc-hidden on panels */
+  [data-sc-hidden] {
+    display: none !important;
+  }
+
+  .question-text {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-lg);
+    line-height: var(--line-height-heading);
+  }
+
+  .option-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .option-btn {
+    width: 100%;
+    padding: var(--space-md) var(--space-lg);
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-charcoal);
+    background-color: var(--color-cream);
+    border: 2px solid var(--color-sage-light);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+    text-align: center;
+    line-height: var(--line-height-body);
+    /* Minimum 48px tap target */
+    min-height: 64px;
+  }
+
+  .option-btn:hover,
+  .option-btn:focus-visible {
+    background-color: var(--color-sage-light);
+    border-color: var(--color-sage);
+    outline: none;
+    transform: translateY(-1px);
+  }
+
+  .option-btn:active {
+    transform: translateY(0);
+    background-color: var(--color-sage);
+    color: var(--color-white);
+  }
+
+  /* Resource panels */
+  .resource-panel {
+    padding: var(--space-sm) 0;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .panel-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    font-weight: 600;
+  }
+
+  /* Back button is only meaningful with JS */
+  .back-btn {
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    color: var(--color-sage);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: color 0.15s ease;
+    /* Hide until JS flags it */
+    display: none;
+  }
+
+  /* Show back buttons only when JS is active */
+  [data-sc-js] .back-btn {
+    display: inline-block;
+  }
+
+  .back-btn:hover,
+  .back-btn:focus-visible {
+    color: var(--color-clay);
+    outline: none;
+    text-decoration: underline;
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 480px) {
+    .option-btn {
+      font-size: var(--font-size-base);
+      padding: var(--space-md);
+    }
+
+    .resource-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

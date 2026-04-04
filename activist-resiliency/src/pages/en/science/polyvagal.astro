@@ -1,0 +1,347 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import resources from '../../../data/resources.json';
+
+const lang = 'en';
+
+const relatedResources = resources.filter(r =>
+  r.scienceTags.some(tag => ['porges', 'levine', 'somatic'].includes(tag))
+);
+---
+
+<BaseLayout
+  title="Polyvagal Theory — The Science — Activist Resiliency"
+  description="How Stephen Porges' polyvagal theory explains the autonomic nervous system, safety, and why activists experience overwhelm, shutdown, and connection."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/science">The Science</a> &rsaquo; Polyvagal Theory</p>
+      <h1 class="page-title">Polyvagal Theory</h1>
+      <p class="page-byline">Research by Stephen Porges &bull; Related work: Peter Levine, Bessel van der Kolk</p>
+      <p class="page-intro">
+        Developed by neuroscientist Stephen Porges, polyvagal theory offers a
+        groundbreaking map of how the autonomic nervous system responds to safety,
+        danger, and life threat — and why social connection is our most fundamental
+        biological resource for regulation.
+      </p>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <div class="container">
+
+      <section class="content-section">
+        <h2>The Three Branches of the Autonomic Nervous System</h2>
+        <p>
+          Classical neuroscience described two modes: sympathetic (fight or flight)
+          and parasympathetic (rest and digest). Porges identified a third, evolutionarily
+          older branch of the vagus nerve — and showed that the three form a hierarchy
+          that the nervous system moves through in a predictable sequence.
+        </p>
+
+        <div class="three-states">
+          <div class="state-card state-ventral">
+            <h3 class="state-name">Ventral Vagal</h3>
+            <p class="state-subtitle">Social Engagement System</p>
+            <p class="state-keywords">Safety &bull; Connection &bull; Regulation</p>
+            <p>
+              The newest evolutionary branch of the vagus nerve. When activated,
+              we feel safe, curious, and able to connect. Our face is expressive,
+              our voice is warm, we can listen. This is the state where learning,
+              creativity, and collaboration are possible.
+            </p>
+            <p>
+              For activists: grounded presence, clear thinking, the capacity to
+              hold complexity, and genuine connection with others in the movement.
+            </p>
+          </div>
+
+          <div class="state-card state-sympathetic">
+            <h3 class="state-name">Sympathetic</h3>
+            <p class="state-subtitle">Fight / Flight / Mobilization</p>
+            <p class="state-keywords">Danger &bull; Activation &bull; Action</p>
+            <p>
+              When the nervous system perceives threat, it mobilizes energy for
+              action. Heart rate increases, attention narrows, digestion slows.
+              This is adaptive in acute danger — but when chronically activated
+              without resolution, it depletes the system.
+            </p>
+            <p>
+              For activists: urgency, anxiety, rage, hypervigilance, difficulty
+              sleeping, racing thoughts, reactive decision-making, interpersonal
+              conflict within teams.
+            </p>
+          </div>
+
+          <div class="state-card state-dorsal">
+            <h3 class="state-name">Dorsal Vagal</h3>
+            <p class="state-subtitle">Freeze / Collapse / Shutdown</p>
+            <p class="state-keywords">Life Threat &bull; Immobilization &bull; Numbness</p>
+            <p>
+              The oldest evolutionary branch — a last-resort survival response
+              when fight or flight have failed. The system shuts down to conserve
+              energy. We feel numb, disconnected, hopeless, and unable to act.
+            </p>
+            <p>
+              For activists: numbness to injustice, apathy, inability to organize,
+              dissociation, depression, dropping out of movements, cynicism as
+              a defense against feeling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>How This Maps to the Moral Resiliency Framework</h2>
+        <p>
+          The Moral Resiliency framework underlying this site maps directly onto
+          polyvagal theory:
+        </p>
+        <ul class="mapping-list">
+          <li>
+            <strong>Ventral vagal = the Resilient Path.</strong> Integration,
+            regulation, and flexible response. The capacity to be moved by injustice
+            without being swept away — to act from empathy rather than reactivity.
+          </li>
+          <li>
+            <strong>Sympathetic activation = the Reactive Path.</strong>
+            Empathic distress, burnout from over-activation, urgency that overrides
+            judgment, and interpersonal friction from unregulated emotion.
+          </li>
+          <li>
+            <strong>Dorsal vagal = the Withdrawn Path.</strong> Compassion fatigue,
+            numbing, disengagement, moral disengagement — the place where care
+            has been frozen out to protect from overwhelm.
+          </li>
+        </ul>
+        <p>
+          The goal is not to eliminate sympathetic or dorsal responses — they are
+          survival adaptations. The goal is to expand the capacity to return to
+          ventral vagal: to develop what Porges calls "neuroception" — the ability
+          to accurately sense safety — and to strengthen the pathways back to
+          connection and regulation.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Neuroception: The Body's Radar for Safety</h2>
+        <p>
+          Porges coined the term <em>neuroception</em> to describe the nervous system's
+          continuous, below-conscious scanning of the environment for cues of safety
+          or threat. This happens faster than thought — which is why our bodies can
+          respond to perceived danger before we're conscious of it.
+        </p>
+        <p>
+          Cues of safety (the sound of a warm voice, a relaxed face, physical
+          stillness, familiar smells) activate ventral vagal pathways. Cues of threat
+          (conflict, loud noise, facial expressions of contempt, physical constriction)
+          activate sympathetic or dorsal responses.
+        </p>
+        <p>
+          For activists, whose environments are often saturated with cues of threat
+          — confrontational spaces, hostile authority, media that amplifies harm —
+          the nervous system can get stuck in high alert. Practices that deliberately
+          introduce cues of safety (slow breathing, connection, grounding, movement)
+          help restore regulatory capacity.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>The Vagal Brake and Why Practices Work</h2>
+        <p>
+          The ventral vagal system acts as a "vagal brake" that modulates sympathetic
+          arousal. When the vagal tone is strong, we can tolerate higher levels of
+          activation without tipping into dysregulation. We can be in a heated meeting
+          and not lose ourselves. We can hold space for someone in crisis without
+          absorbing their distress.
+        </p>
+        <p>
+          Research shows that vagal tone is not fixed. It is trainable. Practices
+          like slow diaphragmatic breathing, humming, chanting, cold water exposure,
+          and face-to-face connection all increase vagal tone. This is why the
+          practices in the Build Resilience section are not merely self-care
+          strategies — they have measurable effects on nervous system regulation.
+        </p>
+      </section>
+
+      <section class="content-section resources-section">
+        <h2>Related Resources</h2>
+        <p class="resources-intro">
+          The following resources draw on polyvagal theory, somatic trauma approaches
+          (Peter Levine), and body-based resilience practices.
+        </p>
+        <div class="resources-grid">
+          {relatedResources.map(resource => (
+            <ResourceCard resource={resource} lang={lang} />
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+    border-bottom: 1px solid var(--color-sage-light);
+  }
+
+  .breadcrumb {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-byline {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .content-article {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .content-section {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-xl);
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .content-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .three-states {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .state-card {
+    border-radius: 10px;
+    padding: var(--space-md);
+    border-left: 5px solid transparent;
+  }
+
+  .state-card p {
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    margin-bottom: var(--space-xs);
+  }
+
+  .state-ventral {
+    background-color: #eef4ec;
+    border-left-color: var(--color-sage);
+  }
+
+  .state-sympathetic {
+    background-color: #fdf0ec;
+    border-left-color: var(--color-clay);
+  }
+
+  .state-dorsal {
+    background-color: #f0eef5;
+    border-left-color: #7a6a9a;
+  }
+
+  .state-name {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: 0.2rem;
+  }
+
+  .state-subtitle {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-charcoal-light);
+    margin-bottom: 0.25rem;
+  }
+
+  .state-keywords {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .mapping-list {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-sm) 0;
+  }
+
+  .mapping-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+  }
+
+  .resources-section {
+    max-width: none;
+  }
+
+  .resources-section h2 {
+    max-width: var(--content-width);
+  }
+
+  .resources-intro {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-md) !important;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

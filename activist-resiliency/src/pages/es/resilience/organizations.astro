@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import allResources from '../../../data/resources.json';
+
+const lang = 'es';
+
+// Filtrar: audiencia incluye "organization" O scienceTags incluye "collective"
+const resources = allResources.filter(r =>
+  r.audience.includes('organization') ||
+  r.scienceTags.includes('collective')
+);
+---
+
+<BaseLayout
+  title="Resiliencia para Organizaciones — Resiliencia Activista"
+  description="Incorporar la resiliencia en la estructura y cultura organizacional para un trabajo de movimiento sostenible."
+  lang={lang}
+>
+  <div class="page-container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="/es/resilience" class="breadcrumb-link">Construir Resiliencia</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="breadcrumb-current">Para Organizaciones</span>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-heading">Resiliencia para Organizaciones</h1>
+      <p class="page-intro">
+        Las organizaciones pueden encarnar patrones que o bien sostienen a las personas a lo largo del tiempo o las desgastan silenciosamente. Esta página explora cómo construir las condiciones estructurales y culturales que permiten a los movimientos mantenerse poderosos a lo largo de años y generaciones — no solo meses.
+      </p>
+    </header>
+
+    <section class="content-section">
+      <h2 class="section-heading">Construir Culturas de Coherencia</h2>
+      <p class="section-body">
+        La <em>coherencia</em> en un contexto organizacional significa alineación entre los valores declarados y las prácticas reales — entre lo que una organización dice que cree y cómo trata a las personas dentro de ella. Cuando estos están desalineados, la disonancia es sentida agudamente por los miembros, creando una forma de lesión moral que acelera el agotamiento y erosiona la confianza.
+      </p>
+      <p class="section-body">
+        Construir una cultura organizacional coherente requiere una evaluación honesta regular: ¿Nuestras prácticas internas reflejan el mundo que estamos tratando de construir? ¿Practicamos el poder compartido y el liderazgo distribuido, o el poder se concentra en la cima a pesar de nuestra retórica? ¿Invertimos en el bienestar de nuestra gente, o tratamos el autocuidado como algo de lo que los individuos son responsables en su tiempo libre?
+      </p>
+      <p class="section-body">
+        Las organizaciones coherentes nombran sus valores explícitamente y construyen estructuras de rendición de cuentas en torno a ellos — no solo a través de la aplicación, sino a través de la reflexión regular, la conversación honesta sobre las brechas y la respuesta genuina cuando los miembros nombran el daño.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Liderazgo Invitacional vs. Patrones de Liderazgo Ineficaz</h2>
+      <p class="section-body">
+        El marco de Resiliencia Moral contrasta los enfoques de liderazgo que emergen de la regulación (invitacional) con los que emergen de los estados reactivos (coercitivos, evasivos o rígidos). Estos patrones se manifiestan a nivel organizacional, no solo en líderes individuales.
+      </p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card comparison-effective">
+          <h3 class="comparison-title">Patrones de Liderazgo Invitacional</h3>
+          <ul class="comparison-list">
+            <li>Toma de decisiones distribuida con responsabilidad clara</li>
+            <li>El conflicto se trata como información y se procesa abiertamente</li>
+            <li>Los errores se reconocen y se aprende de ellos sin espirales de culpa</li>
+            <li>El poder se nombra explícitamente y se redistribuye activamente</li>
+            <li>Los nuevos miembros se incluyen significativamente en la configuración de la cultura</li>
+            <li>El bienestar del personal y los voluntarios se trata como responsabilidad organizacional</li>
+            <li>Responsabilidad externa ante la comunidad o la base más allá del liderazgo</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card comparison-ineffective">
+          <h3 class="comparison-title">Patrones de Liderazgo Reactivo</h3>
+          <ul class="comparison-list">
+            <li>Decisiones tomadas por un pequeño grupo con transparencia limitada</li>
+            <li>El conflicto se suprime o se maneja a través de presión informal</li>
+            <li>Culturas de culpa donde los errores se castigan en lugar de examinarse</li>
+            <li>Poder concentrado a pesar de la retórica de equidad</li>
+            <li>Se espera que los nuevos miembros se adapten a la cultura existente sin aportar</li>
+            <li>El bienestar se trata como responsabilidad individual, separado del trabajo</li>
+            <li>Responsabilidad solo hacia arriba, hacia los financiadores o la autoridad formal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Construcción de Coaliciones Efectivas Entre Movimientos</h2>
+      <p class="section-body">
+        Los movimientos son más fuertes cuando se construyen a través de la diferencia — a través de organizaciones, circunscripciones, ideologías y estrategias. Pero el trabajo de coalición también es uno de los trabajos relacionales más exigentes en la organización, requiriendo la capacidad de mantener las diferencias sin fracturarse y sostener la confianza a través de divisiones ideológicas, culturales y de clase significativas.
+      </p>
+      <p class="section-body">
+        Las coaliciones resilientes comparten algunas características comunes:
+      </p>
+      <ul class="practice-list">
+        <li><strong>Acuerdos claros sobre alcance y autonomía.</strong> Las coaliciones funcionan mejor cuando los miembros acuerdan de antemano sobre qué están coordinando y qué se decide de forma independiente. Los límites poco claros son una fuente primaria de ruptura de coaliciones.</li>
+        <li><strong>Atención explícita a las dinámicas de poder entre organizaciones.</strong> Las organizaciones grandes y bien financiadas pueden dominar fácilmente las coaliciones sin pretenderlo. Nombrar y redistribuir activamente este poder — en la configuración de la agenda, las oportunidades para hablar y la asignación de recursos — es un trabajo continuo.</li>
+        <li><strong>Prácticas para trabajar a través del conflicto.</strong> Todas las coaliciones encuentran conflictos. Las que tienen acuerdos explícitos sobre cómo trabajar a través del desacuerdo (diálogo facilitado, procesos de toma de decisiones acordados, reflexión estructurada después de eventos difíciles) sobreviven a ello. Las que no tienen tales acuerdos a menudo se fracturan cuando surge el conflicto.</li>
+        <li><strong>Construcción regular de relaciones fuera del trabajo de tareas.</strong> Las coaliciones formadas solo alrededor de tareas se fracturan más fácilmente que las que tienen vínculos relacionales genuinos a través de líneas organizacionales. El tiempo social intencional, el aprendizaje entre organizaciones y las celebraciones compartidas construyen la confianza que mantiene a las coaliciones unidas bajo presión.</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Prevenir el Agotamiento Organizacional</h2>
+      <p class="section-body">
+        El agotamiento organizacional — el agotamiento colectivo de un grupo — tiene causas estructurales que el autocuidado individual no puede abordar. Dos patrones son particularmente comunes y dañinos:
+      </p>
+
+      <div class="patterns-grid">
+        <div class="pattern-card">
+          <h3 class="pattern-title">Silos y Aislamiento</h3>
+          <p class="pattern-body">
+            Cuando los equipos o departamentos operan sin una conexión significativa entre sí, las personas pierden el sentido de ser parte de algo más grande que su trabajo inmediato. Esto reduce el significado y hace que los retrocesos se sientan más personales y más totales. Romper los silos — a través de reuniones entre equipos, aprendizaje compartido y proyectos colaborativos — no es solo una estrategia de eficiencia; es una estrategia de resiliencia.
+          </p>
+        </div>
+
+        <div class="pattern-card">
+          <h3 class="pattern-title">Patrones de Culpa</h3>
+          <p class="pattern-body">
+            Cuando las organizaciones responden a los retrocesos con culpa en lugar de análisis, crean un clima de miedo que suprime la honestidad y la toma de riesgos. Las personas dejan de señalar problemas temprano porque han aprendido que hacerlo invita al castigo en lugar del apoyo. Las culturas de culpa también se refuerzan a sí mismas: a medida que disminuye la confianza, aumentan los errores, creando más ocasiones para la culpa. Romper este patrón requiere liderazgo que modele explícitamente la responsabilidad sin vergüenza — nombrar los problemas, analizar las causas y responder con curiosidad.
+          </p>
+        </div>
+
+        <div class="pattern-card">
+          <h3 class="pattern-title">Urgencia Crónica</h3>
+          <p class="pattern-body">
+            Muchas organizaciones de cambio social operan en un modo de emergencia permanente donde todo es urgente y nada puede esperar. Esto a veces es realista — pero también es a veces un patrón cultural que impide el descanso, la reflexión y el pensamiento estratégico genuino. Las organizaciones que incorporan tiempo protegido para el aprendizaje, la planificación y la recuperación — no solo la respuesta de emergencia — sostienen a su gente más efectivamente a lo largo del tiempo.
+          </p>
+        </div>
+
+        <div class="pattern-card">
+          <h3 class="pattern-title">Apoyo de Transición Insuficiente</h3>
+          <p class="pattern-body">
+            Las personas que abandonan las organizaciones — ya sea por elección, agotamiento o circunstancias de vida cambiantes — llevan consigo conocimiento, relaciones y a menudo duelo no procesado del trabajo. Las organizaciones que invierten en la salida, los rituales de transición y las relaciones con los antiguos miembros retienen más de su conocimiento institucional y dejan a los miembros que se van mejor dotados para lo que viene después, en lugar de agotados por una ruptura limpia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources-section">
+      <h2 class="resources-heading">Recursos para Organizaciones</h2>
+      <p class="resources-intro">
+        Guías y manuales para construir resiliencia organizacional — incluyendo guías de Protection International, el manual de Seguridad Holística y marcos de protección colectiva.
+      </p>
+      <div class="resources-grid">
+        {resources.map(resource => (
+          <ResourceCard resource={resource} lang={lang} />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    opacity: 0.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .breadcrumb-link {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-sep {
+    opacity: 0.5;
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--color-sage-light);
+  }
+
+  .page-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    max-width: 70ch;
+    opacity: 0.85;
+  }
+
+  .content-section {
+    margin-bottom: var(--space-xl);
+    max-width: var(--content-width);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-body {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    margin-bottom: var(--space-md);
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .comparison-card {
+    border-radius: 8px;
+    padding: var(--space-md);
+  }
+
+  .comparison-effective {
+    background-color: rgba(139, 169, 138, 0.12);
+    border: 1px solid var(--color-sage-light);
+  }
+
+  .comparison-ineffective {
+    background-color: var(--color-cream);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .comparison-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .comparison-list {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    padding-left: var(--space-md);
+  }
+
+  .comparison-list li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .practice-list {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .practice-list li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .patterns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .patterns-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pattern-card {
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+  }
+
+  .pattern-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .pattern-body {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+  }
+
+  .resources-section {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--color-sage-light);
+  }
+
+  .resources-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .resources-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    opacity: 0.75;
+    margin-bottom: var(--space-lg);
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

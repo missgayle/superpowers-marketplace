@@ -1,0 +1,389 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import resources from '../../../data/resources.json';
+
+const lang = 'en';
+
+const relatedResources = resources.filter(r =>
+  r.scienceTags.includes('contemplative')
+);
+---
+
+<BaseLayout
+  title="Contemplative Traditions — The Science — Activist Resiliency"
+  description="How mindfulness, breathwork, and embodied awareness from Buddhist, Hindu, and other contemplative traditions build regulation and resilience for activists."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/science">The Science</a> &rsaquo; Contemplative Traditions</p>
+      <h1 class="page-title">Contemplative Traditions</h1>
+      <p class="page-byline">Mindfulness &bull; Breathwork &bull; Embodied Awareness &bull; Internal Family Systems</p>
+      <p class="page-intro">
+        Long before neuroscience had the language to describe the window of tolerance
+        or vagal tone, contemplative traditions were developing systematic practices
+        for working with the mind, body, and relational life. These traditions — Buddhist,
+        Hindu, Daoist, and others — offer practices that modern research has
+        repeatedly validated and that form the practical backbone of activist resilience.
+      </p>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <div class="container">
+
+      <section class="content-section">
+        <h2>A Note on Lineage</h2>
+        <div class="lineage-note">
+          <p>
+            Many of the practices on this site — mindfulness meditation, breathwork,
+            body scanning, loving-kindness meditation — originate in Buddhist and
+            Hindu traditions that have been practiced for thousands of years. As these
+            practices have entered Western clinical and wellness contexts, their roots
+            are often obscured.
+          </p>
+          <p>
+            We acknowledge that debt directly. Mindfulness as taught in Western
+            clinical settings (MBSR, DBT, ACT) draws heavily from Theravada Buddhist
+            meditation practice. Breathwork practices such as pranayama originate in
+            Hindu yogic traditions. Loving-kindness (metta) meditation is a specifically
+            Buddhist practice of cultivating compassion.
+          </p>
+          <p>
+            None of these practices require practitioners to identify with the traditions
+            from which they come. But naming the lineage is a matter of honesty, and
+            often enriches the practice.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Mindfulness: Awareness Without Judgment</h2>
+        <p>
+          Mindfulness — at its core — is the practice of paying attention to present
+          experience with openness and without automatic judgment. It is deceptively
+          simple and neurologically profound.
+        </p>
+        <p>
+          Research on mindfulness practice has documented measurable changes in
+          brain structure and function, including:
+        </p>
+        <ul class="research-list">
+          <li>Increased thickness in prefrontal cortical areas associated with attention and emotion regulation</li>
+          <li>Reduced reactivity of the amygdala (the brain's threat-detection center)</li>
+          <li>Improved integration between prefrontal and limbic systems</li>
+          <li>Increased gray matter density in the hippocampus (learning and memory)</li>
+          <li>Reduced cortisol response to acute stressors</li>
+        </ul>
+        <p>
+          For activists, the most practically significant effect of mindfulness is
+          this: it increases the gap between stimulus and response. Something happens
+          (upsetting news, a conflict in a meeting, a setback in organizing), and
+          rather than an automatic reactive response, there is — with practice —
+          a moment of awareness first. That moment is where choice lives.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Breathwork: Direct Access to the Nervous System</h2>
+        <p>
+          Breath is unique among bodily processes: it is both involuntary (it
+          continues without attention) and voluntary (we can consciously control it).
+          This makes it a direct lever on the autonomic nervous system.
+        </p>
+        <p>
+          Slow, diaphragmatic breathing — specifically, extending the exhale relative
+          to the inhale — activates the parasympathetic nervous system and increases
+          vagal tone. This is not metaphorical. It is a direct neurophysiological
+          effect, measurable in heart rate variability within minutes.
+        </p>
+        <p>
+          Different breathing practices have different effects:
+        </p>
+        <div class="breath-practices">
+          <div class="breath-item">
+            <h3>Extended exhale breathing (4-7-8, box breathing)</h3>
+            <p>
+              Activates parasympathetic system. Useful for acute calming — before
+              a confrontation, after receiving difficult news, or when sleep feels
+              impossible.
+            </p>
+          </div>
+          <div class="breath-item">
+            <h3>Coherent / resonance breathing (5 breaths/min)</h3>
+            <p>
+              Maximizes heart rate variability. Regular practice builds baseline
+              vagal tone. Used in clinical settings for anxiety, PTSD, and depression.
+            </p>
+          </div>
+          <div class="breath-item">
+            <h3>Activating breathwork (Wim Hof, holotropic)</h3>
+            <p>
+              Increases arousal and can surface and release held physiological
+              stress. Best used in supported settings with skilled facilitation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Embodied Awareness: The Body as Teacher</h2>
+        <p>
+          A central insight of both contemplative traditions and somatic neuroscience
+          is that wisdom lives in the body, not only the mind. Emotional experience
+          is fundamentally physical — it has location, texture, temperature, movement.
+          Learning to notice and stay with physical sensation is a core contemplative
+          and therapeutic skill.
+        </p>
+        <p>
+          Body-scan meditation — systematically bringing attention to different parts
+          of the body — trains this capacity. Yoga, qi gong, and tai chi integrate
+          mindful movement with breath. Somatic therapy approaches work directly with
+          bodily sensation to process and release held trauma.
+        </p>
+        <p>
+          For activists, embodied awareness practices counter a specific occupational
+          hazard: the tendency to live entirely in the head — in analysis, strategy,
+          outrage, and abstraction — while losing contact with the body's signals
+          of depletion, need, and aliveness. The body often knows we are burning out
+          before the mind is willing to admit it.
+        </p>
+      </section>
+
+      <section class="content-section">
+        <h2>Internal Family Systems (IFS)</h2>
+        <p>
+          Developed by psychologist Richard Schwartz, Internal Family Systems is a
+          contemplative-informed therapeutic approach that treats the mind as a
+          community of "parts" — each with its own perspective, needs, and history.
+          It draws on Buddhist teachings about the constructed nature of self and
+          Jungian depth psychology.
+        </p>
+        <p>
+          The core IFS insight is that what we call "reactivity" is often a part of
+          us trying to protect us from pain — not an enemy to suppress, but a guardian
+          to understand. When activists feel rage, despair, numbness, or compulsive
+          overwork, IFS asks: what is this part protecting? What does it fear would
+          happen without it?
+        </p>
+        <p>
+          This approach maps directly onto the Moral Resiliency framework. Rather than
+          treating dysregulated states as failures, IFS treats them as adaptive responses
+          seeking to be understood — and offers a path toward integration in which all
+          parts of the self are welcomed rather than suppressed.
+        </p>
+        <div class="ifs-note">
+          <p>
+            <strong>Key concept:</strong> In IFS, the "Self" — capital S — refers to
+            a state of being that is calm, curious, compassionate, connected, and clear.
+            It is the activist's capacity to remain themselves while engaging with the
+            world's pain. Porges would recognize it as ventral vagal. Siegel would call
+            it the integrated state within the window of tolerance.
+          </p>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>How Contemplative Practice Maps to the Framework</h2>
+        <p>
+          Contemplative practices do not eliminate the reactive states described in
+          the Moral Resiliency framework. They build the regulatory capacity to:
+        </p>
+        <ul class="mapping-list">
+          <li>Notice when you have moved into sympathetic or dorsal states (rather than acting them out unconsciously)</li>
+          <li>Return more quickly to ventral vagal — to regulated, connected, flexible response</li>
+          <li>Widen the window of tolerance so that more can be held without dysregulation</li>
+          <li>Access the Resilient Path more consistently, even under sustained pressure</li>
+          <li>Build the integration that allows compassion to be sustained without collapsing into distress</li>
+        </ul>
+        <p>
+          The contemplative traditions have always known what neuroscience is now
+          confirming: that the capacity to remain present with suffering — without
+          being destroyed by it or shutting it out — is trainable. And that this
+          training is among the most important work an activist can do.
+        </p>
+      </section>
+
+      <section class="content-section resources-section">
+        <h2>Related Resources</h2>
+        <p class="resources-intro">
+          The following resources incorporate contemplative practices, mindfulness,
+          breathwork, and body-based resilience approaches.
+        </p>
+        <div class="resources-grid">
+          {relatedResources.map(resource => (
+            <ResourceCard resource={resource} lang={lang} />
+          ))}
+        </div>
+      </section>
+
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+    border-bottom: 1px solid var(--color-sage-light);
+  }
+
+  .breadcrumb {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    margin-bottom: var(--space-sm);
+  }
+
+  .breadcrumb a {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .page-byline {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal-light);
+    font-style: italic;
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .content-article {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .content-section {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-xl);
+  }
+
+  .content-section h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .content-section p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .lineage-note {
+    background-color: #f0eef5;
+    border-left: 4px solid #7a6a9a;
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .lineage-note p {
+    margin-bottom: 0;
+  }
+
+  .research-list {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: var(--space-sm) 0;
+  }
+
+  .research-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+  }
+
+  .breath-practices {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .breath-item {
+    border-left: 3px solid var(--color-sage);
+    padding-left: var(--space-md);
+  }
+
+  .breath-item h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-xs);
+  }
+
+  .breath-item p {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+  }
+
+  .ifs-note {
+    background-color: #eef4ec;
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .ifs-note p {
+    margin-bottom: 0;
+    font-size: var(--font-size-sm);
+  }
+
+  .mapping-list {
+    padding-left: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: var(--space-sm) 0;
+  }
+
+  .mapping-list li {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+  }
+
+  .resources-section {
+    max-width: none;
+  }
+
+  .resources-section h2 {
+    max-width: var(--content-width);
+  }
+
+  .resources-intro {
+    max-width: var(--content-width);
+    margin-bottom: var(--space-md) !important;
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

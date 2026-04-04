@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import allResources from '../../../data/resources.json';
+
+const lang = 'en';
+
+// Filter: audience includes "organization" OR scienceTags includes "collective"
+const resources = allResources.filter(r =>
+  r.audience.includes('organization') ||
+  r.scienceTags.includes('collective')
+);
+---
+
+<BaseLayout
+  title="Resilience for Organizations — Activist Resiliency"
+  description="Building resilience into your organizational structure and culture for sustainable movement work."
+  lang={lang}
+>
+  <div class="page-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/en/resilience" class="breadcrumb-link">Build Resilience</a>
+      <span class="breadcrumb-sep" aria-hidden="true">/</span>
+      <span class="breadcrumb-current">For Organizations</span>
+    </nav>
+
+    <header class="page-header">
+      <h1 class="page-heading">Resilience for Organizations</h1>
+      <p class="page-intro">
+        Organizations can embody patterns that either sustain people over time or quietly grind them down. This page explores how to build the structural and cultural conditions that allow movements to stay powerful across years and generations — not just months.
+      </p>
+    </header>
+
+    <section class="content-section">
+      <h2 class="section-heading">Building Cultures of Coherence</h2>
+      <p class="section-body">
+        <em>Coherence</em> in an organizational context means alignment between stated values and actual practices — between what an organization says it believes and how it treats the people within it. When these are misaligned, the dissonance is felt acutely by members, creating a form of moral injury that accelerates burnout and erodes trust.
+      </p>
+      <p class="section-body">
+        Building coherent organizational culture requires regular honest assessment: Do our internal practices reflect the world we're trying to build? Do we practice shared power and distributed leadership, or does power pool at the top despite our rhetoric? Do we invest in the wellbeing of our people, or treat self-care as something individuals are responsible for on their own time?
+      </p>
+      <p class="section-body">
+        Coherent organizations name their values explicitly and build accountability structures around them — not through enforcement alone, but through regular reflection, honest conversation about gaps, and genuine responsiveness when members name harm.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Invitational vs. Ineffective Leadership Patterns</h2>
+      <p class="section-body">
+        The Moral Resiliency framework contrasts leadership approaches that emerge from regulation (invitational) with those that emerge from reactive states (coercive, avoidant, or rigid). These patterns manifest at the organizational level, not just in individual leaders.
+      </p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card comparison-effective">
+          <h3 class="comparison-title">Invitational Leadership Patterns</h3>
+          <ul class="comparison-list">
+            <li>Distributed decision-making with clear accountability</li>
+            <li>Conflict treated as information and processed openly</li>
+            <li>Mistakes acknowledged and learned from without blame spirals</li>
+            <li>Power explicitly named and actively redistributed</li>
+            <li>New members meaningfully included in shaping culture</li>
+            <li>Wellbeing of staff and volunteers treated as organizational responsibility</li>
+            <li>External accountability to community or base beyond leadership</li>
+          </ul>
+        </div>
+
+        <div class="comparison-card comparison-ineffective">
+          <h3 class="comparison-title">Reactive Leadership Patterns</h3>
+          <ul class="comparison-list">
+            <li>Decisions made by a small group with limited transparency</li>
+            <li>Conflict suppressed or handled through informal pressure</li>
+            <li>Blame cultures where mistakes are punished rather than examined</li>
+            <li>Power concentrated despite equity rhetoric</li>
+            <li>New members expected to adapt to existing culture without input</li>
+            <li>Wellbeing treated as individual responsibility, separate from work</li>
+            <li>Accountability only upward to funders or formal authority</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Effective Coalition Building Across Movements</h2>
+      <p class="section-body">
+        Movements are stronger when they build across difference — across organizations, constituencies, ideologies, and strategies. But coalition work is also among the most demanding relational labor in organizing, requiring the capacity to hold differences without fracturing and to sustain trust across significant ideological, cultural, and class divides.
+      </p>
+      <p class="section-body">
+        Resilient coalitions share some common features:
+      </p>
+      <ul class="practice-list">
+        <li><strong>Clear agreements about scope and autonomy.</strong> Coalitions work best when members agree in advance about what they're coordinating and what remains independently decided. Unclear boundaries are a primary source of coalition breakdown.</li>
+        <li><strong>Explicit attention to power dynamics between organizations.</strong> Large well-resourced organizations easily dominate coalitions without intending to. Naming and actively redistributing this power — in agenda-setting, speaking opportunities, and resource allocation — is ongoing work.</li>
+        <li><strong>Practices for working through conflict.</strong> All coalitions encounter conflict. Those with explicit agreements about how to work through disagreement (facilitated dialogue, agreed-upon decision-making processes, structured reflection after difficult events) survive it. Those without such agreements often fracture when conflict emerges.</li>
+        <li><strong>Regular relationship-building outside of task work.</strong> Coalitions formed only around tasks fracture more easily than those with genuine relational bonds across organizational lines. Intentional social time, cross-organizational learning, and shared celebrations build the trust that holds coalitions together under pressure.</li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-heading">Preventing Organizational Burnout</h2>
+      <p class="section-body">
+        Organizational burnout — the collective exhaustion of a group — has structural causes that individual self-care cannot address. Two patterns are particularly common and damaging:
+      </p>
+
+      <div class="patterns-grid">
+        <div class="pattern-card">
+          <h3 class="pattern-title">Siloing and Isolation</h3>
+          <p class="pattern-body">
+            When teams or departments operate without meaningful connection to each other, people lose the sense of being part of something larger than their immediate work. This reduces meaning and makes setbacks feel more personal and more total. Breaking down silos — through cross-team meetings, shared learning, and collaborative projects — is not just an efficiency strategy; it is a resilience strategy.
+          </p>
+        </div>
+
+        <div class="pattern-card">
+          <h3 class="pattern-title">Blame Patterns</h3>
+          <p class="pattern-body">
+            When organizations respond to setbacks with blame rather than analysis, they create a climate of fear that suppresses honesty and risk-taking. People stop flagging problems early because they've learned that doing so invites punishment rather than support. Blame cultures are also self-reinforcing: as trust decreases, mistakes increase, creating more occasions for blame. Breaking this pattern requires leadership that explicitly models accountability without shame — naming problems, analyzing causes, and responding with curiosity.
+          </p>
+        </div>
+
+        <div class="pattern-card">
+          <h3 class="pattern-title">Chronic Urgency</h3>
+          <p class="pattern-body">
+            Many social change organizations operate in a permanent emergency mode where everything is urgent and nothing can wait. This is sometimes realistic — but it is also sometimes a cultural pattern that prevents rest, reflection, and genuine strategic thinking. Organizations that build in protected time for learning, planning, and recovery — not just emergency response — sustain their people more effectively over time.
+          </p>
+        </div>
+
+        <div class="pattern-card">
+          <h3 class="pattern-title">Insufficient Transition Support</h3>
+          <p class="pattern-body">
+            People who leave organizations — whether through choice, burnout, or changing life circumstances — carry with them knowledge, relationships, and often unprocessed grief from the work. Organizations that invest in offboarding, transition rituals, and alumni relationships retain more of their institutional knowledge and leave departing members better resourced for what comes next, rather than depleted by a clean break.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources-section">
+      <h2 class="resources-heading">Resources for Organizations</h2>
+      <p class="resources-intro">
+        Guides and manuals for building organizational resilience — including Protection International guides, the Holistic Security manual, and collective protection frameworks.
+      </p>
+      <div class="resources-grid">
+        {resources.map(resource => (
+          <ResourceCard resource={resource} lang={lang} />
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    opacity: 0.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .breadcrumb-link {
+    color: var(--color-sage);
+    text-decoration: none;
+  }
+
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+
+  .breadcrumb-sep {
+    opacity: 0.5;
+  }
+
+  .page-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--color-sage-light);
+  }
+
+  .page-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-lg);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    max-width: 70ch;
+    opacity: 0.85;
+  }
+
+  .content-section {
+    margin-bottom: var(--space-xl);
+    max-width: var(--content-width);
+  }
+
+  .section-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-body {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    margin-bottom: var(--space-md);
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .comparison-card {
+    border-radius: 8px;
+    padding: var(--space-md);
+  }
+
+  .comparison-effective {
+    background-color: rgba(139, 169, 138, 0.12);
+    border: 1px solid var(--color-sage-light);
+  }
+
+  .comparison-ineffective {
+    background-color: var(--color-cream);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .comparison-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .comparison-list {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+    padding-left: var(--space-md);
+  }
+
+  .comparison-list li {
+    margin-bottom: var(--space-xs);
+  }
+
+  .practice-list {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: 1.8;
+    max-width: 72ch;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .practice-list li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .patterns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  @media (max-width: 639px) {
+    .patterns-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pattern-card {
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-sage);
+    border-radius: 0 8px 8px 0;
+    padding: var(--space-md);
+  }
+
+  .pattern-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .pattern-body {
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    line-height: 1.7;
+  }
+
+  .resources-section {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 2px solid var(--color-sage-light);
+  }
+
+  .resources-heading {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .resources-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    opacity: 0.75;
+    margin-bottom: var(--space-lg);
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+</style>

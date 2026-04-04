@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ResourceBrowser from '../../components/ResourceBrowser.astro';
+import resources from '../../data/resources.json';
+
+const lang = 'en';
+---
+
+<BaseLayout
+  title="Resources — Activist Resiliency"
+  description="A curated library of tools, guides, and media for activist resilience — organized by format, stage, and audience."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Resources</h1>
+      <p class="page-intro">
+        A curated collection of books, podcasts, videos, and toolkits to support
+        activist resilience — grounded in neuroscience, somatic practice, and
+        collective wisdom. Filter by format, stage of need, or intended audience.
+      </p>
+    </div>
+  </div>
+
+  <section class="browser-section">
+    <div class="container">
+      <ResourceBrowser resources={resources} lang={lang} />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-sm);
+  }
+
+  .page-intro {
+    font-size: var(--font-size-base);
+    color: var(--color-charcoal);
+    line-height: var(--line-height-body);
+    max-width: var(--content-width);
+    opacity: 0.85;
+  }
+
+  .browser-section {
+    padding-bottom: var(--space-2xl);
+  }
+</style>
