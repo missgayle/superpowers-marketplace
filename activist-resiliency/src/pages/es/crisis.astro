@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreathingGuide from '../../components/BreathingGuide.astro';
+import SelfCheck from '../../components/SelfCheck.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import resources from '../../data/resources.json';
+const lang = 'es';
+const acuteResources = resources.filter(r => r.stage.includes('acute') || r.stage.includes('both'));
+const formatOrder: Record<string, number> = { watch: 0, listen: 1, read: 2 };
+const additionalResources = [...acuteResources].sort((a, b) => (formatOrder[a.format] ?? 99) - (formatOrder[b.format] ?? 99));
+---
+<BaseLayout title="Apoyo en Crisis — Resiliencia para Activistas" description="Apoyo inmediato y recursos para activistas en momentos de angustia aguda." lang={lang}>
+  <div class="crisis-page">
+    <section class="opening-section" aria-label="Apertura"><div class="container"><p class="opening-text">Estás lo suficientemente seguro/a para estar aquí.<br/>Comencemos con una respiración.</p></div></section>
+    <section class="breathing-section" aria-label="Ejercicio de respiración"><BreathingGuide /></section>
+    <section class="selfcheck-section" aria-label="Autoevaluación"><div class="container"><SelfCheck resources={resources} lang={lang} /></div></section>
+    <section class="additional-section" aria-label="Más recursos inmediatos"><div class="container">
+      <h2 class="section-heading">Más recursos para este momento</h2>
+      <p class="section-intro">Herramientas adicionales para ahora mismo — ordenadas por lo que puedes acceder más rápido.</p>
+      <div class="resource-grid">{additionalResources.map(r => <ResourceCard resource={r} lang={lang} />)}</div>
+    </div></section>
+  </div>
+</BaseLayout>
+<style>
+  .crisis-page { padding-bottom: var(--space-2xl); }
+  .opening-section { padding: var(--space-xl) 0 var(--space-lg); text-align: center; }
+  .opening-text { font-family: var(--font-heading); font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 400; color: var(--color-charcoal); line-height: 1.55; }
+  .breathing-section { background-color: var(--color-cream); }
+  .selfcheck-section { padding: var(--space-lg) 0; background-color: var(--color-white); }
+  .additional-section { padding: var(--space-xl) 0 var(--space-lg); }
+  .section-heading { font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-charcoal); margin-bottom: var(--space-sm); }
+  .section-intro { color: var(--color-charcoal-light); font-size: var(--font-size-base); margin-bottom: var(--space-lg); max-width: var(--content-width); }
+  .resource-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-md); }
+  @media (max-width: 480px) { .resource-grid { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ResourceCard from '../../../components/ResourceCard.astro';
+import resources from '../../../data/resources.json';
+
+const lang = 'en';
+
+const relatedResources = resources.filter(r =>
+  r.scienceTags.includes('siegel')
+);
+---
+
+<BaseLayout
+  title="Window of Tolerance — The Science — Activist Resiliency"
+  description="Dan Siegel's window of tolerance concept — the optimal arousal zone for activists, how sustained work narrows it, and how practices widen it."
+  lang={lang}
+>
+  <div class="page-header">
+    <div class="container">
+      <p class="breadcrumb"><a href="/en/science">The Science</a> &rsaquo; Window of Tolerance</p>
+      <h1 class="page-title">Window of Tolerance</h1>
+      <p class="page-byline">Concept by Dan Siegel &bull; Applied in trauma-informed and somatic practice</p>
+      <p class="page-intro">The window of tolerance describes the optimal zone of nervous system arousal where a person can function effectively.</p>
+    </div>
+  </div>
+  <article class="content-article"><div class="container">
+    <section class="content-section"><h2>What Is the Window of Tolerance?</h2><p>The zone between hyper-arousal and hypo-arousal where the prefrontal cortex stays online.</p></section>
+    <section class="content-section resources-section"><h2>Related Resources</h2>
+      <div class="resources-grid">{relatedResources.map(resource => (<ResourceCard resource={resource} lang={lang} />))}</div>
+    </section>
+  </div></article>
+</BaseLayout>
+
+<style>
+  .page-header { padding: var(--space-xl) 0 var(--space-md); border-bottom: 1px solid var(--color-sage-light); }
+  .breadcrumb { font-size: var(--font-size-sm); color: var(--color-charcoal-light); margin-bottom: var(--space-sm); }
+  .breadcrumb a { color: var(--color-sage); text-decoration: none; }
+  .page-title { font-family: var(--font-heading); font-size: var(--font-size-2xl); font-weight: 700; color: var(--color-charcoal); margin-bottom: var(--space-xs); }
+  .page-byline { font-size: var(--font-size-sm); color: var(--color-charcoal-light); font-style: italic; margin-bottom: var(--space-sm); }
+  .page-intro { font-size: var(--font-size-base); color: var(--color-charcoal); line-height: var(--line-height-body); max-width: var(--content-width); opacity: 0.85; }
+  .content-article { padding: var(--space-xl) 0 var(--space-2xl); }
+  .content-section { max-width: var(--content-width); margin-bottom: var(--space-xl); }
+  .content-section h2 { font-family: var(--font-heading); font-size: var(--font-size-xl); font-weight: 700; color: var(--color-charcoal); margin-bottom: var(--space-md); }
+  .content-section p { font-size: var(--font-size-base); line-height: var(--line-height-body); color: var(--color-charcoal); margin-bottom: var(--space-sm); }
+  .resources-section { max-width: none; }
+  .resources-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-md); }
+</style>
