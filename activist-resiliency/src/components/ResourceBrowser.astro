@@ -1,0 +1,289 @@
+---
+import ResourceCard from './ResourceCard.astro';
+
+interface Resource {
+  id: string;
+  title: { en: string; es: string };
+  description: { en: string; es: string };
+  format: string;
+  type: string;
+  stage: string[];
+  audience: string[];
+  source: string;
+  url: string;
+  scienceTags: string[];
+}
+
+interface Props {
+  resources: Resource[];
+  lang: string;
+}
+
+const { resources, lang } = Astro.props;
+
+const ui = {
+  en: {
+    tabRead:    'Read',
+    tabListen:  'Listen',
+    tabWatch:   'Watch',
+    tabAll:     'All',
+    stageLabel: 'Stage',
+    stageAll:   'All',
+    stageAcute: 'Acute',
+    stageLong:  'Long-term',
+    audLabel:   'Audience',
+    audAll:     'All',
+    audInd:     'Individual',
+    audOrg:     'Organizer',
+    audOrgan:   'Organization',
+    noResults:  'No resources match your filters.',
+  },
+  es: {
+    tabRead:    'Leer',
+    tabListen:  'Escuchar',
+    tabWatch:   'Ver',
+    tabAll:     'Todo',
+    stageLabel: 'Etapa',
+    stageAll:   'Todo',
+    stageAcute: 'Aguda',
+    stageLong:  'A largo plazo',
+    audLabel:   'Audiencia',
+    audAll:     'Todo',
+    audInd:     'Individual',
+    audOrg:     'Organizador',
+    audOrgan:   'Organizaci\u00f3n',
+    noResults:  'Ning\u00fan recurso coincide con tus filtros.',
+  },
+}[lang as 'en' | 'es'] ?? {
+  tabRead: 'Read', tabListen: 'Listen', tabWatch: 'Watch', tabAll: 'All',
+  stageLabel: 'Stage', stageAll: 'All', stageAcute: 'Acute', stageLong: 'Long-term',
+  audLabel: 'Audience', audAll: 'All', audInd: 'Individual', audOrg: 'Organizer', audOrgan: 'Organization',
+  noResults: 'No resources match your filters.',
+};
+---
+
+<div class="resource-browser" id="resource-browser">
+  <!-- Format Tabs -->
+  <div class="tab-bar" role="tablist" aria-label="Filter by format">
+    <button
+      class="tab-btn tab-active"
+      role="tab"
+      aria-selected="true"
+      data-format="all"
+    >{ui.tabAll}</button>
+    <button
+      class="tab-btn"
+      role="tab"
+      aria-selected="false"
+      data-format="read"
+    >{ui.tabRead}</button>
+    <button
+      class="tab-btn"
+      role="tab"
+      aria-selected="false"
+      data-format="listen"
+    >{ui.tabListen}</button>
+    <button
+      class="tab-btn"
+      role="tab"
+      aria-selected="false"
+      data-format="watch"
+    >{ui.tabWatch}</button>
+  </div>
+
+  <!-- Filter Controls -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label for="filter-stage" class="filter-label">{ui.stageLabel}:</label>
+      <select id="filter-stage" class="filter-select" data-filter="stage">
+        <option value="all">{ui.stageAll}</option>
+        <option value="acute">{ui.stageAcute}</option>
+        <option value="long-term">{ui.stageLong}</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-audience" class="filter-label">{ui.audLabel}:</label>
+      <select id="filter-audience" class="filter-select" data-filter="audience">
+        <option value="all">{ui.audAll}</option>
+        <option value="individual">{ui.audInd}</option>
+        <option value="organizer">{ui.audOrg}</option>
+        <option value="organization">{ui.audOrgan}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Resource Grid -->
+  <div class="resource-grid" id="resource-grid">
+    {resources.map((resource) => (
+      <ResourceCard resource={resource} lang={lang} />
+    ))}
+  </div>
+
+  <!-- No-results message (hidden by default via JS) -->
+  <p class="no-results" id="no-results" hidden>{ui.noResults}</p>
+</div>
+
+<script>
+  function initBrowser() {
+    const browser = document.getElementById('resource-browser');
+    if (!browser) return;
+
+    const grid = document.getElementById('resource-grid');
+    const noResults = document.getElementById('no-results');
+    const cards = grid ? Array.from(grid.querySelectorAll<HTMLElement>('.resource-card')) : [];
+    const tabs = browser.querySelectorAll<HTMLButtonElement>('.tab-btn');
+    const stageSelect = document.getElementById('filter-stage') as HTMLSelectElement | null;
+    const audienceSelect = document.getElementById('filter-audience') as HTMLSelectElement | null;
+
+    let activeFormat = 'all';
+    let activeStage = 'all';
+    let activeAudience = 'all';
+
+    function applyFilters() {
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const cardFormat = card.dataset.format ?? '';
+        const cardStage = card.dataset.stage ?? '';
+        const cardAudience = card.dataset.audience ?? '';
+
+        const formatMatch =
+          activeFormat === 'all' || cardFormat === activeFormat;
+
+        const stageMatch =
+          activeStage === 'all' || cardStage.split(',').includes(activeStage);
+
+        const audienceMatch =
+          activeAudience === 'all' || cardAudience.split(',').includes(activeAudience);
+
+        const visible = formatMatch && stageMatch && audienceMatch;
+        card.hidden = !visible;
+        if (visible) visibleCount++;
+      });
+
+      if (noResults) {
+        noResults.hidden = visibleCount > 0;
+      }
+    }
+
+    // Tab clicks
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => {
+          t.classList.remove('tab-active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('tab-active');
+        tab.setAttribute('aria-selected', 'true');
+        activeFormat = tab.dataset.format ?? 'all';
+        applyFilters();
+      });
+    });
+
+    // Select changes
+    stageSelect?.addEventListener('change', () => {
+      activeStage = stageSelect.value;
+      applyFilters();
+    });
+
+    audienceSelect?.addEventListener('change', () => {
+      activeAudience = audienceSelect.value;
+      applyFilters();
+    });
+  }
+
+  // Run on load
+  initBrowser();
+</script>
+
+<style>
+  .resource-browser {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  /* Tabs */
+  .tab-bar {
+    display: flex;
+    gap: var(--space-xs);
+    border-bottom: 2px solid var(--color-sage-light);
+    padding-bottom: 0;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--space-xs) var(--space-sm);
+    cursor: pointer;
+    color: var(--color-charcoal-light);
+    margin-bottom: -2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .tab-btn:hover {
+    color: var(--color-charcoal);
+  }
+
+  .tab-active {
+    color: var(--color-sage);
+    border-bottom-color: var(--color-sage);
+  }
+
+  /* Filters */
+  .filter-bar {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .filter-label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-charcoal);
+    white-space: nowrap;
+  }
+
+  .filter-select {
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    color: var(--color-charcoal);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-sage-light);
+    border-radius: 6px;
+    padding: 0.3em 0.7em;
+    cursor: pointer;
+  }
+
+  .filter-select:focus {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 1px;
+  }
+
+  /* Grid */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .no-results {
+    text-align: center;
+    color: var(--color-charcoal-light);
+    font-size: var(--font-size-base);
+    padding: var(--space-xl) 0;
+  }
+</style>
