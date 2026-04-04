@@ -1,0 +1,23 @@
+{
+  "site": {
+    "title": "Activist Resiliency",
+    "description": "Evidence-based resilience tools for pro-democracy activists"
+  },
+  "nav": {
+    "home": "Home",
+    "crisis": "I Need Help Now",
+    "resilience": "Build Resilience",
+    "framework": "Framework",
+    "resources": "Resources",
+    "science": "The Science"
+  },
+  "footer": {
+    "framework_credit": "Based on the Working Framework for Moral Resiliency by Gayle Karen Young",
+    "adapted_from": "Adapted from N. Eisenberg, D. Batson, J. Halifax, C. Rushton"
+  },
+  "lang": {
+    "en": "English",
+    "es": "Español",
+    "switch": "Switch language"
+  }
+}

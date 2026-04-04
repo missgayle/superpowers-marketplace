@@ -1,0 +1,23 @@
+{
+  "site": {
+    "title": "Resiliencia Activista",
+    "description": "Herramientas de resiliencia basadas en evidencia para activistas pro-democracia"
+  },
+  "nav": {
+    "home": "Inicio",
+    "crisis": "Necesito Ayuda Ahora",
+    "resilience": "Construir Resiliencia",
+    "framework": "Marco Teórico",
+    "resources": "Recursos",
+    "science": "La Ciencia"
+  },
+  "footer": {
+    "framework_credit": "Basado en el Marco de Trabajo para la Resiliencia Moral de Gayle Karen Young",
+    "adapted_from": "Adaptado de N. Eisenberg, D. Batson, J. Halifax, C. Rushton"
+  },
+  "lang": {
+    "en": "English",
+    "es": "Español",
+    "switch": "Cambiar idioma"
+  }
+}
